@@ -1,0 +1,51 @@
+import os
+
+# Template XML content
+xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="40500">
+	<InverseDynamicsTool name="subject{subject}_stw{trial}">
+		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
+		<results_directory>./results_ID</results_directory>
+		<!--Name of the .osim file used to construct a model.-->
+		<model_file>../model/RajagopalLa2023_LL-stw_adjustedWieghts.osim</model_file>
+		<!--Time range over which the inverse dynamics problem is solved.-->
+		<time_range> 4.4000000000000003553 5.6299999999999998934</time_range>
+		<!--List of forces by individual or grouping name (e.g. All, actuators, muscles, ...) to be excluded when computing model dynamics. 'All' also excludes external loads added via 'external_loads_file'.-->
+		<forces_to_exclude> Muscles</forces_to_exclude>
+		<!--XML file (.xml) containing the external loads applied to the model as a set of ExternalForce(s).-->
+		<external_loads_file>grf/S{subject}_stw{trial}_grf.xml</external_loads_file>
+		<!--The name of the file containing coordinate data. Can be a motion (.mot) or a states (.sto) file.-->
+		<coordinates_file>../IK/results_stw/ik_output_s{subject}_stw{trial}.mot</coordinates_file>
+		<!--Low-pass cut-off frequency for filtering the coordinates_file data (currently does not apply to states_file or speeds_file). A negative value results in no filtering. The default value is -1.0, so no filtering.-->
+		<lowpass_cutoff_frequency_for_coordinates>6</lowpass_cutoff_frequency_for_coordinates>
+		<!--Name of the storage file (.sto) to which the generalized forces are written. Only a filename should be specified here (not a full path); the file will appear in the location provided in the results_directory property.-->
+		<output_gen_force_file>id_output_s{subject}_stw{trial}.sto</output_gen_force_file>
+		<!--List of joints (keyword All, for all joints) to report body forces acting at the joint frame expressed in ground.-->
+		<joints_to_report_body_forces />
+		<!--Name of the storage file (.sto) to which the body forces at specified joints are written.-->
+		<output_body_forces_file>body_forces_at_joints_s{subject}_stw{trial}.sto</output_body_forces_file>
+	</InverseDynamicsTool>
+</OpenSimDocument>
+'''
+
+# Create output directory if it doesn't exist
+output_dir = r"D:\UG_Proj\Human Sitting to Walking Transitions\S01\ID"
+os.makedirs(output_dir, exist_ok=True)
+subject = "01"
+
+# Generate files for trials 1 through 5
+for trial in range(1, 6):
+    # Fill in the template with current trial number
+    xml_content = xml_template.format(trial=trial,subject=subject)
+    
+    # Create filename
+    filename = f"id_setup_S{subject}_stw{trial}.xml"
+    filepath = os.path.join(output_dir, filename)
+    
+    # Write to file
+    with open(filepath, 'w', encoding='UTF-8') as f:
+        f.write(xml_content)
+    
+    print(f"Created: {filepath}")
+
+print(f"\nAll files created successfully in '{output_dir}' directory!")
