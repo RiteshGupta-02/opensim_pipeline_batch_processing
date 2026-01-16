@@ -1,7 +1,7 @@
 import os
 
 # Template XML content
-xml_template = rf'''<?xml version="1.0" encoding="UTF-8" ?>
+xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 <OpenSimDocument Version="40500">
 	<InverseKinematicsTool name="{subject:02d}_stw{trial}">
 		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
@@ -15,7 +15,7 @@ xml_template = rf'''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--The time range for the study.-->
 		<time_range>0 5.4550000000000001</time_range>
 		<!--Name of the resulting inverse kinematics motion (.mot) file.-->
-		<output_motion_file>D:\student\MTech\Sakshi\STW\S{subject:02d}\IK\ik_output_stw{trial}_S{subject:02d}.mot</output_motion_file>
+		<output_motion_file>D:/student/MTech/Sakshi/STW/S{subject:02d}/IK/ik_output_stw{trial}_S{subject:02d}.mot</output_motion_file>
 		<!--Flag (true or false) indicating whether or not to report errors from the inverse kinematics solution. Default is true.-->
 		<report_errors>true</report_errors>
 		<!--Markers and coordinates to be considered (tasks) and their weightings. The sum of weighted-squared task errors composes the cost function.-->
