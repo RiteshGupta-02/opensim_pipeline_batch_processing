@@ -77,7 +77,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 '''
 
 # Create output directory if it doesn't exist
-subject = "01"
+subject = "02"
 output_dir = rf"D:\UG_Proj\Human Sitting to Walking Transitions\S{subject}\so"
 os.makedirs(output_dir, exist_ok=True)
 

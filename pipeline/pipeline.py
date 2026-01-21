@@ -6,6 +6,8 @@ import multiprocessing as mp
 import logging
 import os
 import opensim as osim
+import tkinter as tk
+from tkinter import filedialog
 
 def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
 
@@ -173,7 +175,11 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python pipeline.py /path/to/template.json [--parallel] [--dry]")
         sys.exit(1)
-
+    
+    root = tk.Tk()
+    root.withdraw()  # Hide the main tkinter window
+    folder_path = filedialog.askdirectory(title="Select the root directory containing subject folders")
+    
     template_path = Path(sys.argv[1])
     if not template_path.exists():
         print(f"Template file {template_path} does not exist.")
