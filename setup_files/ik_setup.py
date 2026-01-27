@@ -1,4 +1,6 @@
 import os
+import sys
+from pathlib import Path
 
 # Template XML content
 xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
@@ -228,10 +230,15 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 '''
 
 # Create output directory if it doesn't exist
-
-subject = "01"
-output_dir = fr"D:\UG_Proj\Human Sitting to Walking Transitions\S{subject}\IK"
+if len(sys.argv) < 3:
+	print("Usage: python id_setup.py <output_directory>")
+	sys.exit(1)
+     
+subjdir = Path(sys.argv[1])
+# Create output directory if it doesn't exist
+output_dir = rf"{subjdir}\IK"
 os.makedirs(output_dir, exist_ok=True)
+subject = subjdir.name
 
 # Generate files for trials 1 through 5
 for trial in range(1, 6):

@@ -6,10 +6,10 @@ import multiprocessing as mp
 import logging
 import os
 import opensim as osim
-import tkinter as tk
-from tkinter import filedialog
 
 def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+BOLD_RED = "\033[1;91m" # Bold and bright red for extra attention
+END = "\033[0m" # Reset code
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -18,7 +18,7 @@ def replace_subject_in_path(path_str, old_subj, new_subj):
     """Replace subject number in path strings."""
     return path_str.replace(old_subj, new_subj)
 
-def generate_setups_if_needed(subject_num, subj_dir, dry_run=False):
+def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     """Generate setup XMLs if they don't exist."""
     script_dir = Path(__file__).parent
 
@@ -27,7 +27,7 @@ def generate_setups_if_needed(subject_num, subj_dir, dry_run=False):
     if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
         logging.info(f"Generating GRF setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'grf_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
+            result = subprocess.run(['python', 'setup_files/grf_setup.py', subject_num, subj_dir], cwd=str(script_dir), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"GRF setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -71,10 +71,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
         logging.warning(f"Subject {subject_num} directory not found; skipping.")
         return
 
-    # Generate setups if needed
-    if not generate_setups_if_needed(subject_num, subj_dir, dry_run):
-        logging.error(f"Setup generation failed for {subject_num}; skipping.")
-        return
+
 
     # Deep copy and adapt paths
     adapted = json.loads(json.dumps(template))
@@ -93,20 +90,26 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
         logging.info(f"Adapted paths for subject {subject_num}: {json.dumps(adapted, indent=2)}")
 
     # Change to subject directory for relative paths
+    scaled_model = "" #----------------for global use
     original_cwd = os.getcwd()
     try:
         os.chdir(str(subj_dir))
         logging.info(f"Processing subject {subject_num} in {subj_dir}")
-        # osim.Logger_setLevelString("Off")
+        osim.Logger_setLevelString("error")  # Suppress OpenSim output except errors
 
         # Run scaling if scale_xml exists
         scale_xml = Path(adapted['scale_xml'])
+        os.chdir(str(scale_xml.parent))
+        print(f'{BOLD_RED}',os.getcwd(),f'{END}')
         if scale_xml.exists():
             logging.info(f"Running scaling for subject {subject_num}")
             if not dry_run:
                 try:
                     scale_tool = osim.ScaleTool(str(scale_xml))
+                    scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
+                    print(f"Scaled model will be saved to: {scaled_model}")
                     success = scale_tool.run()
+                    
                     if not success:
                         logging.error(f"Scaling failed for {subject_num}")
                         return
@@ -120,15 +123,25 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
         for trial in adapted['mapped_trials']:
             trial_name = trial['trial_trc'].split('stw')[1].split('.')[0]  # Extract trial number, e.g., '1'
             logging.info(f"Processing trial {trial_name} for subject {subject_num}")
+            if trial_name != '1':
+                continue  # For testing, only process trial 1
+            # Generate setups if needed
+            if not generate_setups_if_needed(subject_num, subj_dir, trial_name,dry_run):
+                logging.error(f"Setup generation failed for {subject_num}; skipping.")
+                return
 
             # IK
+            ik_tool = None
             ik_xml = Path(trial['ik_xml'])
+            os.chdir(str(ik_xml.parent))
             if ik_xml.exists():
                 logging.info(f"Running IK for trial {trial_name}")
                 if not dry_run:
                     try:
                         ik_tool = osim.InverseKinematicsTool(str(ik_xml))
-                        success = ik_tool.run()
+                        ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model))))
+                        ik_tool.setMarkerDataFileName(trial['trial_trc'])
+                        success = True #ik_tool.run()                                              ----------------do  it
                         if not success:
                             logging.error(f"IK failed for {trial_name}")
                             continue
@@ -139,12 +152,17 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                 logging.warning(f"IK XML not found for {trial_name}; skipping IK.")
             # ID (requires GRF)
             id_xml = Path(trial['id_xml'])
+            os.chdir(str(id_xml.parent))
             grf_xml = Path(trial['grf_xml'])
             if id_xml.exists() and grf_xml.exists():
                 logging.info(f"Running ID for trial {trial_name}")
                 if not dry_run:
                     try:
                         id_tool = osim.InverseDynamicsTool(str(id_xml))
+                        id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))
+                        if ik_tool is not None:
+                            id_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
+                        id_tool.setExternalLoadsFileName(str(grf_xml))
                         success = id_tool.run()
                         if not success:
                             logging.error(f"ID failed for {trial_name}")
@@ -154,12 +172,19 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                         continue
             else:
                 logging.warning(f"ID or GRF XML not found for {trial_name}; skipping ID.")
+
+            # SO   
             so_xml = Path(trial['so_xml'])
+            os.chdir(str(so_xml.parent))
             if so_xml.exists():
                 logging.info(f"Running SO for trial {trial_name}")
                 if not dry_run:
                     try:
                         so_tool = osim.AnalyzeTool(str(so_xml))
+                        so_tool.setExternalLoadsFileName(str(grf_xml))
+                        so_tool.setModelFilename((os.path.join(scale_xml.parent,(scaled_model))))
+                        if ik_tool is not None:
+                            so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
                         success = so_tool.run()
                         if not success:
                             logging.error(f"SO failed for {trial_name}")
@@ -176,9 +201,6 @@ def main():
         print("Usage: python pipeline.py /path/to/template.json [--parallel] [--dry]")
         sys.exit(1)
     
-    root = tk.Tk()
-    root.withdraw()  # Hide the main tkinter window
-    folder_path = filedialog.askdirectory(title="Select the root directory containing subject folders")
     
     template_path = Path(sys.argv[1])
     if not template_path.exists():
@@ -210,17 +232,22 @@ def main():
         sys.exit(1)
 
     logging.info(f"Found subjects: {subjects}")
+    y = input(f"Proceed to run pipeline for {len(subjects)} subjects? \n Enter to continue: ")
 
     if parallel:
         logging.info("Running in parallel mode.")
-        with mp.Pool(processes=min(mp.cpu_count(), len(subjects))) as pool:
+        with mp.Pool(processes=min(mp.cpu_count()-2, len(subjects))) as pool:
             pool.starmap(run_pipeline_for_subject, [(s, template, root_dir, dry_run) for s in subjects])
     else:
         logging.info("Running in sequential mode.")
         for s in subjects:
-            run_pipeline_for_subject(s, template, root_dir, dry_run)
+            if s == '02':
+                print(f"Starting subject {s}...")
+                run_pipeline_for_subject(s, template, root_dir, dry_run)
 
     logging.info("Pipeline completed.")
 
 if __name__ == "__main__":
     main()
+
+    

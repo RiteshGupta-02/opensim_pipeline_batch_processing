@@ -7,38 +7,38 @@
   "mapped_trials": [
     {
       "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw1.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_S01_stw1.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_S01_stw1.xml",
+      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw1.xml",
+      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw1.xml",
       "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw1.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\S01_stw1_grf.xml"
+      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw1.xml"
     },
     {
       "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw2.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_S01_stw2.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_S01_stw2.xml",
+      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw2.xml",
+      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw2.xml",
       "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw2.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\S01_stw2_grf.xml"
+      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw2.xml"
     },
     {
       "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw3.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_S01_stw3.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_S01_stw3.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_S01_stw3.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\S01_stw3_grf.xml"
+      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw3.xml",
+      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw3.xml",
+      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw3.xml",
+      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw3.xml"
     },
     {
       "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw4.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_S01_stw4.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_S01_stw4.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_S01_stw4.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\S01_stw4_grf.xml"
+      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw4.xml",
+      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw4.xml",
+      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw4.xml",
+      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw4.xml"
     },
     {
       "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw5.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_S01_stw5.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_S01_stw5.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_S01_stw5.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\S01_stw5_grf.xml"
+      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw5.xml",
+      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw5.xml",
+      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw5.xml",
+      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw5.xml"
     }
   ]
 }
