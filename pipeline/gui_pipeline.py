@@ -131,7 +131,6 @@ class PipelineEngine:
             self.logger.info(f"Adapted paths for subject {subject_num}: {json.dumps(adapted, indent=2)}")
 
         original_cwd = os.getcwd()
-        print(original_cwd)
         try:
             os.chdir(os.path.join(str(subj_dir)+'\\scale'))
             print('{BOLD_RED}',os.getcwd(),'{END}')
@@ -190,9 +189,9 @@ class PipelineEngine:
                         if not dry_run:
                             try:
                                 ik_tool = osim.InverseKinematicsTool(str(ik_xml))
-                                ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model))))   # pyright: ignore[reportPossiblyUnboundVariable]
+                                ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model)))) 
                                 ik_tool.setMarkerDataFileName(trial['trial_trc'])
-                                success = True #ik_tool.run() 
+                                success = ik_tool.run() 
                                 if not success:
                                     self.logger.error(f"IK failed for {trial_name}")
                                     continue
@@ -213,9 +212,9 @@ class PipelineEngine:
                             try:
                                 
                                     id_tool = osim.InverseDynamicsTool(str(id_xml))
-                                    id_tool.setModel((os.path.join(scale_xml.parent,(scaled_model))))   # pyright: ignore[reportPossiblyUnboundVariable]
+                                    id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))   
                                     if ik_tool is not None:
-                                        id_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
+                                        id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, ik_tool.getOutputMotionFileName()))
                                     id_tool.setExternalLoadsFileName(str(grf_xml))
                                     success = id_tool.run()
                                     if not success:
@@ -236,8 +235,8 @@ class PipelineEngine:
                         if not dry_run:
                             try:
                                 so_tool = osim.AnalyzeTool(str(so_xml))
-                                so_tool.setExternalLoadsFileName(str(grf_xml)) # pyright: ignore[reportPossiblyUnboundVariable]
-                                so_tool.setModel((os.path.join(scale_xml.parent,(scaled_model))))   # pyright: ignore[reportPossiblyUnboundVariable]
+                                so_tool.setExternalLoadsFileName(str(grf_xml)) 
+                                so_tool.setModel((os.path.join(scale_xml.parent,(scaled_model))))   
                                 if ik_tool is not None:
                                     so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
                                 success = so_tool.run()

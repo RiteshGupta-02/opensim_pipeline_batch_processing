@@ -95,19 +95,18 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
     try:
         os.chdir(str(subj_dir))
         logging.info(f"Processing subject {subject_num} in {subj_dir}")
-        osim.Logger_setLevelString("error")  # Suppress OpenSim output except errors
+        # osim.Logger_setLevelString("error")  # Suppress OpenSim output except errors
 
         # Run scaling if scale_xml exists
         scale_xml = Path(adapted['scale_xml'])
         os.chdir(str(scale_xml.parent))
-        print(f'{BOLD_RED}',os.getcwd(),f'{END}')
         if scale_xml.exists():
             logging.info(f"Running scaling for subject {subject_num}")
             if not dry_run:
                 try:
                     scale_tool = osim.ScaleTool(str(scale_xml))
+                    scale_tool.createModel()
                     scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                    print(f"Scaled model will be saved to: {scaled_model}")
                     success = scale_tool.run()
                     
                     if not success:
@@ -123,8 +122,6 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
         for trial in adapted['mapped_trials']:
             trial_name = trial['trial_trc'].split('stw')[1].split('.')[0]  # Extract trial number, e.g., '1'
             logging.info(f"Processing trial {trial_name} for subject {subject_num}")
-            if trial_name != '1':
-                continue  # For testing, only process trial 1
             # Generate setups if needed
             if not generate_setups_if_needed(subject_num, subj_dir, trial_name,dry_run):
                 logging.error(f"Setup generation failed for {subject_num}; skipping.")
@@ -141,7 +138,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                         ik_tool = osim.InverseKinematicsTool(str(ik_xml))
                         ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model))))
                         ik_tool.setMarkerDataFileName(trial['trial_trc'])
-                        success = True #ik_tool.run()                                              ----------------do  it
+                        success = True #ik_tool.run()                                              #do  it
                         if not success:
                             logging.error(f"IK failed for {trial_name}")
                             continue
@@ -156,7 +153,6 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
             grf_xml = Path(trial['grf_xml'])
             print(id_xml.exists())
             print(grf_xml.exists())
-            exit()
             if id_xml.exists() and grf_xml.exists():
                 logging.info(f"Running ID for trial {trial_name}")
                 if not dry_run:
@@ -164,7 +160,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                         id_tool = osim.InverseDynamicsTool(str(id_xml))
                         id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))
                         if ik_tool is not None:
-                            id_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
+                            id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, ik_tool.getOutputMotionFileName()))
                         id_tool.setExternalLoadsFileName(str(grf_xml))
                         success = id_tool.run()
                         if not success:
@@ -188,7 +184,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                         so_tool.setModelFilename((os.path.join(scale_xml.parent,(scaled_model))))
                         if ik_tool is not None:
                             so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
-                        success = so_tool.run()
+                        success = True #so_tool.run()
                         if not success:
                             logging.error(f"SO failed for {trial_name}")
                     except Exception as e:

@@ -1,0 +1,307 @@
+Proceed to run pipeline for 10 subjects? 
+ Enter to continue: [info] Processing subject subject01...
+[info] Step 1: Loading generic model
+[info] Updating Model file from 40000 to latest format...
+[info] Loaded model RajagopalLaiUhlrich2023 from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[info] Processing subject subject01...
+[info] Step 1: Loading generic model
+[info] Updating Model file from 40000 to latest format...
+[info] Loaded model RajagopalLaiUhlrich2023 from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[info] Step 2: Scaling generic model
+[info] Loaded marker file D:\student\MTech\Sakshi\STW\S01\scale\../../../../../../RESEARCH/STW_dataset/Extracted/S01/S01/Mocap/trcResults/static.trc (36 markers, 591 frames)
+[info] Measurement 'pelvis'
+[info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[info] 	overall scale factor = 1.06043
+[info] Measurement 'thigh'
+[info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[info] 	overall scale factor = 1.02819
+[info] Measurement 'shank'
+[info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[info] 	overall scale factor = 1.07223
+[info] Measurement 'foot'
+[info] 	pair 0 (RFCC, RFMT1): model = 0.231559, experimental = 0.198737
+[info] 	pair 1 (LFCC, LFMT1): model = 0.231559, experimental = 0.200261
+[info] 	overall scale factor = 0.861545
+[info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[info] Step 3: Placing markers on model
+[info] Loaded marker file D:\student\MTech\Sakshi\STW\S01\scale\..\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[info] Averaged frames from time 1.0 to 2.95 in D:\student\MTech\Sakshi\STW\S01\scale\..\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[info] Deleted 0 unused markers from model subject01.
+[info] Frame at (t = 1.0):	 total squared error = 0.0854774, marker error: RMS = 0.0487275, max = 0.106771 (RTH1)
+[info] Moved markers in model subject01 to match locations in marker file 'D:\student\MTech\Sakshi\STW\S01\scale\..\ExpData\Mocap\trcResults\static.trc'.
+[info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[info] Loaded model subject01 from file D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+               MODEL: subject01
+         coordinates: 22
+              forces: 80
+           actuators: 80
+             muscles: 80
+            analyses: 0
+              probes: 0
+              bodies: 13
+              joints: 13
+         constraints: 2
+             markers: 36
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[info] Running tool subject01_stw1...
+[info] ExternalForce::l_cal_0 Data source being set to 
+[info] ExternalForce::r_cal Data source being set to 
+[info] Storage: read data file = D:\student\MTech\Sakshi\STW\S01\IK\ik_output_stw1S01.mot (nr=1125 nc=23)
+[info] Low-pass filtering coordinates data with a cutoff frequency of 6.0...
+[info] InverseDynamicsTool: 247 time frames in 336 millisecond(s).
+[info] AbstractTool subject01_stw1 loading model ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[info] Updating Model file from 40000 to latest format...
+[info] Loaded model subject01 from file ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[info] Adding force object set from cmc_actuators.xml
+[info] Loaded model subject01 from file D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+               MODEL: subject01
+         coordinates: 22
+              forces: 80
+           actuators: 80
+             muscles: 80
+            analyses: 0
+              probes: 0
+              bodies: 13
+              joints: 13
+         constraints: 2
+             markers: 36
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[info] Running tool subject01_stw2...
+[info] ExternalForce::cal_r Data source being set to 
+[info] ExternalForce::cal_l Data source being set to 
+[info] Storage: read data file = D:\student\MTech\Sakshi\STW\S01\IK\results_stw\ik_output_stw2S01.mot (nr=1127 nc=23)
+[info] Low-pass filtering coordinates data with a cutoff frequency of 6.0...
+[info] InverseDynamicsTool: 247 time frames in 338 millisecond(s).
+[info] AbstractTool subject01_stw2 loading model ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[info] Updating Model file from 40000 to latest format...
+[info] Loaded model subject01 from file ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[info] Adding force object set from cmc_actuators.xml
+[info] Loaded model subject01 from file D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+               MODEL: subject01
+         coordinates: 22
+              forces: 80
+           actuators: 80
+             muscles: 80
+            analyses: 0
+              probes: 0
+              bodies: 13
+              joints: 13
+         constraints: 2
+             markers: 36
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[info] Running tool subject01_stw3...
+[info] ExternalForce::cal_r Data source being set to 
+[info] ExternalForce::cal_l Data source being set to 
+[info] Storage: read data file = D:\student\MTech\Sakshi\STW\S01\IK\results_stw\ik_output_stw3S01.mot (nr=1157 nc=23)
+[info] Low-pass filtering coordinates data with a cutoff frequency of 6.0...
+[info] InverseDynamicsTool: 247 time frames in 343 millisecond(s).
+[info] AbstractTool subject01_stw3 loading model ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[info] Updating Model file from 40000 to latest format...
+[info] Loaded model subject01 from file ../../model/RajagopalLa2023_LL-stw_adjustedWieghts_scaled.osim
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[info] Adding force object set from cmc_actuators.xml
+[info] Loaded model subject01 from file D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+               MODEL: subject01
+         coordinates: 22
+              forces: 80
+           actuators: 80
+             muscles: 80
+            analyses: 0
+              probes: 0
+              bodies: 13
+              joints: 13
+         constraints: 2
+             markers: 36
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[info] Running tool subject01_stw4...
+[info] ExternalForce::cal_r Data source being set to 
+[info] ExternalForce::cal_l Data source being set to 
+[error] IO.OpenInputFile(const string&,openmode mode): failed to open ./results_stw/ik_output_stw4S01.mot.
+[error] InverseDynamicsTool Failed: Storage: Failed to open file './results_stw/ik_output_stw4S01.mot'. Verify that the file exists at the specified location.
+	Thrown at Storage.cpp:186 in Storage().
+[info] Loaded model subject01 from file D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+               MODEL: subject01
+         coordinates: 22
+              forces: 80
+           actuators: 80
+             muscles: 80
+            analyses: 0
+              probes: 0
+              bodies: 13
+              joints: 13
+         constraints: 2
+             markers: 36
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[info] Running tool subject01_stw5...
+[info] ExternalForce::cal_r Data source being set to 
+[info] ExternalForce::cal_l Data source being set to 
+[error] IO.OpenInputFile(const string&,openmode mode): failed to open ./results_stw/ik_output_stw5S01.mot.
+[error] InverseDynamicsTool Failed: Storage: Failed to open file './results_stw/ik_output_stw5S01.mot'. Verify that the file exists at the specified location.
+	Thrown at Storage.cpp:186 in Storage().
+Starting subject 01...
+[1;91m D:\student\MTech\Sakshi\STW\S01\scale [0m
+D:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+Scaled model will be saved to: subject01_simbody_scaled.osim
+True
+True
+[91m ID Model File: D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim[00m
+[91m IK Output Motion File: D:\student\MTech\Sakshi\STW\S01\IK\ik_output_stw1S01.mot[00m
+True
+True
+[91m ID Model File: D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim[00m
+[91m IK Output Motion File: D:\student\MTech\Sakshi\STW\S01\IK\results_stw\ik_output_stw2S01.mot[00m
+True
+True
+[91m ID Model File: D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim[00m
+[91m IK Output Motion File: D:\student\MTech\Sakshi\STW\S01\IK\results_stw\ik_output_stw3S01.mot[00m
+True
+True
+[91m ID Model File: D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim[00m
+[91m IK Output Motion File: ./results_stw/ik_output_stw4S01.mot[00m
+True
+True
+[91m ID Model File: D:\student\MTech\Sakshi\STW\S01\scale\subject01_simbody_scaled.osim[00m
+[91m IK Output Motion File: ./results_stw/ik_output_stw5S01.mot[00m
