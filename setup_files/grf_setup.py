@@ -53,9 +53,9 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 if len(sys.argv) < 2:
         print("Usage: python grf_setup.py subject")
         sys.exit(1)
-    
-    
-subject = Path(sys.argv[1])
+
+
+subject = int(sys.argv[1])
 subjdir = Path(sys.argv[2])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID\grf"

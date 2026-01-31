@@ -11,6 +11,7 @@ def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
 BOLD_RED = "\033[1;91m" # Bold and bright red for extra attention
 END = "\033[0m" # Reset code
 
+
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -21,13 +22,12 @@ def replace_subject_in_path(path_str, old_subj, new_subj):
 def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     """Generate setup XMLs if they don't exist."""
     script_dir = Path(__file__).parent
-
     # GRF
     grf_dir = subj_dir / "ID" / "grf"
     if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
         logging.info(f"Generating GRF setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'setup_files/grf_setup.py', subject_num, subj_dir], cwd=str(script_dir), capture_output=True, text=True)
+            result = subprocess.run(['python', 'grf_setup.py', subject_num, subj_dir], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"GRF setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -154,6 +154,9 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
             id_xml = Path(trial['id_xml'])
             os.chdir(str(id_xml.parent))
             grf_xml = Path(trial['grf_xml'])
+            print(id_xml.exists())
+            print(grf_xml.exists())
+            exit()
             if id_xml.exists() and grf_xml.exists():
                 logging.info(f"Running ID for trial {trial_name}")
                 if not dry_run:

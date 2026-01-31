@@ -41,7 +41,7 @@ def calculate_marker_acceleration(trc_path, trial = 0,subject = 0,output_csv='ma
 
     # 3. Filter the Position Data (Butterworth Low-pass)
     # This is mandatory; differentiating raw noise creates huge errors.
-    b, a = butter(4, cutoff_freq / (fs / 2), btype='low',fs = fs) # type: ignore
+    b, a = butter(4, cutoff_freq / (fs / 2), btype='low') # type: ignore
     rfcc_filt = filtfilt(b, a, rfcc_pos, axis=0)
     lfcc_filt = filtfilt(b, a, lfcc_pos, axis=0)
 
@@ -57,9 +57,10 @@ def calculate_marker_acceleration(trc_path, trial = 0,subject = 0,output_csv='ma
     # We look for the first peak in Vertical (Y) acceleration (index 1)
     # A threshold of 0.5 m/s^2 is usually enough to detect movement
     threshold = 2
-    r_start_idx = np.where(np.abs(rfcc_acc[:, 1]) > threshold)[0][0]
-    l_start_idx = np.where(np.abs(lfcc_acc[:, 1]) > threshold)[0][0]
+    r_start_idx = np.where(np.abs(rfcc_acc[:, 1]) > threshold)[0][0]    
     
+    l_start_idx = np.where(np.abs(lfcc_acc[:, 1]) > threshold)[0][0]
+
     first_leg = "Right (RFCC)" if r_start_idx < l_start_idx else "Left (LFCC)"
     # print(f"The {first_leg} leg starts moving first at {time[min(r_start_idx, l_start_idx)]:.3f}s")
     
@@ -82,6 +83,7 @@ def calculate_marker_acceleration(trc_path, trial = 0,subject = 0,output_csv='ma
     # plt.ylabel('Acceleration ($m/s^2$)')
     # plt.xlabel('Time (s)')
     # plt.legend()
+    # plt.show()
     # plt.savefig(f'heel_acceleration_plot_{trial}.png')
     
     return first_leg
@@ -96,12 +98,13 @@ def calculate_marker_acceleration(trc_path, trial = 0,subject = 0,output_csv='ma
 #     for subject in range(1,11):
 #         leg[subject] = []  # Add this line
 #         for trial in range(1,6):
-#             trc_file = rf'd:\UG_Proj\Human Sitting to Walking Transitions\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
+#             trc_file = rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
 #             print(f"Processing {trc_file}...")
-#             df,first_leg = calculate_marker_acceleration(trc_file, output_csv=rf'd:\UG_Proj\Human Sitting to Walking Transitions\S{subject:02d}\subject_{subject:02d}_trial_{trial}_accelerations.csv',trial=trial,subject=subject)
+#             df,first_leg = calculate_marker_acceleration(trc_file, output_csv=rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\subject_{subject:02d}_trial_{trial}_accelerations.csv',trial=trial,subject=subject)
 #             leg[subject].append({trial:first_leg})
 #     leg_df = pd.DataFrame(leg).T
+#     print(leg_df)
     
-#     os.chdir(os.path.dirname(rf'd:\UG_Proj\Human Sitting to Walking Transitions'))
-#     leg_df.to_excel('leg_results.xlsx')
-#     print("Saved to leg_results.xlsx")
+    # os.chdir(os.path.dirname(rf'd:\UG_Proj\Human Sitting to Walking Transitions'))
+    # leg_df.to_excel('leg_results.xlsx')
+    # print("Saved to leg_results.xlsx")

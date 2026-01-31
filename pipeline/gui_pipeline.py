@@ -72,7 +72,7 @@ class PipelineEngine:
         if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
             self.logger.info(f"Generating GRF setups for subject {subject_num}")
             if not dry_run:
-                result = subprocess.run(['python', 'setup_files/grf_setup.py', subject_num, str(subj_dir)], cwd=str(script_dir), capture_output=True, text=True)
+                result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
                 if result.returncode != 0:
                     self.logger.error(f"GRF setup failed for {subject_num}: {result.stderr}")
                     return False
@@ -333,7 +333,7 @@ class MainWindow(QMainWindow):
         # Subject filter
         filter_box = QHBoxLayout()
         self.filter_input = QLineEdit()
-        self.filter_input.setPlaceholderText("Filter subjects (contains)")
+        self.filter_input.setPlaceholderText("Filter subjects (seperated by commas)...")
         self.filter_input.textChanged.connect(self.apply_filter)
         filter_box.addWidget(QLabel("Filter:"))
         filter_box.addWidget(self.filter_input)
@@ -464,8 +464,26 @@ class MainWindow(QMainWindow):
 
     def apply_filter(self, text: str):
         text = text.lower().strip()
+    
+        # Check if input looks like comma-separated numbers: (6,23,18) or 6,23,18
+        selected_subjects = set()
+        if text:
+            # Remove parentheses if present
+            cleaned = text.replace('(', '').replace(')', '')
+            # Check if it's a comma-separated list
+            if ',' in cleaned:
+                try:
+                    selected_subjects = {s.strip().zfill(2) for s in cleaned.split(',') if s.strip().isdigit()}
+                except:
+                    pass
+    
         for s, item in self.subject_items.items():
-            visible = text in s or text in item.text().lower()
+            # Show if: selected_subjects is empty (no filter), or subject matches
+            if selected_subjects:
+                visible = s in selected_subjects
+            else:
+                # Regular substring matching
+                visible = text in s or text in item.text().lower()
             item.setHidden(not visible)
 
     def subject_toggled(self, item: QListWidgetItem):
