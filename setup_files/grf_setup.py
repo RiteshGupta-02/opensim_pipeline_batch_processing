@@ -57,6 +57,7 @@ if len(sys.argv) < 2:
 
 subject = int(sys.argv[1])
 subjdir = Path(sys.argv[2])
+trial_name = str(sys.argv[3])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID\grf"
 os.makedirs(output_dir, exist_ok=True)

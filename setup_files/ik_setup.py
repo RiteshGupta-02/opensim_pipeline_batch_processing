@@ -5,7 +5,7 @@ from pathlib import Path
 # Template XML content
 xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 <OpenSimDocument Version="40500">
-	<InverseKinematicsTool name="{subject:02d}_stw{trial}">
+	<InverseKinematicsTool name="{subject}_{trial}">
 		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
 		<results_directory>./results_stw</results_directory>
 		<!--Name/path to the xml .osim file.-->
@@ -17,7 +17,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--The time range for the study.-->
 		<time_range>0 5.4550000000000001</time_range>
 		<!--Name of the resulting inverse kinematics motion (.mot) file.-->
-		<output_motion_file>D:/student/MTech/Sakshi/STW/S{subject:02d}/IK/ik_output_stw{trial}_S{subject:02d}.mot</output_motion_file>
+		<output_motion_file>D:/student/MTech/Sakshi/STW/{subject}/IK/ik_output_{trial}_{subject}.mot</output_motion_file>
 		<!--Flag (true or false) indicating whether or not to report errors from the inverse kinematics solution. Default is true.-->
 		<report_errors>true</report_errors>
 		<!--Markers and coordinates to be considered (tasks) and their weightings. The sum of weighted-squared task errors composes the cost function.-->
@@ -219,7 +219,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 			<groups />
 		</IKTaskSet>
 		<!--TRC file (.trc) containing the time history of observations of marker positions obtained during a motion capture experiment. Markers in this file that have a corresponding task and model marker are included.-->
-		<marker_file>../ExpData/Mocap/trcResults/stw{trial}.trc</marker_file>
+		<marker_file>../ExpData/Mocap/trcResults/{trial}.trc</marker_file>
 		<!--The name of the storage (.sto or .mot) file containing the time history of coordinate observations. Coordinate values from this file are included if there is a corresponding model coordinate and task. -->
 		<coordinate_file>Unassigned</coordinate_file>
 		<!--Flag indicating whether or not to report model marker locations. Note, model marker locations are expressed in Ground.-->
@@ -235,24 +235,36 @@ if len(sys.argv) < 3:
 	sys.exit(1)
      
 subjdir = Path(sys.argv[1])
+trial = (sys.argv[2])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\IK"
 os.makedirs(output_dir, exist_ok=True)
-subject = subjdir.name
+subject = (subjdir.name)
+xml_content = xml_template.format(trial=trial,subject=subject)
 
-# Generate files for trials 1 through 5
-for trial in range(1, 6):
-    # Fill in the template with current trial number
-    xml_content = xml_template.format(trial=trial,subject=subject)
-    
-    # Create filename
-    filename = f"ik_setup_S{subject}_stw{trial}.xml"
-    filepath = os.path.join(output_dir, filename)
-    
-    # Write to file
-    with open(filepath, 'w', encoding='UTF-8') as f:
-        f.write(xml_content)
-    
-    print(f"Created: {filepath}")
+# Create filename
+filename = f"ik_setup_{subject}_{trial}.xml"
+filepath = os.path.join(output_dir, filename)
 
-print(f"\nAll files created successfully in '{output_dir}' directory!")
+# Write to file
+with open(filepath, 'w', encoding='UTF-8') as f:
+	f.write(xml_content)
+
+print(f"Created: {filepath}")
+
+# # Generate files for trials 1 through 5
+# for trial in range(1, 6):
+#     # Fill in the template with current trial number
+#     xml_content = xml_template.format(trial=trial,subject=subject)
+    
+#     # Create filename
+#     filename = f"ik_setup_S{subject}_stw{trial}.xml"
+#     filepath = os.path.join(output_dir, filename)
+    
+#     # Write to file
+#     with open(filepath, 'w', encoding='UTF-8') as f:
+#         f.write(xml_content)
+    
+#     print(f"Created: {filepath}")
+
+# print(f"\nAll files created successfully in '{output_dir}' directory!")
