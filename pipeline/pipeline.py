@@ -37,7 +37,7 @@ def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     if not id_dir.exists() or not list(id_dir.glob("id_setup_*.xml")):
         logging.info(f"Generating ID setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'id_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
+            result = subprocess.run(['python', 'id_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"ID setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -47,7 +47,7 @@ def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     if not so_dir.exists() or not list(so_dir.glob("so_setup_*.xml")):
         logging.info(f"Generating SO setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'SO_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
+            result = subprocess.run(['python', 'SO_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"SO setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -57,7 +57,7 @@ def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     if not ik_dir.exists() or not list(ik_dir.glob("ik_setup_*.xml")):
         logging.info(f"Generating IK setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'ik_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
+            result = subprocess.run(['python', 'ik_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"IK setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -129,6 +129,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
 
             # IK
             ik_tool = None
+            generate_setups_if_needed(subject_num, subj_dir, trial_name,dry_run)
             ik_xml = Path(trial['ik_xml'])
             os.chdir(str(ik_xml.parent))
             if ik_xml.exists():
@@ -147,6 +148,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                         continue
             else:
                 logging.warning(f"IK XML not found for {trial_name}; skipping IK.")
+            generate_setups_if_needed(subject_num, subj_dir, trial_name,dry_run)
             # ID (requires GRF)
             id_xml = Path(trial['id_xml'])
             os.chdir(str(id_xml.parent))
@@ -175,6 +177,7 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
             # SO   
             so_xml = Path(trial['so_xml'])
             os.chdir(str(so_xml.parent))
+            generate_setups_if_needed(subject_num, subj_dir, trial_name,dry_run)
             if so_xml.exists():
                 logging.info(f"Running SO for trial {trial_name}")
                 if not dry_run:
@@ -240,9 +243,9 @@ def main():
     else:
         logging.info("Running in sequential mode.")
         for s in subjects:
-            if s == '02':
-                print(f"Starting subject {s}...")
-                run_pipeline_for_subject(s, template, root_dir, dry_run)
+        #     if s == '02':
+            print(f"Starting subject {s}...")
+            run_pipeline_for_subject(s, template, root_dir, dry_run)
 
     logging.info("Pipeline completed.")
 
