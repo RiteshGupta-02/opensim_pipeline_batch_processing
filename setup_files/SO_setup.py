@@ -7,7 +7,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 <OpenSimDocument Version="40000">
 	<AnalyzeTool name="subject{subject}_{trial}">
 		<!--Name of the .osim file used to construct a model.-->
-		<model_file>../../model/RajagopalLa2023_LL-stw_adjustedWieghts.osim</model_file>
+		<model_file>{model_file}</model_file>
 		<!--Replace the model's force set with sets specified in <force_set_files>? If false, the force set is appended to.-->
 		<replace_force_set>false</replace_force_set>
 		<!--List of xml files used to construct a force set for the model.-->
@@ -93,7 +93,7 @@ subject = subjdir.name
 # Generate files for trials 1 through 5
 for trial in range(1, 6):
     # Fill in the template with current trial number
-    xml_content = xml_template.format(trial=trial,subject=subject)
+    xml_content = xml_template.format(trial=trial,subject=subject, model_file=Path(sys.argv[3]))
     
     # Create filename
     filename = f"so_setup_S{subject}_{trial}.xml"

@@ -22,7 +22,7 @@ from pathlib import Path
 from collections import defaultdict
 
 REQ_EXT = {".xml", ".trc", ".mot", ".sto"}
-OUTPUT = "template_map.json"
+OUTPUT = r"pipeline/template_map.json"
 
 
 def print_tree(root: Path, prefix=""):
@@ -161,13 +161,30 @@ def find_associated_files_for_trial(trial_path, all_files):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python map_file(single).py /path/to/example_subject")
-        sys.exit(1)
+    # Accept example folder via CLI or open a folder dialog
+    example = None
+    if len(sys.argv) >= 2:
+        example = Path(sys.argv[1])
+    else:
+        try:
+            import tkinter as tk
+            from tkinter import filedialog
+            tk_root = tk.Tk()
+            tk_root.withdraw()
+            folder = filedialog.askdirectory(title="Select example subject folder")
+            tk_root.destroy()
+            if folder:
+                example = Path(folder)
+            else:
+                print("No folder selected. Exiting.")
+                sys.exit(1)
+        except Exception as e:
+            print("Tkinter folder selection failed:", e)
+            print("You can also provide the folder as a CLI argument.")
+            sys.exit(1)
 
-    example = Path(sys.argv[1]).expanduser().resolve()
     root_dir = example
-    if not example.is_dir():
+    if not example.exists() or not example.is_dir():
         print("Example must be a directory.")
         sys.exit(1)
 
@@ -177,8 +194,7 @@ def main():
     
     print("\n-----------------------------------\n")
 
-    files = gather_files(example,".osim")
-    
+    files = gather_files(example)
     osim_models = [p for p in files if p.suffix.lower() == '.osim']
     check=False
     for subject in example.iterdir():

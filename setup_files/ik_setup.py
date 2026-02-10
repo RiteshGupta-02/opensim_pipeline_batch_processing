@@ -9,7 +9,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
 		<results_directory>./results_stw</results_directory>
 		<!--Name/path to the xml .osim file.-->
-		<model_file>../Scale/subject_scaled_walk.osim</model_file>
+		<model_file>{model_file}</model_file>
 		<!--The relative weighting of kinematic constraint errors. By default this is Infinity, which means constraints are strictly enforced as part of the optimization and are not appended to the objective (cost) function. Any other non-zero positive scalar is the penalty factor for constraint violations.-->
 		<constraint_weight>Inf</constraint_weight>
 		<!--The accuracy of the solution in absolute terms, i.e. the number of significant digits to which the solution can be trusted. Default 1e-5.-->
@@ -236,11 +236,12 @@ if len(sys.argv) < 3:
      
 subjdir = Path(sys.argv[1])
 trial = (sys.argv[2])
+model_file = Path(sys.argv[3])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\IK"
 os.makedirs(output_dir, exist_ok=True)
 subject = (subjdir.name)
-xml_content = xml_template.format(trial=trial,subject=subject)
+xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
 
 # Create filename
 filename = f"ik_setup_{subject}_{trial}.xml"

@@ -9,7 +9,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
 		<results_directory>./results_ID</results_directory>
 		<!--Name of the .osim file used to construct a model.-->
-		<model_file>../model/RajagopalLa2023_LL-stw_adjustedWieghts.osim</model_file>
+		<model_file>{model_file}</model_file>
 		<!--Time range over which the inverse dynamics problem is solved.-->
 		<time_range> 4.4000000000000003553 5.6299999999999998934</time_range>
 		<!--List of forces by individual or grouping name (e.g. All, actuators, muscles, ...) to be excluded when computing model dynamics. 'All' also excludes external loads added via 'external_loads_file'.-->
@@ -30,19 +30,20 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 </OpenSimDocument>
 '''
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
 	print("Usage: python id_setup.py <output_directory>")
 	sys.exit(1)
      
 subjdir = Path(sys.argv[1])
 trial = Path(sys.argv[2]).name.removesuffix('.trc').removeprefix('stw')  # Extract trial from filename
+model_file = Path(sys.argv[3])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID"
 os.makedirs(output_dir, exist_ok=True)
 subject = (subjdir.name)
 
 
-xml_content = xml_template.format(trial=trial,subject=subject)
+xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
 
 # Create filename
 filename = rf"id_setup_{subject.lower()}_stw{trial}.xml"

@@ -51,7 +51,6 @@ class PipelineConfig:
     run_id: bool
     run_so: bool
     parallel: bool
-    dry_run: bool
 
 
 # ------------------ Utility functions ------------------
@@ -65,51 +64,64 @@ class PipelineEngine:
     def __init__(self, logger: logging.Logger = None):# type: ignore
         self.logger = logger or logging.getLogger(__name__)
 
-    def generate_setups_if_needed(self, subject_num: str, subj_dir: Path, trial_name: str, dry_run: bool = False) -> bool:
+    def generate_setups_if_needed(self, subject_num: str, subj_dir: Path, trial_name: str, model_file: Path) -> bool:
+        print({model_file})
         script_dir = Path(__file__).parent
+        if trial_name == "scale":
+            # scale
+            scale_dir = subj_dir / "scale"
+            if not scale_dir.exists() or not list(scale_dir.glob("subject*_Setup_Scale*.xml")):
+                self.logger.info(f"Generating scale setup for subject {subject_num}")
+                
+                result = subprocess.run(['python', 'scale_setup.py', subject_num, str(subj_dir), str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+                if result.returncode != 0:
+                    self.logger.error(f"Scale setup failed for {subject_num}: {result.stderr}")
+                    return False
+            return True
         # GRF
         grf_dir = subj_dir / "ID" / "grf"
         if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
             self.logger.info(f"Generating GRF setups for subject {subject_num}")
-            if not dry_run:
-                result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
-                if result.returncode != 0:
-                    self.logger.error(f"GRF setup failed for {subject_num}: {result.stderr}")
-                    return False
+            
+            result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            if result.returncode != 0:
+                self.logger.error(f"GRF setup failed for {subject_num}: {result.stderr}")
+                return False
 
         # ID
         id_dir = subj_dir / "ID"
         if not id_dir.exists() or not list(id_dir.glob("id_setup_*.xml")):
             self.logger.info(f"Generating ID setups for subject {subject_num}")
-            if not dry_run:
-                result = subprocess.run(['python', 'id_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
-                if result.returncode != 0:
-                    self.logger.error(f"ID setup failed for {subject_num}: {result.stderr}")
-                    return False
+            
+            result = subprocess.run(['python', 'id_setup.py', subject_num, str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            if result.returncode != 0:
+                self.logger.error(f"ID setup failed for {subject_num}: {result.stderr}")
+                return False
 
         # SO
         so_dir = subj_dir / "SO"
         if not so_dir.exists() or not list(so_dir.glob("so_setup_*.xml")):
             self.logger.info(f"Generating SO setups for subject {subject_num}")
-            if not dry_run:
-                result = subprocess.run(['python', 'SO_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
-                if result.returncode != 0:
-                    self.logger.error(f"SO setup failed for {subject_num}: {result.stderr}")
-                    return False
+            
+            result = subprocess.run(['python', 'SO_setup.py', subject_num, str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            if result.returncode != 0:
+                self.logger.error(f"SO setup failed for {subject_num}: {result.stderr}")
+                return False
 
         # IK
         ik_dir = subj_dir / "IK"
         if not ik_dir.exists() or not list(ik_dir.glob("ik_setup_*.xml")):
             self.logger.info(f"Generating IK setups for subject {subject_num}")
-            if not dry_run:
-                result = subprocess.run(['python', 'ik_setup.py', subject_num], cwd=str(script_dir), capture_output=True, text=True)
-                if result.returncode != 0:
-                    self.logger.error(f"IK setup failed for {subject_num}: {result.stderr}")
-                    return False
+            
+            result = subprocess.run(['python', 'ik_setup.py', subject_num, str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            if result.returncode != 0:
+                self.logger.error(f"IK setup failed for {subject_num}: {result.stderr}")
+                return False
+        
 
         return True
 
-    def run_pipeline_for_subject(self, subject_num: str, template: dict, root_dir: Path, enabled_steps: dict, selected_trials: List[str] = None, dry_run: bool = False): # type: ignore
+    def run_pipeline_for_subject(self, subject_num: str, template: dict, root_dir: Path, enabled_steps: dict, selected_trials: List[str] = None): # type: ignore
         subj_dir = root_dir / f"S{subject_num}"
         if not subj_dir.exists():
             self.logger.warning(f"Subject {subject_num} directory not found; skipping.")
@@ -127,39 +139,45 @@ class PipelineEngine:
                             if isinstance(v, str):
                                 item[k] = replace_subject_in_path(v, "01", subject_num)
 
-        if dry_run:
-            self.logger.info(f"Adapted paths for subject {subject_num}: {json.dumps(adapted, indent=2)}")
-
+        
         original_cwd = os.getcwd()
         try:
-            os.chdir(os.path.join(str(subj_dir)+'\\scale'))
+            
             print('{BOLD_RED}',os.getcwd(),'{END}')
             self.logger.info(f"Processing subject {subject_num} in {subj_dir}")
 
             # Scaling
+            scaled_model = None
+
             if enabled_steps.get('scale', True):
+                os.mkdir(subj_dir / "scale") if not (subj_dir / "scale").exists() else None
+                os.chdir(os.path.join(str(subj_dir)+'\\scale'))
                 scale_xml = Path(adapted.get('scale_xml', ''))
-                os.chdir(str(scale_xml.parent))
+                self.generate_setups_if_needed(subject_num, subj_dir, trial_name = "scale", model_file=adapted.get('model', '')) # generate scale setup if not exists
                 if scale_xml.exists():
+                    os.chdir(str(scale_xml.parent))
                     self.logger.info(f"Running scaling for subject {subject_num}")
-                    if not dry_run:
-                        try:
-                            
-                            scale_tool = osim.ScaleTool(str(scale_xml))
-                            scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                            print(f"Scaled model will be saved to: {scaled_model}")
-                            success = scale_tool.run()
-                            if not success:
-                                self.logger.error(f"Scaling failed for {subject_num}")
-                                return
-                        except Exception as e:
-                            self.logger.error(f"Scaling failed for {subject_num}: {str(e)}")
+                    
+                    try:
+                        
+                        scale_tool = osim.ScaleTool(str(scale_xml))
+                        scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
+                        print(f"Scaled model will be saved to: {scaled_model}")
+                        success = scale_tool.run()
+                        if not success:
+                            self.logger.error(f"Scaling failed for {subject_num}")
                             return
+                    except Exception as e:
+                        self.logger.error(f"Scaling failed for {subject_num}: {str(e)}")
+                        return
                 else:
                     self.logger.warning(f"Scale XML not found for {subject_num}; skipping scaling.")
 
             # Run for each trial
             mapped_trials = adapted.get('mapped_trials', [])
+            if not scaled_model:
+                self.logger.error(f"[FATAL] No scaled model for subject {subject_num}")
+                return
             for trial in mapped_trials:
                 # extract trial name robustly
                 trc = trial.get('trial_trc', '')
@@ -175,7 +193,8 @@ class PipelineEngine:
 
                 self.logger.info(f"Processing trial {trial_name} for subject {subject_num}")
 
-                if not self.generate_setups_if_needed(subject_num, subj_dir, trial_name, dry_run):
+                if not self.generate_setups_if_needed(subject_num, subj_dir, trial_name, model_file=scaled_model):
+                    self.logger.info(1,"\n")
                     self.logger.error(f"Setup generation failed for {subject_num}; skipping.")
                     return
 
@@ -186,18 +205,18 @@ class PipelineEngine:
                     os.chdir(str(ik_xml.parent))            
                     if ik_xml.exists():
                         self.logger.info(f"Running IK for trial {trial_name}")
-                        if not dry_run:
-                            try:
-                                ik_tool = osim.InverseKinematicsTool(str(ik_xml))
-                                ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model)))) 
-                                ik_tool.setMarkerDataFileName(trial['trial_trc'])
-                                success = ik_tool.run() 
-                                if not success:
-                                    self.logger.error(f"IK failed for {trial_name}")
-                                    continue
-                            except Exception as e:
-                                self.logger.error(f"IK failed for {trial_name}: {str(e)}")
+                        
+                        try:
+                            ik_tool = osim.InverseKinematicsTool(str(ik_xml))
+                            ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model)))) 
+                            ik_tool.setMarkerDataFileName(trial['trial_trc'])
+                            success = ik_tool.run() 
+                            if not success:
+                                self.logger.error(f"IK failed for {trial_name}")
                                 continue
+                        except Exception as e:
+                            self.logger.error(f"IK failed for {trial_name}: {str(e)}")
+                            continue
                     else:
                         self.logger.warning(f"IK XML not found for {trial_name}; skipping IK.")
 
@@ -208,21 +227,21 @@ class PipelineEngine:
                     os.chdir(str(id_xml.parent))
                     if id_xml.exists() and grf_xml.exists():
                         self.logger.info(f"Running ID for trial {trial_name}")
-                        if not dry_run:
-                            try:
-                                
-                                    id_tool = osim.InverseDynamicsTool(str(id_xml))
-                                    id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))   
-                                    if ik_tool is not None:
-                                        id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, ik_tool.getOutputMotionFileName()))
-                                    id_tool.setExternalLoadsFileName(str(grf_xml))
-                                    success = id_tool.run()
-                                    if not success:
-                                        self.logger.error(f"ID failed for {trial_name}")
-                                        continue
-                            except Exception as e:
-                                self.logger.error(f"ID failed for {trial_name}: {str(e)}")
-                                continue
+                        
+                        try:
+                            
+                                id_tool = osim.InverseDynamicsTool(str(id_xml))
+                                id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))   
+                                if ik_tool is not None:
+                                    id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, ik_tool.getOutputMotionFileName()))
+                                id_tool.setExternalLoadsFileName(str(grf_xml))
+                                success = id_tool.run()
+                                if not success:
+                                    self.logger.error(f"ID failed for {trial_name}")
+                                    continue
+                        except Exception as e:
+                            self.logger.error(f"ID failed for {trial_name}: {str(e)}")
+                            continue
                     else:
                         self.logger.warning(f"ID or GRF XML not found for {trial_name}; skipping ID.")
 
@@ -232,21 +251,21 @@ class PipelineEngine:
                     os.chdir(str(so_xml.parent))
                     if so_xml.exists():
                         self.logger.info(f"Running SO for trial {trial_name}")
-                        if not dry_run:
-                            try:
-                                so_tool = osim.AnalyzeTool(str(so_xml))
-                                so_tool.setExternalLoadsFileName(str(grf_xml)) 
-                                so_tool.setModel((os.path.join(scale_xml.parent,(scaled_model))))   
-                                if ik_tool is not None:
-                                    so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
-                                success = so_tool.run()
-                                if not success:
-                                    self.logger.error(f"SO failed for {trial_name}")
-                            except Exception as e:
-                                self.logger.error(f"SO failed for {trial_name}: {str(e)}")
+                        
+                        try:
+                            so_tool = osim.AnalyzeTool(str(so_xml))
+                            so_tool.setExternalLoadsFileName(str(grf_xml)) 
+                            so_tool.setModel((os.path.join(scale_xml.parent,(scaled_model))))   
+                            if ik_tool is not None:
+                                so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
+                            success = so_tool.run()
+                            if not success:
+                                self.logger.error(f"SO failed for {trial_name}")
+                        except Exception as e:
+                            self.logger.error(f"SO failed for {trial_name}: {str(e)}")
                     else:
                         self.logger.warning(f"SO XML not found for {trial_name}; skipping SO.")
-
+        
         finally:
             os.chdir(original_cwd)
 
@@ -268,8 +287,7 @@ class PipelineEngine:
                                              'id': config.run_id,
                                              'so': config.run_so
                                          },
-                                         selected_trials=config.trials.get(s, None),  # type: ignore
-                                         dry_run=config.dry_run)
+                                         selected_trials=config.trials.get(s, None))
 
         self.logger.info("Pipeline completed.")
 
@@ -277,7 +295,7 @@ class PipelineEngine:
 # ------------------ Logging integration with Qt ------------------
 class QtLogEmitter(QObject):
     log_signal = Signal(str)
-
+    progress_signal = Signal(int)
 
 class QtLogHandler(logging.Handler):
     def __init__(self, emitter: QtLogEmitter):
@@ -308,7 +326,8 @@ class MainWindow(QMainWindow):
         self.log_handler.setFormatter(formatter)
         self.logger.addHandler(self.log_handler)
 
-        self.engine = PipelineEngine(logger=self.logger)
+        
+
 
         # UI elements
         central = QWidget()
@@ -328,6 +347,15 @@ class MainWindow(QMainWindow):
         btn_box.addWidget(self.label_template)
 
         left_panel.addLayout(btn_box)
+
+        self.btn_select_all = QPushButton("Select all")
+        self.btn_deselect_all = QPushButton("Deselect all")
+        self.btn_select_all.clicked.connect(self.select_all_subjects)
+        self.btn_deselect_all.clicked.connect(self.deselect_all_subjects)
+
+        btn_box.addWidget(self.btn_select_all)
+        btn_box.addWidget(self.btn_deselect_all)
+
 
         # Subject filter
         filter_box = QHBoxLayout()
@@ -366,11 +394,9 @@ class MainWindow(QMainWindow):
         # Run controls
         run_box = QHBoxLayout()
         self.chk_parallel = QCheckBox("Parallel (use multiple cores)")
-        self.chk_dry = QCheckBox("Dry run")
         self.btn_run = QPushButton("Run pipeline")
         self.btn_run.clicked.connect(self.run_pipeline)
         run_box.addWidget(self.chk_parallel)
-        run_box.addWidget(self.chk_dry)
         run_box.addWidget(self.btn_run)
         left_panel.addLayout(run_box)
 
@@ -389,6 +415,8 @@ class MainWindow(QMainWindow):
         # Progress
         self.progress = QProgressBar()
         right_panel.addWidget(self.progress)
+        self.engine = PipelineEngine(logger=self.logger)
+        self.qt_emitter.progress_signal.connect(self.progress.setValue)
 
         main_layout.addLayout(left_panel, stretch=1)
         main_layout.addLayout(right_panel, stretch=2)
@@ -407,6 +435,25 @@ class MainWindow(QMainWindow):
     # ------------------ UI methods ------------------
     def append_log(self, text: str):
         self.log_text.append(text)
+
+    def select_all_subjects(self):
+        for s, item in self.subject_items.items():
+            item.setCheckState(Qt.Checked)
+        for i in range(self.trial_tree.topLevelItemCount()):
+            top = self.trial_tree.topLevelItem(i)
+            top.setCheckState(0, Qt.Checked)
+            for j in range(top.childCount()):
+                top.child(j).setCheckState(0, Qt.Checked)
+
+    def deselect_all_subjects(self):
+        for s, item in self.subject_items.items():
+            item.setCheckState(Qt.Unchecked)
+        for i in range(self.trial_tree.topLevelItemCount()):
+            top = self.trial_tree.topLevelItem(i)
+            top.setCheckState(0, Qt.Unchecked)
+            for j in range(top.childCount()):
+                top.child(j).setCheckState(0, Qt.Unchecked)
+
 
     def load_template(self):
         path, _ = QFileDialog.getOpenFileName(self, "Select template JSON", os.getcwd(), "JSON files (*.json)")
@@ -556,8 +603,7 @@ class MainWindow(QMainWindow):
             run_ik=self.chk_ik.isChecked(),
             run_id=self.chk_id.isChecked(),
             run_so=self.chk_so.isChecked(),
-            parallel=self.chk_parallel.isChecked(),
-            dry_run=self.chk_dry.isChecked()
+            parallel=self.chk_parallel.isChecked()
         )
         return config
 
@@ -577,7 +623,6 @@ class MainWindow(QMainWindow):
             'so': config.run_so
         }.items() if v]
         msg += ','.join(steps)
-        msg += f"\nDry run: {config.dry_run}"
 
         if QMessageBox.question(self, "Confirm run", msg) != QMessageBox.StandardButton.Yes:
             return
@@ -588,7 +633,7 @@ class MainWindow(QMainWindow):
 
     def _background_run(self, config: PipelineConfig):
         try:
-            self.progress.setValue(0)
+            self.qt_emitter.progress_signal.emit(0)
             total_subjects = len(config.subjects)
             for idx, s in enumerate(config.subjects):
                 # update progress (emit via logger so UI updates in main thread)
@@ -598,11 +643,12 @@ class MainWindow(QMainWindow):
                     self.resolve_trials_for_subject(s)
                 self.engine.run_pipeline_for_subject(s, json.load(open(config.template_path)), config.root_dir,
                                                     enabled_steps={'scale': config.run_scale, 'ik': config.run_ik, 'id': config.run_id, 'so': config.run_so},
-                                                    selected_trials=config.trials.get(s, None),
-                                                    dry_run=config.dry_run)
-                self.progress.setValue(int(((idx+1)/total_subjects)*100))
+                                                    selected_trials=config.trials.get(s, None))
+                value = int(((idx+1)/total_subjects)*100)
+                self.qt_emitter.progress_signal.emit(value)
+
             self.logger.info("All done")
-            self.progress.setValue(100)
+            self.qt_emitter.progress_signal.emit(100)
         except Exception as e:
             self.logger.exception(f"Pipeline failed: {e}")
 

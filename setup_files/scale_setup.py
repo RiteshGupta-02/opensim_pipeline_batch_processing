@@ -4,7 +4,7 @@ import csv
 from xml.etree import ElementTree as ET
 from pathlib import Path
 
-def create_scale_setup(subject_id, mass, height, subj_dir):
+def create_scale_setup(subject_id, mass, height, subj_dir, model_file):
     """Create a scale setup XML file for a subject."""
     
     # Template XML structure
@@ -22,7 +22,7 @@ def create_scale_setup(subject_id, mass, height, subj_dir):
         <!--Specifies the name of the unscaled model (.osim) and the marker set.-->
         <GenericModelMaker>
             <!--Model file (.osim) for the unscaled model.-->
-            <model_file>..\\..\\model\\RajagopalLa2023_LL-stw_adjustedWieghts.osim</model_file>
+            <model_file>{model_file}</model_file>
             <!--Set of model markers used to scale the model. Scaling is done based on distances between model markers compared to the same distances between the corresponding experimental markers.-->
             <marker_set_file>Unassigned</marker_set_file>
         </GenericModelMaker>
@@ -235,12 +235,14 @@ def create_scale_setup(subject_id, mass, height, subj_dir):
     print(f"Created: {output_file}")
 
 def main():
-    if len(sys.argv) < 3:
+    if len(sys.argv) < 4:
         print("Usage: python scale_setup.py <subject_num>, <subj_dir>")
         sys.exit(1)
-    
+    os.chdir(Path(__file__).parent)  # Change to the directory of the script to ensure relative paths work
     csv_file = '../Subject Details.csv'  # CSV file with subject_id, mass, height
     subj_dir = Path(sys.argv[2])
+    model_file = Path(sys.argv[3])
+    print("*"*500)
 
     
     # Read CSV file
@@ -255,7 +257,7 @@ def main():
                     height = row['Height (m)']
                     
                     # subj_dir = os.path.join(subj_dir, subject_id)
-                    create_scale_setup(subject_id, mass, height, subj_dir)
+                    create_scale_setup(subject_id, mass, height, subj_dir, model_file)
             # for row in reader:
             #     subject_id = row['subject_id']
             #     mass = row['mass']
