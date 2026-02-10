@@ -4737,3 +4737,628 @@ misc modelcomponents: 0
 [2026-01-21 11:47:51.213] [warning] Couldn't find file 'l_foot.vtp'.
 [2026-01-21 11:47:51.213] [warning] Couldn't find file 'l_bofoot.vtp'.
 [2026-01-21 11:47:51.239] [info] PointKinematics.setBody: set body to calcn_r.
+[2026-02-10 19:51:56.095] [info] Processing subject S02...
+[2026-02-10 19:51:56.095] [info] Step 1: Loading generic model
+[2026-02-10 19:51:56.117] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 19:51:56.118] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 19:51:56.119] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 19:51:56.119] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 19:51:56.130] [info] Step 2: Scaling generic model
+[2026-02-10 19:51:56.138] [error] Unable to open marker file D:\RESEARCH\STW_dataset\Extracted\S02\scale\D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 19:53:31.470] [info] Processing subject S02...
+[2026-02-10 19:53:31.470] [info] Step 1: Loading generic model
+[2026-02-10 19:53:31.493] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 19:53:31.494] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 19:53:31.494] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 19:53:31.494] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 19:53:31.494] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 19:53:31.495] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 19:53:31.495] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 19:53:31.495] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 19:53:31.495] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 19:53:31.506] [info] Step 2: Scaling generic model
+[2026-02-10 19:53:31.514] [error] Unable to open marker file D:\RESEARCH\STW_dataset\Extracted\S02\scale\D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 19:58:15.666] [info] Processing subject S02...
+[2026-02-10 19:58:15.666] [info] Step 1: Loading generic model
+[2026-02-10 19:58:15.688] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 19:58:15.689] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 19:58:15.689] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 19:58:15.689] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 19:58:15.690] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 19:58:15.690] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 19:58:15.690] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 19:58:15.690] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 19:58:15.690] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 19:58:15.702] [info] Step 2: Scaling generic model
+[2026-02-10 19:58:15.729] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 19:58:15.729] [info] Measurement 'pelvis'
+[2026-02-10 19:58:15.729] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 19:58:15.729] [info] 	overall scale factor = 1.07228
+[2026-02-10 19:58:15.729] [info] Measurement 'thigh'
+[2026-02-10 19:58:15.729] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 19:58:15.730] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 19:58:15.730] [info] 	overall scale factor = 1.00245
+[2026-02-10 19:58:15.730] [info] Measurement 'shank'
+[2026-02-10 19:58:15.730] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 19:58:15.730] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 19:58:15.730] [info] 	overall scale factor = 1.12125
+[2026-02-10 19:58:15.730] [info] Measurement 'foot'
+[2026-02-10 19:58:15.730] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 19:58:15.730] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 19:58:15.730] [info] 	overall scale factor = 0.926578
+[2026-02-10 19:58:15.770] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 19:58:15.771] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 19:58:15.771] [info] Step 3: Placing markers on model
+[2026-02-10 19:58:15.813] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 19:58:15.813] [info] Averaged frames from time 1.0 to 2.95 in D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 19:58:15.813] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 19:58:15.838] [info] Frame at (t = 1.0):	 total squared error = 0.0, marker error: RMS = -nan, max = 0.0 ()
+[2026-02-10 19:58:15.838] [info] Moved markers in model S02 to match locations in marker file 'D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc'.
+[2026-02-10 19:58:15.852] [info] Wrote model file 'S02_simbody_scaled.osim' from model S02.
+[2026-02-10 19:58:15.853] [info] Wrote marker file 'S02_marker_scaled.xml' from model S02.
+[2026-02-10 20:00:03.610] [info] Processing subject S02...
+[2026-02-10 20:00:03.610] [info] Step 1: Loading generic model
+[2026-02-10 20:00:03.633] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:00:03.634] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:00:03.635] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:00:03.647] [info] Step 2: Scaling generic model
+[2026-02-10 20:00:03.673] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:00:03.673] [info] Measurement 'pelvis'
+[2026-02-10 20:00:03.673] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:00:03.673] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:00:03.673] [info] Measurement 'thigh'
+[2026-02-10 20:00:03.673] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:00:03.673] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:00:03.673] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:00:03.673] [info] Measurement 'shank'
+[2026-02-10 20:00:03.673] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:00:03.673] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:00:03.673] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:00:03.673] [info] Measurement 'foot'
+[2026-02-10 20:00:03.673] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:00:03.673] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:00:03.673] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:00:03.713] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:00:03.713] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:00:03.713] [info] Step 3: Placing markers on model
+[2026-02-10 20:00:03.753] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:00:03.753] [info] Averaged frames from time 1.0 to 2.95 in D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:00:03.753] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:00:34.044] [info] Processing subject S02...
+[2026-02-10 20:00:34.044] [info] Step 1: Loading generic model
+[2026-02-10 20:00:34.066] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:00:34.067] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:00:34.078] [info] Step 2: Scaling generic model
+[2026-02-10 20:00:34.104] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:00:34.104] [info] Measurement 'pelvis'
+[2026-02-10 20:00:34.104] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:00:34.104] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:00:34.104] [info] Measurement 'thigh'
+[2026-02-10 20:00:34.104] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:00:34.104] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:00:34.104] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:00:34.105] [info] Measurement 'shank'
+[2026-02-10 20:00:34.105] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:00:34.105] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:00:34.105] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:00:34.105] [info] Measurement 'foot'
+[2026-02-10 20:00:34.105] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:00:34.105] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:00:34.105] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:00:34.143] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:00:34.143] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:00:34.143] [info] Step 3: Placing markers on model
+[2026-02-10 20:00:34.183] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:00:34.183] [info] Averaged frames from time 1.0 to 2.95 in D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:00:34.183] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:04:27.083] [info] Processing subject S02...
+[2026-02-10 20:04:27.083] [info] Step 1: Loading generic model
+[2026-02-10 20:04:27.105] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:04:27.105] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:04:27.105] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:04:27.105] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:04:27.106] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:04:27.106] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:04:27.106] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:04:27.106] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:04:27.106] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:04:27.117] [info] Step 2: Scaling generic model
+[2026-02-10 20:04:27.143] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:27.143] [info] Measurement 'pelvis'
+[2026-02-10 20:04:27.143] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:04:27.143] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:04:27.143] [info] Measurement 'thigh'
+[2026-02-10 20:04:27.143] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:04:27.143] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:04:27.143] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:04:27.143] [info] Measurement 'shank'
+[2026-02-10 20:04:27.143] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:04:27.143] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:04:27.143] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:04:27.143] [info] Measurement 'foot'
+[2026-02-10 20:04:27.143] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:04:27.143] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:04:27.143] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:04:27.182] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:04:27.183] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:04:27.183] [info] Step 3: Placing markers on model
+[2026-02-10 20:04:27.223] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:27.223] [info] Averaged frames from time 1.0 to 2.95 in d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:04:27.223] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:04:39.052] [info] Processing subject S02...
+[2026-02-10 20:04:39.052] [info] Step 1: Loading generic model
+[2026-02-10 20:04:39.077] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:04:39.078] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:04:39.094] [info] Step 2: Scaling generic model
+[2026-02-10 20:04:39.127] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:39.127] [info] Measurement 'pelvis'
+[2026-02-10 20:04:39.127] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:04:39.127] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:04:39.127] [info] Measurement 'thigh'
+[2026-02-10 20:04:39.127] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:04:39.127] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:04:39.127] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:04:39.127] [info] Measurement 'shank'
+[2026-02-10 20:04:39.127] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:04:39.127] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:04:39.127] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:04:39.127] [info] Measurement 'foot'
+[2026-02-10 20:04:39.127] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:04:39.127] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:04:39.127] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:04:39.165] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:04:39.166] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:04:39.166] [info] Step 3: Placing markers on model
+[2026-02-10 20:04:39.205] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:39.205] [info] Averaged frames from time 1.0 to 2.95 in d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:04:39.205] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:04:39.231] [info] Frame at (t = 1.0):	 total squared error = 0.0, marker error: RMS = -nan, max = 0.0 ()
+[2026-02-10 20:04:39.231] [info] Moved markers in model S02 to match locations in marker file 'd:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc'.
+[2026-02-10 20:04:39.245] [info] Wrote model file 'S02_simbody_scaled.osim' from model S02.
+[2026-02-10 20:04:39.247] [info] Wrote marker file 'S02_marker_scaled.xml' from model S02.
+[2026-02-10 20:04:57.289] [info] Processing subject S02...
+[2026-02-10 20:04:57.289] [info] Step 1: Loading generic model
+[2026-02-10 20:04:57.310] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:04:57.311] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:04:57.321] [info] Step 2: Scaling generic model
+[2026-02-10 20:04:57.346] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:57.346] [info] Measurement 'pelvis'
+[2026-02-10 20:04:57.346] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:04:57.346] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:04:57.346] [info] Measurement 'thigh'
+[2026-02-10 20:04:57.346] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:04:57.346] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:04:57.346] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:04:57.346] [info] Measurement 'shank'
+[2026-02-10 20:04:57.346] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:04:57.346] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:04:57.346] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:04:57.346] [info] Measurement 'foot'
+[2026-02-10 20:04:57.346] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:04:57.346] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:04:57.346] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:04:57.381] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:04:57.382] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:04:57.382] [info] Step 3: Placing markers on model
+[2026-02-10 20:04:57.423] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:04:57.423] [info] Averaged frames from time 1.0 to 2.95 in d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:04:57.423] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:04:57.446] [info] Frame at (t = 1.0):	 total squared error = 0.0, marker error: RMS = -nan, max = 0.0 ()
+[2026-02-10 20:04:57.446] [info] Moved markers in model S02 to match locations in marker file 'd:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc'.
+[2026-02-10 20:04:57.459] [info] Wrote model file 'S02_simbody_scaled.osim' from model S02.
+[2026-02-10 20:04:57.460] [info] Wrote marker file 'S02_marker_scaled.xml' from model S02.
+[2026-02-10 20:05:03.852] [info] Processing subject S02...
+[2026-02-10 20:05:03.852] [info] Step 1: Loading generic model
+[2026-02-10 20:05:03.873] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:05:03.874] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:05:03.886] [info] Step 2: Scaling generic model
+[2026-02-10 20:05:03.912] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:05:03.913] [info] Measurement 'pelvis'
+[2026-02-10 20:05:03.913] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:05:03.913] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:05:03.913] [info] Measurement 'thigh'
+[2026-02-10 20:05:03.913] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:05:03.913] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:05:03.913] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:05:03.913] [info] Measurement 'shank'
+[2026-02-10 20:05:03.913] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:05:03.913] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:05:03.913] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:05:03.913] [info] Measurement 'foot'
+[2026-02-10 20:05:03.913] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:05:03.913] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:05:03.913] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:05:03.952] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:05:03.952] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:05:03.952] [info] Step 3: Placing markers on model
+[2026-02-10 20:05:03.993] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:05:03.993] [info] Averaged frames from time 1.0 to 2.95 in d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:05:03.993] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:05:04.017] [info] Frame at (t = 1.0):	 total squared error = 0.0, marker error: RMS = -nan, max = 0.0 ()
+[2026-02-10 20:05:04.017] [info] Moved markers in model S02 to match locations in marker file 'd:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc'.
+[2026-02-10 20:05:04.031] [info] Wrote model file 'S02_simbody_scaled.osim' from model S02.
+[2026-02-10 20:05:04.031] [info] Wrote marker file 'S02_marker_scaled.xml' from model S02.
+[2026-02-10 20:05:11.822] [info] Processing subject S02...
+[2026-02-10 20:05:11.822] [info] Step 1: Loading generic model
+[2026-02-10 20:05:11.845] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:05:11.846] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:05:11.847] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:05:11.863] [info] Step 2: Scaling generic model
+[2026-02-10 20:05:11.892] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:05:11.892] [info] Measurement 'pelvis'
+[2026-02-10 20:05:11.892] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:05:11.892] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:05:11.892] [info] Measurement 'thigh'
+[2026-02-10 20:05:11.892] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:05:11.893] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:05:11.893] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:05:11.893] [info] Measurement 'shank'
+[2026-02-10 20:05:11.893] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:05:11.893] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:05:11.893] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:05:11.893] [info] Measurement 'foot'
+[2026-02-10 20:05:11.893] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:05:11.893] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:05:11.893] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:05:11.930] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:05:11.930] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:05:11.930] [info] Step 3: Placing markers on model
+[2026-02-10 20:05:11.970] [info] Loaded marker file d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:05:11.971] [info] Averaged frames from time 1.0 to 2.95 in d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:05:11.971] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:05:37.279] [info] Processing subject S02...
+[2026-02-10 20:05:37.279] [info] Step 1: Loading generic model
+[2026-02-10 20:05:37.299] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:05:37.300] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:05:37.311] [info] Step 2: Scaling generic model
+[2026-02-10 20:05:37.318] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:05:45.240] [info] Processing subject S02...
+[2026-02-10 20:05:45.240] [info] Step 1: Loading generic model
+[2026-02-10 20:05:45.264] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:05:45.264] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:05:45.264] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:05:45.264] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:05:45.264] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:05:45.265] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:05:45.265] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:05:45.265] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:05:45.265] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:05:45.275] [info] Step 2: Scaling generic model
+[2026-02-10 20:05:45.282] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:05:59.750] [info] Processing subject S02...
+[2026-02-10 20:05:59.750] [info] Step 1: Loading generic model
+[2026-02-10 20:05:59.775] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:05:59.775] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:05:59.776] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:05:59.776] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:05:59.786] [info] Step 2: Scaling generic model
+[2026-02-10 20:05:59.792] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:06:25.847] [info] Processing subject S02...
+[2026-02-10 20:06:25.847] [info] Step 1: Loading generic model
+[2026-02-10 20:06:25.868] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:06:25.869] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:06:25.879] [info] Step 2: Scaling generic model
+[2026-02-10 20:06:25.886] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:06:27.028] [info] Processing subject S02...
+[2026-02-10 20:06:27.028] [info] Step 1: Loading generic model
+[2026-02-10 20:06:27.057] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:06:27.059] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:06:27.071] [info] Step 2: Scaling generic model
+[2026-02-10 20:06:27.081] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:06:29.543] [info] Processing subject S02...
+[2026-02-10 20:06:29.543] [info] Step 1: Loading generic model
+[2026-02-10 20:06:29.570] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:06:29.572] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:06:29.583] [info] Step 2: Scaling generic model
+[2026-02-10 20:06:29.590] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:06:34.737] [info] Processing subject S02...
+[2026-02-10 20:06:34.737] [info] Step 1: Loading generic model
+[2026-02-10 20:06:34.760] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:06:34.761] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:06:34.771] [info] Step 2: Scaling generic model
+[2026-02-10 20:06:34.777] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:01.122] [info] Processing subject S02...
+[2026-02-10 20:07:01.122] [info] Step 1: Loading generic model
+[2026-02-10 20:07:01.144] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:01.145] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:01.156] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:01.163] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:42.846] [info] Processing subject S02...
+[2026-02-10 20:07:42.846] [info] Step 1: Loading generic model
+[2026-02-10 20:07:42.869] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:42.870] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:42.881] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:42.888] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:43.864] [info] Processing subject S02...
+[2026-02-10 20:07:43.864] [info] Step 1: Loading generic model
+[2026-02-10 20:07:43.885] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:43.886] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:43.886] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:43.886] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:43.886] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:43.887] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:43.887] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:43.887] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:43.887] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:43.897] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:43.905] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:44.632] [info] Processing subject S02...
+[2026-02-10 20:07:44.632] [info] Step 1: Loading generic model
+[2026-02-10 20:07:44.654] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:44.655] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:44.666] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:44.673] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:45.040] [info] Processing subject S02...
+[2026-02-10 20:07:45.040] [info] Step 1: Loading generic model
+[2026-02-10 20:07:45.062] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:45.063] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:45.073] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:45.080] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:45.263] [info] Processing subject S02...
+[2026-02-10 20:07:45.263] [info] Step 1: Loading generic model
+[2026-02-10 20:07:45.284] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:45.285] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:45.295] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:45.302] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:45.663] [info] Processing subject S02...
+[2026-02-10 20:07:45.663] [info] Step 1: Loading generic model
+[2026-02-10 20:07:45.685] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:45.686] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:45.687] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:45.702] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:45.713] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:46.000] [info] Processing subject S02...
+[2026-02-10 20:07:46.000] [info] Step 1: Loading generic model
+[2026-02-10 20:07:46.020] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:46.021] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:46.031] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:46.038] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:46.362] [info] Processing subject S02...
+[2026-02-10 20:07:46.362] [info] Step 1: Loading generic model
+[2026-02-10 20:07:46.384] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:46.385] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:46.396] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:46.402] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:07:46.680] [info] Processing subject S02...
+[2026-02-10 20:07:46.680] [info] Step 1: Loading generic model
+[2026-02-10 20:07:46.700] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:07:46.701] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:07:46.712] [info] Step 2: Scaling generic model
+[2026-02-10 20:07:46.719] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:08:05.285] [info] Processing subject S02...
+[2026-02-10 20:08:05.285] [info] Step 1: Loading generic model
+[2026-02-10 20:08:05.306] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:08:05.307] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:08:05.308] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:08:05.317] [info] Step 2: Scaling generic model
+[2026-02-10 20:08:05.324] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:08:07.328] [info] Processing subject S02...
+[2026-02-10 20:08:07.328] [info] Step 1: Loading generic model
+[2026-02-10 20:08:07.349] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:08:07.350] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:08:07.361] [info] Step 2: Scaling generic model
+[2026-02-10 20:08:07.368] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-10 20:09:27.286] [info] Processing subject S02...
+[2026-02-10 20:09:27.286] [info] Step 1: Loading generic model
+[2026-02-10 20:09:27.309] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:09:27.310] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:09:27.310] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:09:27.310] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:09:27.310] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:09:27.311] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:09:27.311] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:09:27.311] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:09:27.311] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:09:27.322] [info] Step 2: Scaling generic model
+[2026-02-10 20:09:27.348] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:09:27.348] [info] Measurement 'pelvis'
+[2026-02-10 20:09:27.349] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275499
+[2026-02-10 20:09:27.349] [info] 	overall scale factor = 1.07228
+[2026-02-10 20:09:27.349] [info] Measurement 'thigh'
+[2026-02-10 20:09:27.349] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.500122
+[2026-02-10 20:09:27.349] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512114
+[2026-02-10 20:09:27.349] [info] 	overall scale factor = 1.00245
+[2026-02-10 20:09:27.349] [info] Measurement 'shank'
+[2026-02-10 20:09:27.349] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446535
+[2026-02-10 20:09:27.349] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430066
+[2026-02-10 20:09:27.349] [info] 	overall scale factor = 1.12125
+[2026-02-10 20:09:27.349] [info] Measurement 'foot'
+[2026-02-10 20:09:27.349] [info] 	pair 0 (RFCC, RFMT2): model = 0.209764, experimental = 0.200275
+[2026-02-10 20:09:27.349] [info] 	pair 1 (LFCC, LFMT2): model = 0.212199, experimental = 0.190638
+[2026-02-10 20:09:27.349] [info] 	overall scale factor = 0.926578
+[2026-02-10 20:09:27.386] [info] Wrote model file 'S02_scaledOnly.osim' from model.
+[2026-02-10 20:09:27.387] [info] Wrote scale file 'S02_scaleSet_applied.xml' for model S02.
+[2026-02-10 20:09:27.387] [info] Step 3: Placing markers on model
+[2026-02-10 20:09:27.428] [info] Loaded marker file D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-10 20:09:27.428] [info] Averaged frames from time 1.0 to 2.95 in D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-10 20:09:27.428] [info] Deleted 0 unused markers from model S02.
+[2026-02-10 20:09:27.451] [info] Frame at (t = 1.0):	 total squared error = 0.0, marker error: RMS = -nan, max = 0.0 ()
+[2026-02-10 20:09:27.451] [info] Moved markers in model S02 to match locations in marker file 'D:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc'.
+[2026-02-10 20:09:27.465] [info] Wrote model file 'S02_simbody_scaled.osim' from model S02.
+[2026-02-10 20:09:27.465] [info] Wrote marker file 'S02_marker_scaled.xml' from model S02.
+[2026-02-10 20:09:57.640] [info] Processing subject S02...
+[2026-02-10 20:09:57.640] [info] Step 1: Loading generic model
+[2026-02-10 20:09:57.661] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:09:57.662] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:09:57.674] [info] Step 2: Scaling generic model
+[2026-02-10 20:09:57.682] [error] MarkerData: ERROR- Marker file type is unsupported
+[2026-02-10 20:10:07.621] [info] Processing subject S02...
+[2026-02-10 20:10:07.621] [info] Step 1: Loading generic model
+[2026-02-10 20:10:07.642] [info] Loaded model RajagopalLaiUhlrich2023_lowerLimb from file d:\student\MTech\Sakshi\STW\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-10 20:10:07.643] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-10 20:10:07.653] [info] Step 2: Scaling generic model
+[2026-02-10 20:10:07.660] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc

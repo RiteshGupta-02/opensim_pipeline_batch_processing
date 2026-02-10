@@ -83,7 +83,7 @@ class PipelineEngine:
         if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
             self.logger.info(f"Generating GRF setups for subject {subject_num}")
             
-            result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir), str(trial_name)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 self.logger.error(f"GRF setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -151,18 +151,24 @@ class PipelineEngine:
 
             if enabled_steps.get('scale', True):
                 os.mkdir(subj_dir / "scale") if not (subj_dir / "scale").exists() else None
-                os.chdir(os.path.join(str(subj_dir)+'\\scale'))
+                # os.chdir(os.path.join(str(subj_dir)+'\\scale'))
                 scale_xml = Path(adapted.get('scale_xml', ''))
                 self.generate_setups_if_needed(subject_num, subj_dir, trial_name = "scale", model_file=adapted.get('model', '')) # generate scale setup if not exists
                 if scale_xml.exists():
+                    print(os.getcwd())
                     os.chdir(str(scale_xml.parent))
                     self.logger.info(f"Running scaling for subject {subject_num}")
                     
                     try:
                         
                         scale_tool = osim.ScaleTool(str(scale_xml))
+                        scale_tool.setPathToSubject("")
                         scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                        print(f"Scaled model will be saved to: {scaled_model}")
+                        scale_tool.getGenericModelMaker().setModelFileName(str(adapted.get('model', '')))
+                        scale_tool.getMarkerPlacer().setMarkerFileName(str(adapted.get('static_trc', '')))
+                        scale_tool.getModelScaler().setMarkerFileName(str(adapted.get('static_trc', '')))
+                        # scale_tool.printToXML(str(scale_xml))  # Save the possibly updated XML
+                        
                         success = scale_tool.run()
                         if not success:
                             self.logger.error(f"Scaling failed for {subject_num}")

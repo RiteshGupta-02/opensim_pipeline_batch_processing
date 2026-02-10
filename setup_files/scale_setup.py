@@ -183,7 +183,7 @@ def create_scale_setup(subject_id, mass, height, subj_dir, model_file):
                 <groups />
             </MeasurementSet>
             <!--TRC file (.trc) containing the marker positions used for measurement-based scaling. This is usually a static trial, but doesn't need to be.  The marker-pair distances are computed for each time step in the TRC file and averaged across the time range.-->
-            <marker_file>../ExpData/Mocap/trcResults/static.trc</marker_file>
+            <marker_file>-1</marker_file>
             <!--Time range over which to average marker-pair distances in the marker file (.trc) for measurement-based scaling.-->
             <time_range> 1 2.9500000000000001776</time_range>
             <!--Flag (true or false) indicating whether or not to preserve relative mass between segments.-->
@@ -203,7 +203,7 @@ def create_scale_setup(subject_id, mass, height, subj_dir, model_file):
                 <groups />
             </IKTaskSet>
             <!--TRC file (.trc) containing the time history of experimental marker positions (usually a static trial).-->
-            <marker_file>../ExpData/Mocap/trcResults/static.trc</marker_file>
+            <marker_file>-1</marker_file>
             <!--Time range over which the marker positions are averaged.-->
             <time_range> 1 2.9500000000000001776</time_range>
             <!--Name of the motion file (.mot) written after marker relocation (optional).-->
@@ -222,7 +222,8 @@ def create_scale_setup(subject_id, mass, height, subj_dir, model_file):
     xml_content = xml_template.format(
         subject_id=subject_id,
         mass=mass,
-        height=height
+        height=height,
+        model_file=model_file
     )
     
     # Write to file
@@ -236,7 +237,7 @@ def create_scale_setup(subject_id, mass, height, subj_dir, model_file):
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python scale_setup.py <subject_num>, <subj_dir>")
+        print("Usage: python scale_setup.py <subject_num>, <subj_dir>, <model_file>")
         sys.exit(1)
     os.chdir(Path(__file__).parent)  # Change to the directory of the script to ensure relative paths work
     csv_file = '../Subject Details.csv'  # CSV file with subject_id, mass, height
@@ -258,19 +259,19 @@ def main():
                     
                     # subj_dir = os.path.join(subj_dir, subject_id)
                     create_scale_setup(subject_id, mass, height, subj_dir, model_file)
-            # for row in reader:
-            #     subject_id = row['subject_id']
-            #     mass = row['mass']
-            #     height = row['height']
-                
-            #     subj_dir = os.path.join(subj_dir, subject_id)
-            #     create_scale_setup(subject_id, mass, height, subj_dir)
-    # except FileNotFoundError:
-    #     print(f"Error: CSV file '{csv_file}' not found")
-    #     sys.exit(1)
-    except KeyError as e:
-        print(f"Error: Missing required column {e} in CSV file")
+        # for row in reader:
+        #     subject_id = row['subject_id']
+        #     mass = row['mass']
+        #     height = row['height']
+            
+        #     subj_dir = os.path.join(subj_dir, subject_id)
+        #     create_scale_setup(subject_id, mass, height, subj_dir)
+    except FileNotFoundError:
+        print(f"Error: CSV file '{csv_file}' not found")
         sys.exit(1)
+    # except KeyError as e:
+    #     print(f"Error: Missing required column {e} in CSV file")
+    #     sys.exit(1)
 
 if __name__ == "__main__":
     main()
