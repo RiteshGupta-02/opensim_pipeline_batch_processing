@@ -5362,3 +5362,1544 @@ misc modelcomponents: 0
 [2026-02-10 20:10:07.643] [warning] Couldn't find file 'l_bofoot.vtp'.
 [2026-02-10 20:10:07.653] [info] Step 2: Scaling generic model
 [2026-02-10 20:10:07.660] [error] Unable to open marker file d:\RESEARCH\STW_dataset\Extracted\S02\scale\d:\RESEARCH\STW_dataset\Extracted\S02\S02\Mocap\trcResults\static.trc
+[2026-02-11 11:41:26.967] [info] Processing subject subject01...
+[2026-02-11 11:41:26.967] [info] Step 1: Loading generic model
+[2026-02-11 11:41:27.065] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:41:27.066] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:41:27.067] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:41:27.067] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:41:27.067] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:41:27.067] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:41:27.067] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:41:27.068] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:41:27.069] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:41:27.069] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:41:27.069] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:41:27.069] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:41:27.141] [info] Step 2: Scaling generic model
+[2026-02-11 11:41:27.172] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:42:16.504] [info] Processing subject subject01...
+[2026-02-11 11:42:16.504] [info] Step 1: Loading generic model
+[2026-02-11 11:42:16.578] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:42:16.579] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:42:16.580] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:42:16.580] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:42:16.581] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:42:16.581] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:42:16.582] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:42:16.582] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:42:16.610] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:42:16.612] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:42:16.612] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:42:16.612] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:42:16.612] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:42:16.612] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:42:16.613] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:42:16.613] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:42:16.613] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:42:16.613] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:42:16.650] [info] Step 2: Scaling generic model
+[2026-02-11 11:42:16.668] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:45:37.039] [info] Processing subject subject01...
+[2026-02-11 11:45:37.039] [info] Step 1: Loading generic model
+[2026-02-11 11:45:37.094] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:45:37.095] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:45:37.095] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:45:37.095] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:45:37.095] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:45:37.096] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:45:37.096] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:45:37.096] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:45:37.096] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:45:37.097] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:45:37.097] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:45:37.097] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:45:37.097] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:45:37.098] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:45:37.098] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:45:37.098] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:45:37.098] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:45:37.098] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:45:37.121] [info] Step 2: Scaling generic model
+[2026-02-11 11:45:37.142] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:45:58.003] [info] Processing subject subject01...
+[2026-02-11 11:45:58.003] [info] Step 1: Loading generic model
+[2026-02-11 11:45:58.103] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:45:58.105] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:45:58.105] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:45:58.107] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:45:58.107] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:45:58.108] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:45:58.108] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:45:58.109] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:45:58.109] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:45:58.109] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:45:58.110] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:45:58.110] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:45:58.111] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:45:58.111] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:45:58.112] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:45:58.113] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:45:58.113] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:45:58.114] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:45:58.151] [info] Step 2: Scaling generic model
+[2026-02-11 11:45:58.167] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:46:04.676] [info] Processing subject subject01...
+[2026-02-11 11:46:04.676] [info] Step 1: Loading generic model
+[2026-02-11 11:46:04.732] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:46:04.733] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:46:04.733] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:46:04.734] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:46:04.734] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:46:04.734] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:46:04.734] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:46:04.735] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:46:04.736] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:46:04.736] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:46:04.736] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:46:04.736] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:46:04.736] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:46:04.769] [info] Step 2: Scaling generic model
+[2026-02-11 11:46:04.794] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:46:34.087] [info] Processing subject subject01...
+[2026-02-11 11:46:34.087] [info] Step 1: Loading generic model
+[2026-02-11 11:46:34.144] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:46:34.144] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:46:34.145] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:46:34.146] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:46:34.171] [info] Step 2: Scaling generic model
+[2026-02-11 11:46:34.198] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:46:58.353] [info] Processing subject subject01...
+[2026-02-11 11:46:58.353] [info] Step 1: Loading generic model
+[2026-02-11 11:46:58.407] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:46:58.408] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:46:58.408] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:46:58.408] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:46:58.408] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:46:58.409] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:46:58.410] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:46:58.410] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:46:58.410] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:46:58.411] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:46:58.411] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:46:58.411] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:46:58.411] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:46:58.443] [info] Step 2: Scaling generic model
+[2026-02-11 11:46:58.467] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:49:57.422] [info] Processing subject subject01...
+[2026-02-11 11:49:57.423] [info] Step 1: Loading generic model
+[2026-02-11 11:49:57.503] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:49:57.504] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:49:57.504] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:49:57.504] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:49:57.504] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:49:57.504] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:49:57.505] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:49:57.506] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:49:57.506] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:49:57.506] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:49:57.533] [info] Step 2: Scaling generic model
+[2026-02-11 11:49:57.553] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:54:01.972] [info] Set log level to Debug.
+[2026-02-11 11:54:01.977] [info] Processing subject subject01...
+[2026-02-11 11:54:01.977] [info] Step 1: Loading generic model
+[2026-02-11 11:54:02.035] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:54:02.036] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:54:02.036] [debug] The following locations were tried:
+[2026-02-11 11:54:02.036] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:54:02.036] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:54:02.036] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:54:02.037] [debug] The following locations were tried:
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:54:02.037] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:54:02.037] [debug] The following locations were tried:
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:54:02.037] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:54:02.037] [debug] The following locations were tried:
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:54:02.037] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:54:02.037] [debug] The following locations were tried:
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:54:02.037] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:54:02.038] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:54:02.038] [debug] The following locations were tried:
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:54:02.038] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:54:02.038] [debug] The following locations were tried:
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:54:02.038] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:54:02.038] [debug] The following locations were tried:
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:54:02.038] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:54:02.038] [debug] The following locations were tried:
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:54:02.038] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:54:02.038] [debug] The following locations were tried:
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:54:02.038] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:54:02.039] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:54:02.040] [debug] The following locations were tried:
+[2026-02-11 11:54:02.040] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:54:02.040] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:54:02.041] [debug] The following locations were tried:
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:54:02.041] [debug] The following locations were tried:
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:54:02.041] [debug] The following locations were tried:
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:54:02.041] [debug] The following locations were tried:
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:54:02.041] [debug] The following locations were tried:
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:54:02.041] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:54:02.041] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:54:02.042] [debug] The following locations were tried:
+[2026-02-11 11:54:02.042] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:54:02.042] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:54:02.068] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:02.068] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:02.069] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:02.069] [debug] # initializations=1
+[2026-02-11 11:54:02.069] [debug] # assembly steps: 1
+[2026-02-11 11:54:02.069] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:02.069] [info] Step 2: Scaling generic model
+[2026-02-11 11:54:02.095] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:02.096] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:02.096] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:02.096] [debug] # initializations=1
+[2026-02-11 11:54:02.096] [debug] # assembly steps: 1
+[2026-02-11 11:54:02.096] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:02.096] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:54:03.541] [info] Set log level to Debug.
+[2026-02-11 11:54:03.546] [info] Processing subject subject01...
+[2026-02-11 11:54:03.546] [info] Step 1: Loading generic model
+[2026-02-11 11:54:03.642] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:54:03.643] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:54:03.643] [debug] The following locations were tried:
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:54:03.643] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:54:03.644] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:54:03.644] [debug] The following locations were tried:
+[2026-02-11 11:54:03.644] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:54:03.644] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:54:03.644] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:54:03.644] [debug] The following locations were tried:
+[2026-02-11 11:54:03.644] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:54:03.644] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:54:03.645] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:54:03.645] [debug] The following locations were tried:
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:54:03.645] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:54:03.645] [debug] The following locations were tried:
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:54:03.645] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:54:03.645] [debug] The following locations were tried:
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:54:03.645] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:54:03.645] [debug] The following locations were tried:
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:54:03.645] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:54:03.645] [debug] The following locations were tried:
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:54:03.645] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:54:03.646] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:54:03.646] [debug] The following locations were tried:
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:54:03.646] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:54:03.646] [debug] The following locations were tried:
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:54:03.646] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:54:03.646] [debug] The following locations were tried:
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:54:03.646] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:54:03.646] [debug] The following locations were tried:
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:54:03.646] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:54:03.676] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:03.676] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:03.676] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:03.676] [debug] # initializations=1
+[2026-02-11 11:54:03.676] [debug] # assembly steps: 1
+[2026-02-11 11:54:03.676] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:03.676] [info] Step 2: Scaling generic model
+[2026-02-11 11:54:03.693] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:03.693] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:03.693] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:03.693] [debug] # initializations=1
+[2026-02-11 11:54:03.693] [debug] # assembly steps: 1
+[2026-02-11 11:54:03.693] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:03.693] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:54:09.959] [info] Set log level to Debug.
+[2026-02-11 11:54:09.962] [info] Processing subject subject01...
+[2026-02-11 11:54:09.962] [info] Step 1: Loading generic model
+[2026-02-11 11:54:10.017] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:54:10.018] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:54:10.018] [debug] The following locations were tried:
+[2026-02-11 11:54:10.018] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:54:10.018] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:54:10.018] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:54:10.018] [debug] The following locations were tried:
+[2026-02-11 11:54:10.018] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:54:10.018] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:54:10.019] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:54:10.019] [debug] The following locations were tried:
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:54:10.019] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:54:10.020] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:54:10.020] [debug] The following locations were tried:
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:54:10.020] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:54:10.021] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:54:10.021] [debug] The following locations were tried:
+[2026-02-11 11:54:10.021] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:54:10.021] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:54:10.021] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:54:10.021] [debug] The following locations were tried:
+[2026-02-11 11:54:10.021] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:54:10.021] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:54:10.048] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:10.048] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:10.048] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:10.048] [debug] # initializations=1
+[2026-02-11 11:54:10.048] [debug] # assembly steps: 1
+[2026-02-11 11:54:10.048] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:10.048] [info] Step 2: Scaling generic model
+[2026-02-11 11:54:10.074] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:10.074] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:54:10.074] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:54:10.074] [debug] # initializations=1
+[2026-02-11 11:54:10.074] [debug] # assembly steps: 1
+[2026-02-11 11:54:10.074] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:54:10.075] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:55:28.703] [info] Set log level to Debug.
+[2026-02-11 11:55:28.706] [info] Processing subject subject01...
+[2026-02-11 11:55:28.706] [info] Step 1: Loading generic model
+[2026-02-11 11:55:28.778] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:55:28.779] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:55:28.779] [debug] The following locations were tried:
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:55:28.779] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:55:28.779] [debug] The following locations were tried:
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:55:28.779] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:55:28.779] [debug] The following locations were tried:
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:55:28.779] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:55:28.779] [debug] The following locations were tried:
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:55:28.779] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:55:28.780] [debug] The following locations were tried:
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:55:28.780] [debug] The following locations were tried:
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:55:28.780] [debug] The following locations were tried:
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:55:28.780] [debug] The following locations were tried:
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:55:28.780] [debug] The following locations were tried:
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:55:28.780] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:55:28.780] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:55:28.781] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:55:28.781] [debug] The following locations were tried:
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:55:28.781] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:55:28.782] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:55:28.782] [debug] The following locations were tried:
+[2026-02-11 11:55:28.782] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:55:28.782] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:55:28.813] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.813] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:28.813] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.813] [debug] # initializations=1
+[2026-02-11 11:55:28.813] [debug] # assembly steps: 1
+[2026-02-11 11:55:28.813] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:28.813] [info] Step 2: Scaling generic model
+[2026-02-11 11:55:28.874] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.874] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:28.874] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.874] [debug] # initializations=1
+[2026-02-11 11:55:28.874] [debug] # assembly steps: 1
+[2026-02-11 11:55:28.874] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:28.929] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:55:28.929] [info] Measurement 'pelvis'
+[2026-02-11 11:55:28.929] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 11:55:28.929] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 11:55:28.929] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 11:55:28.929] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 11:55:28.929] [info] 	overall scale factor = 0.991406
+[2026-02-11 11:55:28.929] [info] Measurement 'thigh'
+[2026-02-11 11:55:28.929] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 11:55:28.929] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 11:55:28.929] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 11:55:28.929] [info] 	overall scale factor = 1.03513
+[2026-02-11 11:55:28.929] [info] Measurement 'shank'
+[2026-02-11 11:55:28.929] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 11:55:28.929] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 11:55:28.929] [info] 	overall scale factor = 1.07223
+[2026-02-11 11:55:28.929] [info] Measurement 'foot'
+[2026-02-11 11:55:28.929] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 11:55:28.929] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 11:55:28.929] [info] 	overall scale factor = 1.06069
+[2026-02-11 11:55:28.929] [debug] UNASSEMBLED(track) CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.929] [debug] Model numQs: 22  Assembler num freeQs: 22
+[2026-02-11 11:55:28.929] [debug] Tracking: t= 0.0 (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:55:28.932] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:55:28.932] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:55:28.933] [debug] The following locations were tried:
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:55:28.933] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:55:28.934] [debug] The following locations were tried:
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:55:28.934] [debug] The following locations were tried:
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:55:28.934] [debug] The following locations were tried:
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:55:28.934] [debug] The following locations were tried:
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:55:28.934] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:55:28.950] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.950] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:28.950] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.950] [debug] # initializations=1
+[2026-02-11 11:55:28.950] [debug] # assembly steps: 1
+[2026-02-11 11:55:28.950] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:28.965] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.965] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:28.965] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.965] [debug] # initializations=1
+[2026-02-11 11:55:28.965] [debug] # assembly steps: 1
+[2026-02-11 11:55:28.965] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:28.984] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.984] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:28.984] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:28.984] [debug] # initializations=1
+[2026-02-11 11:55:28.984] [debug] # assembly steps: 1
+[2026-02-11 11:55:28.984] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:29.023] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 11:55:29.024] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 11:55:29.024] [info] Step 3: Placing markers on model
+[2026-02-11 11:55:29.162] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:55:29.163] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 11:55:29.163] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 11:55:29.185] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:29.185] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:29.185] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:55:29.185] [debug] # initializations=1
+[2026-02-11 11:55:29.185] [debug] # assembly steps: 1
+[2026-02-11 11:55:29.185] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:55:29.190] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0459919)
+[2026-02-11 11:55:29.190] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:55:29.242] [debug] ASSEMBLED CONFIGURATION (acc=0.000100000 tol=1.0e-05 normerr=0.0, maxerr=0.0, cost=0.000506261)
+[2026-02-11 11:55:29.242] [debug] # initializations=1
+[2026-02-11 11:55:29.242] [debug] # assembly steps: 1
+[2026-02-11 11:55:29.242] [debug]  evals: goal=80 grad=29 error=80 jac=29
+[2026-02-11 11:55:29.242] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 11:55:29.242] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 11:55:29.274] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 11:55:29.275] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 11:56:16.734] [info] Set log level to Debug.
+[2026-02-11 11:56:16.737] [info] Processing subject subject01...
+[2026-02-11 11:56:16.737] [info] Step 1: Loading generic model
+[2026-02-11 11:56:16.787] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:56:16.788] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:56:16.788] [debug] The following locations were tried:
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:56:16.788] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:56:16.788] [debug] The following locations were tried:
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:56:16.788] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:56:16.788] [debug] The following locations were tried:
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:56:16.788] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:56:16.788] [debug] The following locations were tried:
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:56:16.788] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:56:16.788] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:56:16.789] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:56:16.789] [debug] The following locations were tried:
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:56:16.789] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:56:16.790] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:56:16.790] [debug] The following locations were tried:
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:56:16.790] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:56:16.821] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:16.821] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:16.822] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:16.822] [debug] # initializations=1
+[2026-02-11 11:56:16.822] [debug] # assembly steps: 1
+[2026-02-11 11:56:16.822] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:16.822] [info] Step 2: Scaling generic model
+[2026-02-11 11:56:16.840] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:16.840] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:16.840] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:16.840] [debug] # initializations=1
+[2026-02-11 11:56:16.840] [debug] # assembly steps: 1
+[2026-02-11 11:56:16.840] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:16.840] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:56:19.606] [info] Processing subject subject01...
+[2026-02-11 11:56:19.606] [info] Step 1: Loading generic model
+[2026-02-11 11:56:19.661] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:56:19.662] [debug] The following locations were tried:
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:56:19.662] [debug] The following locations were tried:
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:56:19.662] [debug] The following locations were tried:
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:56:19.662] [debug] The following locations were tried:
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:56:19.662] [debug] The following locations were tried:
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:56:19.662] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:56:19.662] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:56:19.663] [debug] The following locations were tried:
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:56:19.663] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:56:19.663] [debug] The following locations were tried:
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:56:19.663] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:56:19.663] [debug] The following locations were tried:
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:56:19.663] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:56:19.663] [debug] The following locations were tried:
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:56:19.663] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:56:19.663] [debug] The following locations were tried:
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:56:19.663] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:56:19.664] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:56:19.664] [debug] The following locations were tried:
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:56:19.664] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:56:19.685] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.685] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.686] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.686] [debug] # initializations=1
+[2026-02-11 11:56:19.686] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.686] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.686] [info] Step 2: Scaling generic model
+[2026-02-11 11:56:19.705] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.705] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.705] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.705] [debug] # initializations=1
+[2026-02-11 11:56:19.705] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.705] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.755] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:56:19.755] [info] Measurement 'pelvis'
+[2026-02-11 11:56:19.755] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 11:56:19.755] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 11:56:19.755] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 11:56:19.755] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 11:56:19.755] [info] 	overall scale factor = 0.991406
+[2026-02-11 11:56:19.755] [info] Measurement 'thigh'
+[2026-02-11 11:56:19.755] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 11:56:19.755] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 11:56:19.756] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 11:56:19.756] [info] 	overall scale factor = 1.03513
+[2026-02-11 11:56:19.756] [info] Measurement 'shank'
+[2026-02-11 11:56:19.756] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 11:56:19.756] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 11:56:19.756] [info] 	overall scale factor = 1.07223
+[2026-02-11 11:56:19.756] [info] Measurement 'foot'
+[2026-02-11 11:56:19.756] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 11:56:19.756] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 11:56:19.756] [info] 	overall scale factor = 1.06069
+[2026-02-11 11:56:19.757] [debug] UNASSEMBLED(track) CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.757] [debug] Model numQs: 22  Assembler num freeQs: 22
+[2026-02-11 11:56:19.757] [debug] Tracking: t= 0.0 (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.760] [debug] The following locations were tried:
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:56:19.761] [debug] The following locations were tried:
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:56:19.761] [debug] The following locations were tried:
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:56:19.761] [debug] The following locations were tried:
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:56:19.761] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:56:19.762] [debug] The following locations were tried:
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:56:19.762] [debug] The following locations were tried:
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:56:19.762] [debug] The following locations were tried:
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:56:19.762] [debug] The following locations were tried:
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:56:19.762] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:56:19.763] [debug] The following locations were tried:
+[2026-02-11 11:56:19.763] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:56:19.764] [debug] The following locations were tried:
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:56:19.764] [debug] The following locations were tried:
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:56:19.764] [debug] The following locations were tried:
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:56:19.764] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:56:19.784] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.784] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.784] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.784] [debug] # initializations=1
+[2026-02-11 11:56:19.784] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.784] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.804] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.804] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.805] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.805] [debug] # initializations=1
+[2026-02-11 11:56:19.805] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.805] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.827] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.827] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.827] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.827] [debug] # initializations=1
+[2026-02-11 11:56:19.827] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.827] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.866] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 11:56:19.867] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 11:56:19.867] [info] Step 3: Placing markers on model
+[2026-02-11 11:56:19.961] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:56:19.961] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 11:56:19.961] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 11:56:19.979] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.979] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:19.980] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:19.980] [debug] # initializations=1
+[2026-02-11 11:56:19.980] [debug] # assembly steps: 1
+[2026-02-11 11:56:19.980] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:19.983] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0459919)
+[2026-02-11 11:56:19.983] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:20.021] [debug] ASSEMBLED CONFIGURATION (acc=0.000100000 tol=1.0e-05 normerr=0.0, maxerr=0.0, cost=0.000506261)
+[2026-02-11 11:56:20.021] [debug] # initializations=1
+[2026-02-11 11:56:20.021] [debug] # assembly steps: 1
+[2026-02-11 11:56:20.021] [debug]  evals: goal=80 grad=29 error=80 jac=29
+[2026-02-11 11:56:20.022] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 11:56:20.022] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 11:56:20.071] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 11:56:20.074] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 11:56:22.642] [info] Processing subject subject01...
+[2026-02-11 11:56:22.642] [info] Step 1: Loading generic model
+[2026-02-11 11:56:22.696] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:56:22.697] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:56:22.697] [debug] The following locations were tried:
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:56:22.697] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:56:22.697] [debug] The following locations were tried:
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:56:22.697] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:56:22.697] [debug] The following locations were tried:
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:56:22.697] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:56:22.697] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:56:22.697] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:56:22.698] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:56:22.698] [debug] The following locations were tried:
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:56:22.698] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:56:22.699] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:56:22.699] [debug] The following locations were tried:
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:56:22.699] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:56:22.723] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.723] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.723] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.723] [debug] # initializations=1
+[2026-02-11 11:56:22.723] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.723] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.723] [info] Step 2: Scaling generic model
+[2026-02-11 11:56:22.742] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.742] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.742] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.742] [debug] # initializations=1
+[2026-02-11 11:56:22.742] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.742] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.781] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:56:22.781] [info] Measurement 'pelvis'
+[2026-02-11 11:56:22.781] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 11:56:22.781] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 11:56:22.781] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 11:56:22.781] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 11:56:22.781] [info] 	overall scale factor = 0.991406
+[2026-02-11 11:56:22.781] [info] Measurement 'thigh'
+[2026-02-11 11:56:22.781] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 11:56:22.781] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 11:56:22.781] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 11:56:22.781] [info] 	overall scale factor = 1.03513
+[2026-02-11 11:56:22.781] [info] Measurement 'shank'
+[2026-02-11 11:56:22.781] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 11:56:22.781] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 11:56:22.781] [info] 	overall scale factor = 1.07223
+[2026-02-11 11:56:22.781] [info] Measurement 'foot'
+[2026-02-11 11:56:22.781] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 11:56:22.781] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 11:56:22.781] [info] 	overall scale factor = 1.06069
+[2026-02-11 11:56:22.782] [debug] UNASSEMBLED(track) CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.782] [debug] Model numQs: 22  Assembler num freeQs: 22
+[2026-02-11 11:56:22.782] [debug] Tracking: t= 0.0 (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_pelvis.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_pelvis.vtp
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_pelvis.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_pelvis.vtp
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\sacrum.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\sacrum.vtp
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_femur.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_femur.vtp
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_tibia.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_tibia.vtp
+[2026-02-11 11:56:22.785] [debug] The following locations were tried:
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_fibula.vtp
+[2026-02-11 11:56:22.785] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_fibula.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_patella.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_patella.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_talus.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_talus.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_foot.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_foot.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\r_bofoot.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\r_bofoot.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_femur.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_femur.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_tibia.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_tibia.vtp
+[2026-02-11 11:56:22.786] [debug] The following locations were tried:
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_fibula.vtp
+[2026-02-11 11:56:22.786] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_fibula.vtp
+[2026-02-11 11:56:22.787] [debug] The following locations were tried:
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_patella.vtp
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_patella.vtp
+[2026-02-11 11:56:22.787] [debug] The following locations were tried:
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_talus.vtp
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_talus.vtp
+[2026-02-11 11:56:22.787] [debug] The following locations were tried:
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_foot.vtp
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_foot.vtp
+[2026-02-11 11:56:22.787] [debug] The following locations were tried:
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\l_bofoot.vtp
+[2026-02-11 11:56:22.787] [debug] d:\UG_Proj\Human Sitting to Walking Transitions\model\Geometry\l_bofoot.vtp
+[2026-02-11 11:56:22.804] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.804] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.804] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.804] [debug] # initializations=1
+[2026-02-11 11:56:22.804] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.804] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.820] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.820] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.821] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.821] [debug] # initializations=1
+[2026-02-11 11:56:22.821] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.821] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.838] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.838] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.838] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.838] [debug] # initializations=1
+[2026-02-11 11:56:22.838] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.838] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.870] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 11:56:22.871] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 11:56:22.871] [info] Step 3: Placing markers on model
+[2026-02-11 11:56:22.969] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:56:22.969] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 11:56:22.969] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 11:56:22.992] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.992] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:22.992] [debug] ASSEMBLED CONFIGURATION (acc=1.0e-09 tol=1.0e-10 normerr=0.0, maxerr=0.0, cost=0.0)
+[2026-02-11 11:56:22.992] [debug] # initializations=1
+[2026-02-11 11:56:22.992] [debug] # assembly steps: 1
+[2026-02-11 11:56:22.992] [debug]  evals: goal=3 grad=0 error=3 jac=0
+[2026-02-11 11:56:22.996] [debug] UNASSEMBLED CONFIGURATION (normerr=0.0, maxerr=0.0, cost=0.0459919)
+[2026-02-11 11:56:22.996] [debug] Model numQs: 22 Assembler num freeQs: 22
+[2026-02-11 11:56:23.048] [debug] ASSEMBLED CONFIGURATION (acc=0.000100000 tol=1.0e-05 normerr=0.0, maxerr=0.0, cost=0.000506261)
+[2026-02-11 11:56:23.048] [debug] # initializations=1
+[2026-02-11 11:56:23.048] [debug] # assembly steps: 1
+[2026-02-11 11:56:23.048] [debug]  evals: goal=80 grad=29 error=80 jac=29
+[2026-02-11 11:56:23.049] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 11:56:23.049] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 11:56:23.092] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 11:56:23.094] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 11:57:08.424] [info] Processing subject subject01...
+[2026-02-11 11:57:08.425] [info] Step 1: Loading generic model
+[2026-02-11 11:57:08.483] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:57:08.484] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:57:08.485] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:57:08.486] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:57:08.486] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:57:08.486] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:57:08.486] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:57:08.512] [info] Step 2: Scaling generic model
+[2026-02-11 11:57:08.570] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:57:08.570] [info] Measurement 'pelvis'
+[2026-02-11 11:57:08.571] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 11:57:08.571] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 11:57:08.571] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 11:57:08.571] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 11:57:08.571] [info] 	overall scale factor = 0.991406
+[2026-02-11 11:57:08.571] [info] Measurement 'thigh'
+[2026-02-11 11:57:08.571] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 11:57:08.571] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 11:57:08.571] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 11:57:08.571] [info] 	overall scale factor = 1.03513
+[2026-02-11 11:57:08.571] [info] Measurement 'shank'
+[2026-02-11 11:57:08.571] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 11:57:08.571] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 11:57:08.571] [info] 	overall scale factor = 1.07223
+[2026-02-11 11:57:08.571] [info] Measurement 'foot'
+[2026-02-11 11:57:08.571] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 11:57:08.571] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 11:57:08.571] [info] 	overall scale factor = 1.06069
+[2026-02-11 11:57:08.663] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 11:57:08.664] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 11:57:08.664] [info] Step 3: Placing markers on model
+[2026-02-11 11:57:08.771] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 11:57:08.772] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 11:57:08.772] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 11:57:08.839] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 11:57:08.839] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 11:57:08.874] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 11:57:08.876] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 11:58:57.648] [info] Processing subject subject01...
+[2026-02-11 11:58:57.648] [info] Step 1: Loading generic model
+[2026-02-11 11:58:57.705] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:58:57.705] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:58:57.705] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:58:57.706] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:58:57.706] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:58:57.706] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:58:57.706] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:58:57.706] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:58:57.707] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:58:57.707] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:58:57.707] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:58:57.708] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:58:57.737] [info] Step 2: Scaling generic model
+[2026-02-11 11:58:57.760] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scaled:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:59:14.750] [info] Processing subject subject01...
+[2026-02-11 11:59:14.750] [info] Step 1: Loading generic model
+[2026-02-11 11:59:14.809] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:59:14.809] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:59:14.810] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:59:14.811] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:59:14.812] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:59:14.812] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:59:14.812] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:59:14.812] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:59:14.834] [info] Step 2: Scaling generic model
+[2026-02-11 11:59:14.853] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:59:15.636] [info] Processing subject subject01...
+[2026-02-11 11:59:15.637] [info] Step 1: Loading generic model
+[2026-02-11 11:59:15.687] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:59:15.688] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:59:15.688] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:59:15.688] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:59:15.688] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:59:15.689] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:59:15.690] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:59:15.716] [info] Step 2: Scaling generic model
+[2026-02-11 11:59:15.736] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:59:17.055] [info] Processing subject subject01...
+[2026-02-11 11:59:17.055] [info] Step 1: Loading generic model
+[2026-02-11 11:59:17.124] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:59:17.125] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:59:17.126] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:59:17.126] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:59:17.128] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:59:17.128] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:59:17.128] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:59:17.129] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:59:17.129] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:59:17.130] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:59:17.130] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:59:17.130] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:59:17.131] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:59:17.131] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:59:17.132] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:59:17.132] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:59:17.133] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:59:17.133] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:59:17.166] [info] Step 2: Scaling generic model
+[2026-02-11 11:59:17.182] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 11:59:26.941] [info] Processing subject subject01...
+[2026-02-11 11:59:26.941] [info] Step 1: Loading generic model
+[2026-02-11 11:59:27.029] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 11:59:27.030] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 11:59:27.030] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 11:59:27.030] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 11:59:27.031] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 11:59:27.031] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 11:59:27.031] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 11:59:27.031] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 11:59:27.032] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 11:59:27.032] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 11:59:27.032] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 11:59:27.032] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 11:59:27.033] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 11:59:27.065] [info] Step 2: Scaling generic model
+[2026-02-11 11:59:27.082] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 14:08:15.642] [info] Processing subject subject01...
+[2026-02-11 14:08:15.643] [info] Step 1: Loading generic model
+[2026-02-11 14:08:15.786] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:08:15.787] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:08:15.787] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:08:15.788] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:08:15.788] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:08:15.788] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:08:15.788] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:08:15.789] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:08:15.789] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:08:15.789] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:08:15.789] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:08:15.789] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:08:15.790] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:08:15.790] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:08:15.790] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:08:15.791] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:08:15.791] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:08:15.792] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:08:15.864] [info] Step 2: Scaling generic model
+[2026-02-11 14:08:15.898] [error] Unable to open marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\scale\d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc
+[2026-02-11 14:08:40.047] [info] Processing subject subject01...
+[2026-02-11 14:08:40.047] [info] Step 1: Loading generic model
+[2026-02-11 14:08:40.105] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:08:40.106] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:08:40.107] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:08:40.108] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:08:40.109] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:08:40.135] [info] Step 2: Scaling generic model
+[2026-02-11 14:08:40.220] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 14:08:40.220] [info] Measurement 'pelvis'
+[2026-02-11 14:08:40.220] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 14:08:40.220] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 14:08:40.220] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 14:08:40.220] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 14:08:40.220] [info] 	overall scale factor = 0.991406
+[2026-02-11 14:08:40.220] [info] Measurement 'thigh'
+[2026-02-11 14:08:40.220] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 14:08:40.220] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 14:08:40.220] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 14:08:40.220] [info] 	overall scale factor = 1.03513
+[2026-02-11 14:08:40.220] [info] Measurement 'shank'
+[2026-02-11 14:08:40.220] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 14:08:40.220] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 14:08:40.220] [info] 	overall scale factor = 1.07223
+[2026-02-11 14:08:40.220] [info] Measurement 'foot'
+[2026-02-11 14:08:40.220] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 14:08:40.220] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 14:08:40.220] [info] 	overall scale factor = 1.06069
+[2026-02-11 14:08:40.319] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 14:08:40.320] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 14:08:40.320] [info] Step 3: Placing markers on model
+[2026-02-11 14:08:40.409] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 14:08:40.409] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 14:08:40.409] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 14:08:40.489] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 14:08:40.489] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 14:08:40.523] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 14:08:40.525] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 14:09:07.350] [info] Processing subject subject01...
+[2026-02-11 14:09:07.350] [info] Step 1: Loading generic model
+[2026-02-11 14:09:07.401] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:09:07.402] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:09:07.402] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:09:07.402] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:09:07.402] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:09:07.402] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:09:07.403] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:09:07.404] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:09:07.404] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:09:07.404] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:09:07.422] [info] Step 2: Scaling generic model
+[2026-02-11 14:09:07.466] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 14:09:07.466] [info] Measurement 'pelvis'
+[2026-02-11 14:09:07.466] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.272455
+[2026-02-11 14:09:07.466] [info] 	pair 1 (RPSIS, LPSIS): model = 0.09, experimental = 0.05913
+[2026-02-11 14:09:07.466] [info] 	pair 2 (RASIS, RPSIS): model = 0.185264, experimental = 0.206712
+[2026-02-11 14:09:07.466] [info] 	pair 3 (LASIS, LPSIS): model = 0.185264, experimental = 0.209796
+[2026-02-11 14:09:07.466] [info] 	overall scale factor = 0.991406
+[2026-02-11 14:09:07.466] [info] Measurement 'thigh'
+[2026-02-11 14:09:07.466] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.510308
+[2026-02-11 14:09:07.466] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.527916
+[2026-02-11 14:09:07.466] [info] 	pair 2 (RFME, RPSIS): model = 0.527121, experimental = 0.552952
+[2026-02-11 14:09:07.466] [info] 	overall scale factor = 1.03513
+[2026-02-11 14:09:07.466] [info] Measurement 'shank'
+[2026-02-11 14:09:07.466] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.434734
+[2026-02-11 14:09:07.466] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.403543
+[2026-02-11 14:09:07.466] [info] 	overall scale factor = 1.07223
+[2026-02-11 14:09:07.466] [info] Measurement 'foot'
+[2026-02-11 14:09:07.466] [info] 	pair 0 (RFCC, LFMT2): model = 0.268449, experimental = 0.322433
+[2026-02-11 14:09:07.466] [info] 	pair 1 (LFCC, LFMT2): model = 0.209362, experimental = 0.192675
+[2026-02-11 14:09:07.466] [info] 	overall scale factor = 1.06069
+[2026-02-11 14:09:07.526] [info] Wrote model file 'subject01_scaledOnly.osim' from model.
+[2026-02-11 14:09:07.527] [info] Wrote scale file 'subject01_scaleSet_applied.xml' for model subject01.
+[2026-02-11 14:09:07.527] [info] Step 3: Placing markers on model
+[2026-02-11 14:09:07.590] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (36 markers, 591 frames)
+[2026-02-11 14:09:07.591] [info] Averaged frames from time 1.0 to 2.95 in d:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc (frames 201 to 591)
+[2026-02-11 14:09:07.591] [info] Deleted 0 unused markers from model subject01.
+[2026-02-11 14:09:07.631] [info] Frame at (t = 1.0):	 total squared error = 0.0856702, marker error: RMS = 0.0487825, max = 0.1112 (RTH1)
+[2026-02-11 14:09:07.631] [info] Moved markers in model subject01 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S01\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 14:09:07.654] [info] Wrote model file 'subject01_simbody_scaled.osim' from model subject01.
+[2026-02-11 14:09:07.655] [info] Wrote marker file 'subject01_marker_scaled.xml' from model subject01.
+[2026-02-11 14:10:45.341] [info] Processing subject subject02...
+[2026-02-11 14:10:45.341] [info] Step 1: Loading generic model
+[2026-02-11 14:10:45.430] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:10:45.432] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:10:45.433] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:10:45.434] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:10:45.435] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:10:45.435] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:10:45.436] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:10:45.436] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:10:45.437] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:10:45.437] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:10:45.437] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:10:45.437] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:10:45.438] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:10:45.438] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:10:45.438] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:10:45.438] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:10:45.438] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:10:45.439] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:10:45.473] [info] Step 2: Scaling generic model
+[2026-02-11 14:10:45.549] [info] Loaded marker file ../ExpData/Mocap/trcResults/static.trc (36 markers, 599 frames)
+[2026-02-11 14:10:45.550] [info] Measurement 'pelvis'
+[2026-02-11 14:10:45.550] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275561
+[2026-02-11 14:10:45.550] [info] 	overall scale factor = 1.07252
+[2026-02-11 14:10:45.550] [info] Measurement 'thigh'
+[2026-02-11 14:10:45.550] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.499777
+[2026-02-11 14:10:45.550] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512273
+[2026-02-11 14:10:45.550] [info] 	overall scale factor = 1.00227
+[2026-02-11 14:10:45.550] [info] Measurement 'shank'
+[2026-02-11 14:10:45.550] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446861
+[2026-02-11 14:10:45.550] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430042
+[2026-02-11 14:10:45.550] [info] 	overall scale factor = 1.12163
+[2026-02-11 14:10:45.550] [info] Measurement 'foot'
+[2026-02-11 14:10:45.550] [info] 	pair 0 (RFCC, RFMT1): model = 0.231559, experimental = 0.210558
+[2026-02-11 14:10:45.550] [info] 	pair 1 (LFCC, LFMT1): model = 0.231559, experimental = 0.208498
+[2026-02-11 14:10:45.550] [info] 	overall scale factor = 0.904857
+[2026-02-11 14:10:45.626] [info] Wrote model file 'subject02_scaledOnly.osim' from model.
+[2026-02-11 14:10:45.627] [info] Wrote scale file 'subject02_scaleSet_applied.xml' for model subject02.
+[2026-02-11 14:10:45.627] [info] Step 3: Placing markers on model
+[2026-02-11 14:10:45.695] [info] Loaded marker file ../ExpData/Mocap/trcResults/static.trc (36 markers, 599 frames)
+[2026-02-11 14:10:45.695] [info] Averaged frames from time 0.0 to 1.0 in ../ExpData/Mocap/trcResults/static.trc (frames 1 to 201)
+[2026-02-11 14:10:45.695] [info] Deleted 0 unused markers from model subject02.
+[2026-02-11 14:10:45.745] [info] Frame at (t = 0.0):	 total squared error = 0.042162, marker error: RMS = 0.0342223, max = 0.0582024 (RSK4)
+[2026-02-11 14:10:45.745] [info] Moved markers in model subject02 to match locations in marker file '../ExpData/Mocap/trcResults/static.trc'.
+[2026-02-11 14:10:45.767] [info] Wrote model file 'subject02_simbody_scaled.osim' from model subject02.
+[2026-02-11 14:10:45.769] [info] Wrote marker file 'subject02_marker_scaled.xml' from model subject02.
+[2026-02-11 14:12:16.766] [info] Processing subject subject02...
+[2026-02-11 14:12:16.766] [info] Step 1: Loading generic model
+[2026-02-11 14:12:16.845] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:12:16.846] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:12:16.846] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:12:16.846] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:12:16.847] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:12:16.848] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:12:16.849] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:12:16.849] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:12:16.880] [info] Step 2: Scaling generic model
+[2026-02-11 14:12:16.942] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-11 14:12:16.943] [info] Measurement 'pelvis'
+[2026-02-11 14:12:16.943] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275561
+[2026-02-11 14:12:16.943] [info] 	overall scale factor = 1.07252
+[2026-02-11 14:12:16.943] [info] Measurement 'thigh'
+[2026-02-11 14:12:16.943] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.499777
+[2026-02-11 14:12:16.943] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512273
+[2026-02-11 14:12:16.943] [info] 	overall scale factor = 1.00227
+[2026-02-11 14:12:16.943] [info] Measurement 'shank'
+[2026-02-11 14:12:16.943] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446861
+[2026-02-11 14:12:16.943] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430042
+[2026-02-11 14:12:16.943] [info] 	overall scale factor = 1.12163
+[2026-02-11 14:12:16.943] [info] Measurement 'foot'
+[2026-02-11 14:12:16.943] [info] 	pair 0 (RFCC, RFMT1): model = 0.231559, experimental = 0.210558
+[2026-02-11 14:12:16.943] [info] 	pair 1 (LFCC, LFMT1): model = 0.231559, experimental = 0.208498
+[2026-02-11 14:12:16.943] [info] 	overall scale factor = 0.904857
+[2026-02-11 14:12:17.029] [info] Wrote model file 'subject02_scaledOnly.osim' from model.
+[2026-02-11 14:12:17.030] [info] Wrote scale file 'subject02_scaleSet_applied.xml' for model subject02.
+[2026-02-11 14:12:17.030] [info] Step 3: Placing markers on model
+[2026-02-11 14:12:17.124] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-11 14:12:17.124] [info] Averaged frames from time 0.0 to 1.0 in d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (frames 1 to 201)
+[2026-02-11 14:12:17.124] [info] Deleted 0 unused markers from model subject02.
+[2026-02-11 14:12:17.196] [info] Frame at (t = 0.0):	 total squared error = 0.042162, marker error: RMS = 0.0342223, max = 0.0582024 (RSK4)
+[2026-02-11 14:12:17.196] [info] Moved markers in model subject02 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 14:12:17.229] [info] Wrote model file 'subject02_simbody_scaled.osim' from model subject02.
+[2026-02-11 14:12:17.231] [info] Wrote marker file 'subject02_marker_scaled.xml' from model subject02.
+[2026-02-11 14:14:06.532] [info] Processing subject subject02...
+[2026-02-11 14:14:06.532] [info] Step 1: Loading generic model
+[2026-02-11 14:14:06.581] [info] Loaded model RajagopalLaiUhlrich2023-LowerLimb from file d:\UG_Proj\Human Sitting to Walking Transitions\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+[2026-02-11 14:14:06.581] [warning] Couldn't find file 'r_pelvis.vtp'.
+[2026-02-11 14:14:06.581] [warning] Couldn't find file 'l_pelvis.vtp'.
+[2026-02-11 14:14:06.581] [warning] Couldn't find file 'sacrum.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_femur.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_tibia.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_fibula.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_patella.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_talus.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_foot.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'r_bofoot.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'l_femur.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'l_tibia.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'l_fibula.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'l_patella.vtp'.
+[2026-02-11 14:14:06.582] [warning] Couldn't find file 'l_talus.vtp'.
+[2026-02-11 14:14:06.583] [warning] Couldn't find file 'l_foot.vtp'.
+[2026-02-11 14:14:06.583] [warning] Couldn't find file 'l_bofoot.vtp'.
+[2026-02-11 14:14:06.600] [info] Step 2: Scaling generic model
+[2026-02-11 14:14:06.661] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-11 14:14:06.661] [info] Measurement 'pelvis'
+[2026-02-11 14:14:06.661] [info] 	pair 0 (RASIS, LASIS): model = 0.256928, experimental = 0.275561
+[2026-02-11 14:14:06.661] [info] 	overall scale factor = 1.07252
+[2026-02-11 14:14:06.661] [info] Measurement 'thigh'
+[2026-02-11 14:14:06.661] [info] 	pair 0 (RASIS, RFLE): model = 0.504880, experimental = 0.499777
+[2026-02-11 14:14:06.661] [info] 	pair 1 (LASIS, LFLE): model = 0.504880, experimental = 0.512273
+[2026-02-11 14:14:06.661] [info] 	overall scale factor = 1.00227
+[2026-02-11 14:14:06.661] [info] Measurement 'shank'
+[2026-02-11 14:14:06.661] [info] 	pair 0 (RFLE, RFAL): model = 0.390904, experimental = 0.446861
+[2026-02-11 14:14:06.661] [info] 	pair 1 (LFLE, LFAL): model = 0.390904, experimental = 0.430042
+[2026-02-11 14:14:06.661] [info] 	overall scale factor = 1.12163
+[2026-02-11 14:14:06.661] [info] Measurement 'foot'
+[2026-02-11 14:14:06.661] [info] 	pair 0 (RFCC, RFMT1): model = 0.231559, experimental = 0.210558
+[2026-02-11 14:14:06.661] [info] 	pair 1 (LFCC, LFMT1): model = 0.231559, experimental = 0.208498
+[2026-02-11 14:14:06.661] [info] 	overall scale factor = 0.904857
+[2026-02-11 14:14:06.726] [info] Wrote model file 'subject02_scaledOnly.osim' from model.
+[2026-02-11 14:14:06.727] [info] Wrote scale file 'subject02_scaleSet_applied.xml' for model subject02.
+[2026-02-11 14:14:06.727] [info] Step 3: Placing markers on model
+[2026-02-11 14:14:06.796] [info] Loaded marker file d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (36 markers, 599 frames)
+[2026-02-11 14:14:06.796] [info] Averaged frames from time 0.0 to 1.0 in d:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc (frames 1 to 201)
+[2026-02-11 14:14:06.796] [info] Deleted 0 unused markers from model subject02.
+[2026-02-11 14:14:06.850] [info] Frame at (t = 0.0):	 total squared error = 0.042162, marker error: RMS = 0.0342223, max = 0.0582024 (RSK4)
+[2026-02-11 14:14:06.850] [info] Moved markers in model subject02 to match locations in marker file 'd:\UG_Proj\Human Sitting to Walking Transitions\S02\ExpData\Mocap\trcResults\static.trc'.
+[2026-02-11 14:14:06.874] [info] Wrote model file 'subject02_simbody_scaled.osim' from model subject02.
+[2026-02-11 14:14:06.876] [info] Wrote marker file 'subject02_marker_scaled.xml' from model subject02.

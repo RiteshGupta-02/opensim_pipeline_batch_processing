@@ -155,7 +155,6 @@ class PipelineEngine:
                 scale_xml = Path(adapted.get('scale_xml', ''))
                 self.generate_setups_if_needed(subject_num, subj_dir, trial_name = "scale", model_file=adapted.get('model', '')) # generate scale setup if not exists
                 if scale_xml.exists():
-                    print(os.getcwd())
                     os.chdir(str(scale_xml.parent))
                     self.logger.info(f"Running scaling for subject {subject_num}")
                     
@@ -164,11 +163,12 @@ class PipelineEngine:
                         scale_tool = osim.ScaleTool(str(scale_xml))
                         scale_tool.setPathToSubject("")
                         scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                        scale_tool.getGenericModelMaker().setModelFileName(str(adapted.get('model', '')))
-                        scale_tool.getMarkerPlacer().setMarkerFileName(str(adapted.get('static_trc', '')))
-                        scale_tool.getModelScaler().setMarkerFileName(str(adapted.get('static_trc', '')))
-                        # scale_tool.printToXML(str(scale_xml))  # Save the possibly updated XML
-                        
+                        scale_tool.getGenericModelMaker().setModelFileName(adapted.get("model", ""))
+                        scale_tool.getMarkerPlacer().setMarkerFileName(adapted.get("static_trc", ""))
+                        scale_tool.getModelScaler().setMarkerFileName(adapted.get("static_trc", ""))
+                        mp = scale_tool.getMarkerPlacer()
+                        scale_tool.printToXML(str(scale_xml))  # Save the possibly updated XML
+
                         success = scale_tool.run()
                         if not success:
                             self.logger.error(f"Scaling failed for {subject_num}")
@@ -293,7 +293,7 @@ class PipelineEngine:
                                              'id': config.run_id,
                                              'so': config.run_so
                                          },
-                                         selected_trials=config.trials.get(s, None))
+                                         selected_trials=config.trials.get(s, None)) # type: ignore
 
         self.logger.info("Pipeline completed.")
 

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 create_opensim_template_linked.py
 
@@ -163,25 +162,22 @@ def find_associated_files_for_trial(trial_path, all_files):
 def main():
     # Accept example folder via CLI or open a folder dialog
     example = None
-    if len(sys.argv) >= 2:
-        example = Path(sys.argv[1])
-    else:
-        try:
-            import tkinter as tk
-            from tkinter import filedialog
-            tk_root = tk.Tk()
-            tk_root.withdraw()
-            folder = filedialog.askdirectory(title="Select example subject folder")
-            tk_root.destroy()
-            if folder:
-                example = Path(folder)
-            else:
-                print("No folder selected. Exiting.")
-                sys.exit(1)
-        except Exception as e:
-            print("Tkinter folder selection failed:", e)
-            print("You can also provide the folder as a CLI argument.")
+    try:
+        import tkinter as tk
+        from tkinter import filedialog
+        tk_root = tk.Tk()
+        tk_root.withdraw()
+        folder = filedialog.askdirectory(title="Select example subject folder")
+        tk_root.destroy()
+        if folder:
+            example = Path(folder)
+        else:
+            print("No folder selected. Exiting.")
             sys.exit(1)
+    except Exception as e:
+        print("Tkinter folder selection failed:", e)
+        print("You can also provide the folder as a CLI argument.")
+        sys.exit(1)
 
     root_dir = example
     if not example.exists() or not example.is_dir():
