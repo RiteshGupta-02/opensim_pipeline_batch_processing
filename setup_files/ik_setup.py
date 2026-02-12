@@ -15,9 +15,9 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--The accuracy of the solution in absolute terms, i.e. the number of significant digits to which the solution can be trusted. Default 1e-5.-->
 		<accuracy>1.0000000000000001e-05</accuracy>
 		<!--The time range for the study.-->
-		<time_range>0 5.4550000000000001</time_range>
+		<time_range>0 Inf</time_range>
 		<!--Name of the resulting inverse kinematics motion (.mot) file.-->
-		<output_motion_file>D:/student/MTech/Sakshi/STW/{subject}/IK/ik_output_{trial}_{subject}.mot</output_motion_file>
+		<output_motion_file>{subjdir}/IK/results_stw/ik_output_{trial}_{subject}.mot</output_motion_file>
 		<!--Flag (true or false) indicating whether or not to report errors from the inverse kinematics solution. Default is true.-->
 		<report_errors>true</report_errors>
 		<!--Markers and coordinates to be considered (tasks) and their weightings. The sum of weighted-squared task errors composes the cost function.-->
@@ -219,7 +219,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 			<groups />
 		</IKTaskSet>
 		<!--TRC file (.trc) containing the time history of observations of marker positions obtained during a motion capture experiment. Markers in this file that have a corresponding task and model marker are included.-->
-		<marker_file>../ExpData/Mocap/trcResults/{trial}.trc</marker_file>
+		<marker_file>{trial_trc}</marker_file>
 		<!--The name of the storage (.sto or .mot) file containing the time history of coordinate observations. Coordinate values from this file are included if there is a corresponding model coordinate and task. -->
 		<coordinate_file>Unassigned</coordinate_file>
 		<!--Flag indicating whether or not to report model marker locations. Note, model marker locations are expressed in Ground.-->
@@ -231,21 +231,23 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 
 # Create output directory if it doesn't exist
 if len(sys.argv) < 3:
-	print("Usage: python id_setup.py <output_directory>")
+	print("Usage: python ik_setup.py <subject_directory> <trial_name> <model_file>")
 	sys.exit(1)
      
 subjdir = Path(sys.argv[1])
 trial = (sys.argv[2])
 model_file = Path(sys.argv[3])
+trial_trc = Path(sys.argv[4])
+filepath = Path(sys.argv[5])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\IK"
 os.makedirs(output_dir, exist_ok=True)
 subject = (subjdir.name)
-xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
+xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file, subjdir=subjdir, trial_trc=trial_trc)
 
 # Create filename
-filename = f"ik_setup_{subject}_{trial}.xml"
-filepath = os.path.join(output_dir, filename)
+# filename = f"ik_setup_{subject}_{trial}.xml"
+# filepath = os.path.join(output_dir, filename)
 
 # Write to file
 with open(filepath, 'w', encoding='UTF-8') as f:

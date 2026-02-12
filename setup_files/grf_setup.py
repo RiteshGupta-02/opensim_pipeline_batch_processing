@@ -45,19 +45,22 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		</objects>
 		<groups />
 		<!--Storage file (.sto) containing (3) components of force and/or torque and point of application.Note: this file overrides the data source specified by the individual external forces if specified.-->
-		<datafile>../../ExpData/Mocap/grfResults/stw{trial}.mot</datafile>
+		<datafile>{grf}</datafile>
 	</ExternalLoads>
 </OpenSimDocument>
 
 ''' 
 if len(sys.argv) < 2:
-        print("Usage: python grf_setup.py subject")
+        print("Usage: python grf_setup.py subject trial trc_file grf_file filepath")
         sys.exit(1)
 
 
 subject = int(sys.argv[1])
 subjdir = Path(sys.argv[2])
 trial_name = str(sys.argv[3])
+grf = Path(sys.argv[4])
+trc_file = Path(sys.argv[5])
+filepath = Path(sys.argv[6])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID\grf"
 os.makedirs(output_dir, exist_ok=True)
@@ -67,15 +70,15 @@ os.makedirs(output_dir, exist_ok=True)
 # Generate files for trials 1 through 5
 
 
-print("{BOLD_RED}considering left leg on 2 and right leg on 3{END}")
+
 for trial in range(1, 6):
-    leg = fl.calculate_marker_acceleration(rf'{subjdir}\ExpData\Mocap\trcResults\stw{trial}.trc')
+    leg = fl.calculate_marker_acceleration(trc_path=trc_file)
     # Fill in the template with current trial number
-    xml_content = xml_template.format(trial=trial,leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l')
+    xml_content = xml_template.format(trial=trial,leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
     
     # Create filename
-    filename = f"grf_{subject:02d}_stw{trial}.xml"
-    filepath = os.path.join(output_dir, filename)
+    # filename = f"grf_{subject:02d}_stw{trial}.xml"
+    # filepath = os.path.join(output_dir, filename)
     
     # Write to file
     with open(filepath, 'w', encoding='UTF-8') as f:

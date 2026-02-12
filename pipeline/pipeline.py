@@ -19,15 +19,26 @@ def replace_subject_in_path(path_str, old_subj, new_subj):
     """Replace subject number in path strings."""
     return path_str.replace(old_subj, new_subj)
 
-def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
+def generate_setups_if_needed(subject_num: str, subj_dir: Path, trial, trial_name: str, model_file: Path = None, dry_run=False) -> bool:
     """Generate setup XMLs if they don't exist."""
     script_dir = Path(__file__).parent
-    # GRF
+    if trial_name == "scale":
+            # scale
+            scale_dir = subj_dir / "scale"
+            if not scale_dir.exists() or not list(scale_dir.glob("subject*_Setup_Scale*.xml")):
+                logging.info(f"Generating scale setup for subject {subject_num}")
+                
+                result = subprocess.run(['python', 'scale_setup.py', subject_num, str(subj_dir), str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+                if result.returncode != 0:
+                    logging.error(f"Scale setup failed for {subject_num}: {result.stderr}")
+                    return False
+            return True
+        # GRF
     grf_dir = subj_dir / "ID" / "grf"
     if not grf_dir.exists() or not list(grf_dir.glob("*.xml")):
-        logging.info(f"Generating GRF setups for subject {subject_num}")
-        if not dry_run:
-            result = subprocess.run(['python', 'grf_setup.py', subject_num, subj_dir], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            logging.info(f"Generating GRF setups for subject {subject_num}")
+            
+            result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir), str(trial_name), str(trial.get('trial_mot',"")),str(trial.get('trial_trc',""))], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"GRF setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -37,7 +48,7 @@ def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     if not id_dir.exists() or not list(id_dir.glob("id_setup_*.xml")):
         logging.info(f"Generating ID setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'id_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            result = subprocess.run(['python', 'id_setup.py', str(subj_dir), str(trial_name), str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"ID setup failed for {subject_num}: {result.stderr}")
                 return False
@@ -47,34 +58,31 @@ def generate_setups_if_needed(subject_num, subj_dir,trial_name, dry_run=False):
     if not so_dir.exists() or not list(so_dir.glob("so_setup_*.xml")):
         logging.info(f"Generating SO setups for subject {subject_num}")
         if not dry_run:
-            result = subprocess.run(['python', 'SO_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            result = subprocess.run(['python', 'SO_setup.py', str(subj_dir), str(trial_name), str(model_file)], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
             if result.returncode != 0:
                 logging.error(f"SO setup failed for {subject_num}: {result.stderr}")
                 return False
-        
-    # IK
+
+        # IK
     ik_dir = subj_dir / "IK"
     if not ik_dir.exists() or not list(ik_dir.glob("ik_setup_*.xml")):
         logging.info(f"Generating IK setups for subject {subject_num}")
-        if not dry_run:
-            result = subprocess.run(['python', 'ik_setup.py', subject_num], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
-            if result.returncode != 0:
-                logging.error(f"IK setup failed for {subject_num}: {result.stderr}")
-                return False
+            
+        result = subprocess.run(['python', 'ik_setup.py', str(subj_dir), str(trial_name), str(model_file), str(trial.get('trial_trc',""))], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+        if result.returncode != 0:
+            logging.error(f"IK setup failed for {subject_num}: {result.stderr}")
+            return False
 
     return True
 
-def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
-    """Run the OpenSim pipeline for a single subject."""
+def run_pipeline_for_subject(subject_num: str, template: dict, root_dir: Path, enabled_steps: dict, selected_trials: List[str] = None): # type: ignore
     subj_dir = root_dir / f"S{subject_num}"
     if not subj_dir.exists():
         logging.warning(f"Subject {subject_num} directory not found; skipping.")
         return
-
-
-
-    # Deep copy and adapt paths
+    # osim.Logger_setLevelString("Off")
     adapted = json.loads(json.dumps(template))
+    # Replace subject 01 with subject_num in adapted paths
     for key, value in adapted.items():
         if isinstance(value, str):
             adapted[key] = replace_subject_in_path(value, "01", subject_num)
@@ -84,39 +92,46 @@ def run_pipeline_for_subject(subject_num, template, root_dir, dry_run=False):
                     for k, v in item.items():
                         if isinstance(v, str):
                             item[k] = replace_subject_in_path(v, "01", subject_num)
-    # prRed(adapted)
-    # Print adapted paths in dry mode
-    if dry_run:
-        logging.info(f"Adapted paths for subject {subject_num}: {json.dumps(adapted, indent=2)}")
 
-    # Change to subject directory for relative paths
-    scaled_model = "" #----------------for global use
+    
     original_cwd = os.getcwd()
     try:
-        os.chdir(str(subj_dir))
+        
+        print('{BOLD_RED}',os.getcwd(),'{END}')
         logging.info(f"Processing subject {subject_num} in {subj_dir}")
-        # osim.Logger_setLevelString("error")  # Suppress OpenSim output except errors
 
-        # Run scaling if scale_xml exists
-        scale_xml = Path(adapted['scale_xml'])
-        os.chdir(str(scale_xml.parent))
-        if scale_xml.exists():
-            logging.info(f"Running scaling for subject {subject_num}")
-            if not dry_run:
+        # Scaling
+        scaled_model = None
+
+        if enabled_steps.get('scale', True):
+            os.mkdir(subj_dir / "scale") if not (subj_dir / "scale").exists() else None
+            # os.chdir(os.path.join(str(subj_dir)+'\\scale'))
+            scale_xml = Path(adapted.get('scale_xml', ''))
+            generate_setups_if_needed(subject_num, subj_dir, trial = 0,trial_name = "scale", model_file=adapted.get('model', '')) # generate scale setup if not exists
+            if scale_xml.exists():
+                os.chdir(str(scale_xml.parent))
+                logging.info(f"Running scaling for subject {subject_num}")
+                
                 try:
-                    scale_tool = osim.ScaleTool(str(scale_xml))
-                    scale_tool.createModel()
-                    scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                    success = scale_tool.run()
                     
+                    scale_tool = osim.ScaleTool(str(scale_xml))
+                    scale_tool.setPathToSubject("")
+                    scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
+                    scale_tool.getGenericModelMaker().setModelFileName(adapted.get("model", ""))
+                    scale_tool.getMarkerPlacer().setMarkerFileName(adapted.get("static_trc", ""))
+                    scale_tool.getModelScaler().setMarkerFileName(adapted.get("static_trc", ""))
+                    
+                    scale_tool.printToXML(str(scale_xml))  # Save the possibly updated XML
+
+                    success = scale_tool.run()
                     if not success:
                         logging.error(f"Scaling failed for {subject_num}")
                         return
                 except Exception as e:
                     logging.error(f"Scaling failed for {subject_num}: {str(e)}")
                     return
-        else:
-            logging.warning(f"Scale XML not found for {subject_num}; skipping scaling.")
+            else:
+                logging.warning(f"Scale XML not found for {subject_num}; skipping scaling.")
 
         # Run for each trial
         for trial in adapted['mapped_trials']:

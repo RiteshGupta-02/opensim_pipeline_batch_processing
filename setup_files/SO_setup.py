@@ -79,30 +79,43 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 '''
 
 # Create output directory if it doesn't exist
-if len(sys.argv) < 4:
-	print("Usage: python id_setup.py <output_directory>")
+if len(sys.argv) < 3:
+	print("Usage: python SO_setup.py <sub_directory> <trial_name> <model_file>")
 	sys.exit(1)
      
 subjdir = Path(sys.argv[1])
 trial = Path(sys.argv[2]).name.removesuffix('.trc').removeprefix('stw')  # Extract trial from filename
+model_file = Path(sys.argv[3])
+filepath = Path(sys.argv[4])
 # Create output directory if it doesn't exist
-output_dir = rf"{subjdir}\ID"
+output_dir = filepath.parent
 os.makedirs(output_dir, exist_ok=True)
 subject = subjdir.name
 
-# Generate files for trials 1 through 5
-for trial in range(1, 6):
-    # Fill in the template with current trial number
-    xml_content = xml_template.format(trial=trial,subject=subject, model_file=Path(sys.argv[3]))
-    
-    # Create filename
-    filename = f"so_setup_S{subject}_{trial}.xml"
-    filepath = os.path.join(output_dir, filename)
-    
-    # Write to file
-    with open(filepath, 'w', encoding='UTF-8') as f:
-        f.write(xml_content)
-    
-    print(f"Created: {filepath}")
+xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
 
-print(f"\nAll files created successfully in '{output_dir}' directory!")
+# Create filename
+# filename = rf"so_setup_{subject.lower()}_stw{trial}.xml"
+# filepath = os.path.join(output_dir, filename)
+
+# Write to file
+with open(filepath, 'w', encoding='UTF-8') as f:
+	f.write(xml_content)
+
+print(f"Created: {filepath}")
+# Generate files for trials 1 through 5
+# for trial in range(1, 6):
+#     # Fill in the template with current trial number
+#     xml_content = xml_template.format(trial=trial,subject=subject, model_file=Path(sys.argv[3]))
+    
+#     # Create filename
+#     filename = f"so_setup_S{subject}_{trial}.xml"
+#     filepath = os.path.join(output_dir, filename)
+    
+#     # Write to file
+#     with open(filepath, 'w', encoding='UTF-8') as f:
+#         f.write(xml_content)
+    
+#     print(f"Created: {filepath}")
+
+# print(f"\nAll files created successfully in '{output_dir}' directory!")

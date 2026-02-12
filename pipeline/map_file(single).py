@@ -20,7 +20,7 @@ import re
 from pathlib import Path
 from collections import defaultdict
 
-REQ_EXT = {".xml", ".trc", ".mot", ".sto"}
+REQ_EXT = {".xml", ".trc", ".mot", ".sto",".osim"}
 OUTPUT = r"pipeline/template_map.json"
 
 
@@ -140,22 +140,21 @@ def map_ik_to_trials(ik_files,id_files,so_files,grf_files, trial_files):
 
 def find_associated_files_for_trial(trial_path, all_files):
     """Find .mot and .sto in same folder with same basename (or same prefix)."""
-    folder = trial_path.parent
+    # 
     name_noext = trial_path.stem
     mot = []
     sto = []
     # exact basename matches first
     for p in all_files:
-        if p.parent == folder:
-            if p.suffix.lower() == '.mot' and p.stem == name_noext:
-                mot.append(p)
-            if p.suffix.lower() == '.sto' and p.stem == name_noext:
-                sto.append(p)
-    # fallback: any .mot/.sto in same folder (less strict)
-    if not mot:
-        mot = [p for p in all_files if p.parent == folder and p.suffix.lower() == '.mot']
-    if not sto:
-        sto = [p for p in all_files if p.parent == folder and p.suffix.lower() == '.sto']
+        if p.suffix.lower() == '.mot' and p.stem == name_noext:
+            mot.append(p)
+        if p.suffix.lower() == '.sto' and p.stem == name_noext:
+            sto.append(p)
+    # # fallback: any .mot/.sto in same folder (less strict)
+    # if not mot:
+    #     mot = [p for p in all_files if p.parent == folder and p.suffix.lower() == '.mot']
+    # if not sto:
+    #     sto = [p for p in all_files if p.parent == folder and p.suffix.lower() == '.sto']
     return mot, sto
 
 
@@ -278,15 +277,15 @@ def main():
                                                 so_to_trials_map.items(),
                                                 grf_to_trials_map.items()):
         for tr in tr_list:
-            # mot, sto = find_associated_files_for_trial(tr, files)
+            mot_list, sto_list = find_associated_files_for_trial(tr, files)
             mapped_trials.append({
                 "trial_trc": str(tr),
-                "ik_xml": str(ik),
-                "id_xml": str(id),
-                "so_xml": str(so),
-                "grf_xml": str(grf)
-                # "trial_mot": [str(p) for p in mot],
-                # "trial_sto": [str(p) for p in sto]
+                "ik_xml": str(ik) if ik else None,
+                "id_xml": str(id) if id else None,
+                "so_xml": str(so) if so else None,
+                "grf_xml": str(grf) if grf else None,
+                "trial_mot": str(mot_list[0]),
+                # "trial_sto": [str(p) for p in sto_list]
             })
 
     # summary outputs

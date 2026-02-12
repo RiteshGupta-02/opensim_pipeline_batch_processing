@@ -11,13 +11,13 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--Name of the .osim file used to construct a model.-->
 		<model_file>{model_file}</model_file>
 		<!--Time range over which the inverse dynamics problem is solved.-->
-		<time_range> 4.4000000000000003553 5.6299999999999998934</time_range>
+		<time_range>0 Inf</time_range>
 		<!--List of forces by individual or grouping name (e.g. All, actuators, muscles, ...) to be excluded when computing model dynamics. 'All' also excludes external loads added via 'external_loads_file'.-->
 		<forces_to_exclude> Muscles</forces_to_exclude>
 		<!--XML file (.xml) containing the external loads applied to the model as a set of ExternalForce(s).-->
-		<external_loads_file>grf/grf_{subject}_stw{trial}.xml</external_loads_file>
+		<external_loads_file>grf/{subject}_stw{trial}_grf.xml</external_loads_file>
 		<!--The name of the file containing coordinate data. Can be a motion (.mot) or a states (.sto) file.-->
-		<coordinates_file>../IK/results_stw/ik_output_{subject}_stw{trial}.mot</coordinates_file>
+		<coordinates_file>../IK/results_stw/ik_output_stw{trial}_{subject}.mot</coordinates_file>
 		<!--Low-pass cut-off frequency for filtering the coordinates_file data (currently does not apply to states_file or speeds_file). A negative value results in no filtering. The default value is -1.0, so no filtering.-->
 		<lowpass_cutoff_frequency_for_coordinates>6</lowpass_cutoff_frequency_for_coordinates>
 		<!--Name of the storage file (.sto) to which the generalized forces are written. Only a filename should be specified here (not a full path); the file will appear in the location provided in the results_directory property.-->
@@ -30,13 +30,14 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 </OpenSimDocument>
 '''
 
-if len(sys.argv) < 3:
-	print("Usage: python id_setup.py <output_directory>")
+if len(sys.argv) < 4:
+	print("Usage: python id_setup.py <sub_directory> <trial_filename> <model_file>")
 	sys.exit(1)
      
 subjdir = Path(sys.argv[1])
 trial = Path(sys.argv[2]).name.removesuffix('.trc').removeprefix('stw')  # Extract trial from filename
 model_file = Path(sys.argv[3])
+filepath = Path(sys.argv[4])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID"
 os.makedirs(output_dir, exist_ok=True)
@@ -46,8 +47,8 @@ subject = (subjdir.name)
 xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
 
 # Create filename
-filename = rf"id_setup_{subject.lower()}_stw{trial}.xml"
-filepath = os.path.join(output_dir, filename)
+# filename = rf"id_setup_{subject.lower()}_stw{trial}.xml"
+# filepath = os.path.join(output_dir, filename)
 
 # Write to file
 with open(filepath, 'w', encoding='UTF-8') as f:

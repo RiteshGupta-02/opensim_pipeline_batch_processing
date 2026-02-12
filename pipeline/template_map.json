@@ -1,44 +1,49 @@
 {
-  "subject": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01",
-  "root_dir": "D:\\UG_Proj\\Human Sitting to Walking Transitions",
-  "model": null,
-  "static_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\static.trc",
-  "scale_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\scale\\subject01_Setup_Scale.xml",
+  "subject": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01",
+  "root_dir": "D:\\RESEARCH\\STW_dataset\\Extracted",
+  "model": "D:\\RESEARCH\\STW_dataset\\Extracted\\model\\RajagopalLa2023_LL-stw_adjustedWieghts.osim",
+  "static_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\static.trc",
+  "scale_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\scale\\scale_S01_setup.xml",
   "mapped_trials": [
     {
-      "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw1.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw1.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw1.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw1.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw1.xml"
+      "trial_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\stw1.trc",
+      "ik_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\IK\\ik_setup_S01_stw1.xml",
+      "id_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\id_setup_S01_stw1.xml",
+      "so_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\SO\\so_setup_s01_stw1.xml",
+      "grf_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\grf\\S01_stw1_grf.xml",
+      "trial_mot": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\grfResults\\stw1.mot"
     },
     {
-      "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw2.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw2.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw2.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw2.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw2.xml"
+      "trial_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\stw2.trc",
+      "ik_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\IK\\ik_setup_S01_stw2.xml",
+      "id_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\id_setup_S01_stw2.xml",
+      "so_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\SO\\so_setup_s01_stw2.xml",
+      "grf_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\grf\\S01_stw2_grf.xml",
+      "trial_mot": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\grfResults\\stw2.mot"
     },
     {
-      "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw3.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw3.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw3.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw3.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw3.xml"
+      "trial_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\stw3.trc",
+      "ik_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\IK\\ik_setup_S01_stw3.xml",
+      "id_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\id_setup_S01_stw3.xml",
+      "so_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\SO\\so_setup_S01_stw3.xml",
+      "grf_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\grf\\S01_stw3_grf.xml",
+      "trial_mot": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\grfResults\\stw3.mot"
     },
     {
-      "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw4.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw4.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw4.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw4.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw4.xml"
+      "trial_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\stw4.trc",
+      "ik_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\IK\\ik_setup_S01_stw4.xml",
+      "id_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\id_setup_S01_stw4.xml",
+      "so_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\SO\\so_setup_S01_stw4.xml",
+      "grf_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\grf\\S01_stw4_grf.xml",
+      "trial_mot": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\grfResults\\stw4.mot"
     },
     {
-      "trial_trc": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ExpData\\Mocap\\trcResults\\stw5.trc",
-      "ik_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\IK\\ik_setup_stw5.xml",
-      "id_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\id_setup_s01_stw5.xml",
-      "so_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\SO\\so_setup_s01_stw5.xml",
-      "grf_xml": "D:\\UG_Proj\\Human Sitting to Walking Transitions\\S01\\ID\\grf\\grf_s01_stw5.xml"
+      "trial_trc": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\trcResults\\stw5.trc",
+      "ik_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\IK\\ik_setup_S01_stw5.xml",
+      "id_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\id_setup_S01_stw5.xml",
+      "so_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\SO\\so_setup_S01_stw5.xml",
+      "grf_xml": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\ID\\grf\\S01_stw5_grf.xml",
+      "trial_mot": "D:\\RESEARCH\\STW_dataset\\Extracted\\S01\\S01\\Mocap\\grfResults\\stw5.mot"
     }
   ]
 }
