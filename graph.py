@@ -42,4 +42,4 @@ def plot_muscle_forces(sto_file, muscles=None):
 
 # Usage
 if __name__ == '__main__':
-    plot_muscle_forces(r'd:\student\MTech\test\output\subject01_StaticOptimization_force.sto')
+    plot_muscle_forces(r'D:\student\MTech\test\result_so\subject01_StaticOptimization_force.sto')

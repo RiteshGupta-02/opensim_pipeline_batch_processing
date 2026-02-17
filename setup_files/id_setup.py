@@ -7,11 +7,11 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 <OpenSimDocument Version="40500">
 	<InverseDynamicsTool name="{subject}_stw{trial}">
 		<!--Name of the directory where results are written. Be default this is the directory in which the setup file is be  executed.-->
-		<results_directory>./results_ID</results_directory>
+		<results_directory>{output_dir}</results_directory>
 		<!--Name of the .osim file used to construct a model.-->
 		<model_file>{model_file}</model_file>
 		<!--Time range over which the inverse dynamics problem is solved.-->
-		<time_range>0 Inf</time_range>
+		<time_range>0 1</time_range>
 		<!--List of forces by individual or grouping name (e.g. All, actuators, muscles, ...) to be excluded when computing model dynamics. 'All' also excludes external loads added via 'external_loads_file'.-->
 		<forces_to_exclude> Muscles</forces_to_exclude>
 		<!--XML file (.xml) containing the external loads applied to the model as a set of ExternalForce(s).-->
@@ -21,7 +21,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--Low-pass cut-off frequency for filtering the coordinates_file data (currently does not apply to states_file or speeds_file). A negative value results in no filtering. The default value is -1.0, so no filtering.-->
 		<lowpass_cutoff_frequency_for_coordinates>6</lowpass_cutoff_frequency_for_coordinates>
 		<!--Name of the storage file (.sto) to which the generalized forces are written. Only a filename should be specified here (not a full path); the file will appear in the location provided in the results_directory property.-->
-		<output_gen_force_file>id_output_{subject}_stw{trial}.sto</output_gen_force_file>
+		<output_gen_force_file>{output_dir}\id_output_{subject}_stw{trial}.sto</output_gen_force_file>
 		<!--List of joints (keyword All, for all joints) to report body forces acting at the joint frame expressed in ground.-->
 		<joints_to_report_body_forces />
 		<!--Name of the storage file (.sto) to which the body forces at specified joints are written.-->
@@ -44,7 +44,7 @@ os.makedirs(output_dir, exist_ok=True)
 subject = (subjdir.name)
 
 
-xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file)
+xml_content = xml_template.format(trial=trial,subject=subject, model_file=model_file,output_dir=output_dir)
 
 # Create filename
 # filename = rf"id_setup_{subject.lower()}_stw{trial}.xml"

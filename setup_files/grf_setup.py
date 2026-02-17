@@ -67,23 +67,35 @@ os.makedirs(output_dir, exist_ok=True)
 
 
 
-# Generate files for trials 1 through 5
+
+leg = fl.calculate_marker_acceleration(trc_path=trc_file)
+# Fill in the template with current trial number
+xml_content = xml_template.format(trial=str(trc_file.stem())[-1],leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
+
+# Create filename
+# filename = f"grf_{subject:02d}_stw{trial}.xml"
+# filepath = os.path.join(output_dir, filename)
+
+# Write to file
+with open(filepath, 'w', encoding='UTF-8') as f:
+	f.write(xml_content)
+
+print(f"Created: {filepath}")
 
 
-
-for trial in range(1, 6):
-    leg = fl.calculate_marker_acceleration(trc_path=trc_file)
-    # Fill in the template with current trial number
-    xml_content = xml_template.format(trial=trial,leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
+# for trial in range(1, 6):
+#     leg = fl.calculate_marker_acceleration(trc_path=trc_file)
+#     # Fill in the template with current trial number
+#     xml_content = xml_template.format(trial=trial,leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
     
-    # Create filename
-    # filename = f"grf_{subject:02d}_stw{trial}.xml"
-    # filepath = os.path.join(output_dir, filename)
+#     # Create filename
+#     # filename = f"grf_{subject:02d}_stw{trial}.xml"
+#     # filepath = os.path.join(output_dir, filename)
     
-    # Write to file
-    with open(filepath, 'w', encoding='UTF-8') as f:
-        f.write(xml_content)
+#     # Write to file
+#     with open(filepath, 'w', encoding='UTF-8') as f:
+#         f.write(xml_content)
     
-    print(f"Created: {filepath}")
+#     print(f"Created: {filepath}")
 
-print(f"\nAll files created successfully in '{output_dir}' directory!")
+# print(f"\nAll files created successfully in '{output_dir}' directory!")

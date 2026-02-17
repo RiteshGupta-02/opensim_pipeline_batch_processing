@@ -24,6 +24,7 @@ import shutil
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Dict, List
+from multiprocessing import Pool, cpu_count
 
 from PySide6.QtWidgets import (
     QApplication, QWidget, QMainWindow, QFileDialog, QPushButton, QLabel,
@@ -38,6 +39,27 @@ import opensim as osim
 
 BOLD_RED = "\033[1;91m" # Bold and bright red for extra attention
 END = "\033[0m" # Reset code
+
+def subject_worker(args):
+    s, template_path, root_dir, steps, trials = args
+    import json
+    import opensim as osim
+
+    from pathlib import Path
+
+    engine = PipelineEngine(logging.getLogger(f"S{s}"))
+    template = json.load(open(template_path))
+
+    engine.run_pipeline_for_subject(
+        s,
+        template,
+        root_dir,
+        enabled_steps=steps,
+        selected_trials=trials
+    )
+
+    return s
+
 
 # ------------------ Data classes ------------------
 
@@ -67,7 +89,7 @@ class PipelineEngine:
 
     def generate_setups_if_needed(self, subject_num: str, subj_dir: Path, trial, model_file: Path,xml = "", trial_name = "") -> bool:
         script_dir = Path(__file__).parent
-        # print(f"subject_num = {subject_num},\nsubj_dir = {subj_dir},\ntrial = {trial},\nmodel_file = {model_file},\nxml = {xml},\ntrial_name = {trial_name}\n")
+        print(f"subject_num = {subject_num},\nsubj_dir = {subj_dir},\ntrial = {trial},\nmodel_file = {model_file},\nxml = {xml},\ntrial_name = {trial_name}\n")
         if trial_name == "scale":
             # scale
             scale_dir = subj_dir / "scale"
@@ -84,8 +106,9 @@ class PipelineEngine:
             if trial_name == "stw1":
             # if not grf_dir.exists() or not Path(trial.get('grf_xml',"")).exists():
                 self.logger.info(f"Generating GRF setups for subject {subject_num}")
-                
+                print("*"*50)
                 result = subprocess.run(['python', 'grf_setup.py', subject_num, str(subj_dir), str(trial_name), str(trial.get('trial_mot',"")),str(trial.get('trial_trc',"")),str(trial.get('grf_xml',""))], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+                print(result.returncode)
         except Exception as e:
             self.logger.error(f"GRF setup failed for {subject_num}: {e}")
 
@@ -120,10 +143,10 @@ class PipelineEngine:
         # IK
         try:            
             ik_dir = subj_dir / "IK"
-            if not ik_dir.exists() or not Path(trial.get('ik_xml',"")).exists():
-                self.logger.info(f"Generating IK setups for subject {subject_num}")
-                
-                result = subprocess.run(['python', 'ik_setup.py', str(subj_dir), str(trial_name), str(model_file), str(trial.get('trial_trc',"")), str(trial.get('ik_xml',""))], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
+            # if not ik_dir.exists() or not Path(trial.get('ik_xml',"")).exists():
+            self.logger.info(f"Generating IK setups for subject {subject_num}")
+            
+            result = subprocess.run(['python', 'ik_setup.py', str(subj_dir), str(trial_name), str(model_file), str(trial.get('trial_trc',"")), str(trial.get('ik_xml',""))], cwd=str(Path.joinpath(script_dir.parent, 'setup_files')), capture_output=True, text=True)
         except Exception as e:
             self.logger.error(f"IK setup failed for {subject_num}: {e}")
         
@@ -132,8 +155,7 @@ class PipelineEngine:
 
     def run_pipeline_for_subject(self, subject_num: str, template: dict, root_dir: Path, enabled_steps: dict, selected_trials: List[str] = None): # type: ignore
         subj_dir = root_dir / f"S{subject_num}"
-        osim.Logger_setLevelString("Error") # Suppress OpenSim logs except errors
-        # osim.Logger_setLevelString("Critical") # Suppress all OpenSim logs
+        osim.Logger.setLevelString("Warn")
         if not subj_dir.exists():
             self.logger.warning(f"Subject {subject_num} directory not found; skipping.")
             return False
@@ -227,6 +249,7 @@ class PipelineEngine:
                             ik_tool = osim.InverseKinematicsTool(str(ik_xml))
                             ik_tool.set_model_file((os.path.join(scale_xml.parent,(scaled_model)))) 
                             ik_tool.setMarkerDataFileName(trial['trial_trc'])
+                            ik_tool.printToXML(str(ik_xml))  # Save the possibly updated XML
                             success = ik_tool.run() 
                             if not success:
                                 self.logger.error(f"IK failed for {trial_name}")
@@ -247,16 +270,22 @@ class PipelineEngine:
                         self.logger.info(f"Running ID for trial {trial_name}")
                         
                         try:
-                            
-                                id_tool = osim.InverseDynamicsTool(str(id_xml))
-                                id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))   
-                                if ik_tool is not None:
-                                    id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, ik_tool.getOutputMotionFileName()))
-                                id_tool.setExternalLoadsFileName(str(grf_xml))
-                                success = id_tool.run()
-                                if not success:
-                                    self.logger.error(f"ID failed for {trial_name}")
-                                    continue
+                            id_tool = osim.InverseDynamicsTool(str(id_xml))
+                            id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))
+                            mot_file = ik_tool.getOutputMotionFileName()
+                            table = osim.TimeSeriesTable(mot_file)
+                            start = table.getIndependentColumn()[0]
+                            end   = table.getIndependentColumn()[-1]
+                            id_tool.setStartTime(start)
+                            id_tool.setEndTime(end)   
+                            if ik_tool is not None:
+                                id_tool.setCoordinatesFileName(os.path.join(ik_xml.parent, mot_file))
+                            id_tool.setExternalLoadsFileName(str(grf_xml))
+                            id_tool.printToXML(str(id_xml))  # Save the possibly updated XML
+                            success = id_tool.run()
+                            if not success:
+                                self.logger.error(f"ID failed for {trial_name}")
+                                continue
                         except Exception as e:
                             self.logger.error(f"ID failed for {trial_name}: {str(e)}")
                             continue
@@ -277,6 +306,7 @@ class PipelineEngine:
                             so_tool.setModel((os.path.join(scale_xml.parent,scaled_model)))   
                             if ik_tool is not None:
                                 so_tool.setCoordinatesFileName(ik_tool.getOutputMotionFileName())
+                            so_tool.printToXML(str(so_xml))  # Save the possibly updated XML
                             success = so_tool.run()
                             if not success:
                                 self.logger.error(f"SO failed for {trial_name}")
@@ -651,26 +681,56 @@ class MainWindow(QMainWindow):
         thread = threading.Thread(target=self._background_run, args=(config,), daemon=True)
         thread.start()
 
+    
+
     def _background_run(self, config: PipelineConfig):
         try:
             self.qt_emitter.progress_signal.emit(0)
-            total_subjects = len(config.subjects)
-            for idx, s in enumerate(config.subjects):
-                # update progress (emit via logger so UI updates in main thread)
-                self.logger.info(f"Starting subject {s} ({idx+1}/{total_subjects})")
-                # ensure trials resolved for subject (in case user changed selection)
-                if s not in self.subject_trials:
-                    self.resolve_trials_for_subject(s)
-                self.engine.run_pipeline_for_subject(s, json.load(open(config.template_path)), config.root_dir,
-                                                    enabled_steps={'scale': config.run_scale, 'ik': config.run_ik, 'id': config.run_id, 'so': config.run_so},
-                                                    selected_trials=config.trials.get(s, None))
-                value = int(((idx+1)/total_subjects)*100)
-                self.qt_emitter.progress_signal.emit(value)
 
-            self.logger.info("All done")
+            subjects = config.subjects
+            total = len(subjects)
+
+            steps = {
+                'scale': config.run_scale,
+                'ik': config.run_ik,
+                'id': config.run_id,
+                'so': config.run_so
+            }
+
+            jobs = []
+            for s in subjects:
+                jobs.append((
+                    s,
+                    str(config.template_path),
+                    config.root_dir,
+                    steps,
+                    config.trials.get(s, None)
+                ))
+
+            if config.parallel:
+                cores = min(cpu_count()-2, len(jobs))
+                self.logger.info(f"Running in parallel on {cores} cores")
+
+                done = 0
+                with Pool(cores) as pool:
+                    for result in pool.imap_unordered(subject_worker, jobs):
+                        done += 1
+                        progress = int(done/total*100)
+                        self.qt_emitter.progress_signal.emit(progress)
+                        self.logger.info(f"Finished subject {result}")
+
+            else:
+                for idx, job in enumerate(jobs):
+                    subject_worker(job)
+                    progress = int((idx+1)/total*100)
+                    self.qt_emitter.progress_signal.emit(progress)
+
             self.qt_emitter.progress_signal.emit(100)
+            self.logger.info("All done")
+
         except Exception as e:
             self.logger.exception(f"Pipeline failed: {e}")
+
 
 
 # ------------------ Main ------------------
@@ -682,4 +742,6 @@ def main():
 
 
 if __name__ == '__main__':
+    import multiprocessing
+    multiprocessing.freeze_support()
     main()
