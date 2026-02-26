@@ -267,10 +267,13 @@ class PipelineEngine:
                     grf_xml = Path(replace_subject_in_path(trial.get('grf_xml', ''), '01', subject_num))
                     os.chdir(str(id_xml.parent))
                     if id_xml.exists() and grf_xml.exists():
+                        id_tool = osim.InverseDynamicsTool(str(id_xml))
+                    else:
+                        id_tool = osim.InverseDynamicsTool()
                         self.logger.info(f"Running ID for trial {trial_name}")
                         
-                        try:
-                            id_tool = osim.InverseDynamicsTool(str(id_xml))
+                    try:
+                        if grf_xml.exists():
                             id_tool.setModelFileName((os.path.join(scale_xml.parent,(scaled_model))))
                             mot_file = ik_tool.getOutputMotionFileName()
                             table = osim.TimeSeriesTable(mot_file)
@@ -286,11 +289,11 @@ class PipelineEngine:
                             if not success:
                                 self.logger.error(f"ID failed for {trial_name}")
                                 continue
-                        except Exception as e:
-                            self.logger.error(f"ID failed for {trial_name}: {str(e)}")
+                        else:
+                            self.logger.info(f"Grf file does not exist for {trial_name}")
                             continue
-                    else:
-                        self.logger.warning(f"ID or GRF XML not found for {trial_name}; skipping ID.")
+                    except Exception as e:
+                        self.logger.error(f"ID failed for {trial_name}: {str(e)}")
                         continue
 
                 # SO
