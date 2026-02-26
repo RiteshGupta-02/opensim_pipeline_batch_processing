@@ -39,7 +39,7 @@ trial = Path(sys.argv[2]).name.removesuffix('.trc').removeprefix('stw')  # Extra
 model_file = Path(sys.argv[3])
 filepath = Path(sys.argv[4])
 # Create output directory if it doesn't exist
-output_dir = rf"{subjdir}\ID"
+output_dir = rf"{subjdir}\ID\results_id"
 os.makedirs(output_dir, exist_ok=True)
 subject = (subjdir.name)
 

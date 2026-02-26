@@ -70,7 +70,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 leg = fl.calculate_marker_acceleration(trc_path=trc_file)
 # Fill in the template with current trial number
-xml_content = xml_template.format(trial=str(trc_file.stem())[-1],leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
+xml_content = xml_template.format(trial=str(trc_file.stem)[-1],leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
 
 # Create filename
 # filename = f"grf_{subject:02d}_stw{trial}.xml"

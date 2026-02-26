@@ -473,7 +473,7 @@ def create_scale_setup(subject_id, mass, height, subj_dir, model_file, output_fi
             <max_marker_movement>-1</max_marker_movement>
         </MarkerPlacer>
     </ScaleTool>
-</OpenSimDocument>"""
+</OpenSimDocument>"""-
     
     # Format the XML with subject data
     xml_content = xml_template.format(
