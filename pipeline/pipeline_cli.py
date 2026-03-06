@@ -31,6 +31,9 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
+# Import the setup generation module
+from generate_setup_files import generate_setups_if_needed
+
 
 # ---------------------------------------------------------------------------
 # Physical core detection (psutil preferred, graceful fallback)
@@ -116,143 +119,6 @@ class PipelineEngine:
             return False
         return True
 
-    def generate_setups_if_needed(
-        self,
-        subject_num: str,
-        subj_dir: Path,
-        trial,
-        model_file,
-        xml: str = "",
-        trial_name: str = "",
-    ) -> bool:
-        script_dir = Path(__file__).parent
-        setup_dir = script_dir.parent / "setup_files"
-
-        self._dbg("SETUP", f"generate_setups_if_needed called",
-                  f"subject={subject_num}  trial_name={trial_name!r}  subj_dir={subj_dir}")
-        self._dbg("SETUP", "Setup scripts directory", setup_dir)
-        self._dbg("SETUP", "Setup dir exists?", setup_dir.exists())
-        self._dbg("SETUP", "Model file", model_file)
-
-        # ---- Scale setup ------------------------------------------------
-        if trial_name == "scale":
-            self._dbg("SCALE-SETUP", "Entering scale setup branch")
-            self._dbg("SCALE-SETUP", "Scale XML path", xml)
-            self._dbg("SCALE-SETUP", "Scale XML exists?", Path(xml).exists() if xml else "no path given")
-            self.logger.info("Generating scale setup for subject %s", subject_num)
-            ok = self._run_script(
-                "scale_setup.py",
-                [subject_num, str(subj_dir), str(model_file), str(xml)],
-                setup_dir,
-            )
-            self._dbg("SCALE-SETUP", "scale_setup.py result", "SUCCESS" if ok else "FAILED")
-            return ok
-            
-        # ---- GRF setup --------------------------------------
-        
-        self._dbg("GRF-SETUP", "Entering GRF setup branch (stw1 trial)")
-        try:
-            grf_xml_path = trial.get("grf_xml", "")
-            mot_path = trial.get("trial_mot", "")
-            trc_path = trial.get("trial_trc", "")
-            self._dbg("GRF-SETUP", "GRF XML path", grf_xml_path)
-            self._dbg("GRF-SETUP", "GRF XML exists?", Path(grf_xml_path).exists() if grf_xml_path else "no path")
-            self._dbg("GRF-SETUP", "MOT path", mot_path)
-            self._dbg("GRF-SETUP", "MOT exists?", Path(mot_path).exists() if mot_path else "no path")
-            self._dbg("GRF-SETUP", "TRC path", trc_path)
-            self._dbg("GRF-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
-            if not Path(grf_xml_path).exists() or not Path(mot_path).exists() or not Path(trc_path).exists():
-                self._dbg("GRF-SETUP", "Missing GRF/MOT/TRC path — skipping GRF setup")
-                self.logger.warning("Missing GRF/MOT/TRC path for trial %s; skipping GRF setup.", trial_name)  # Not an error if GRF setup is just not applicable for this trial
-                self.logger.info("Generating GRF setups for subject %s", subject_num)
-                ok = self._run_script(
-                    "grf_setup.py",
-                    [subject_num, str(subj_dir), str(trial_name), str(mot_path), str(trc_path), str(grf_xml_path)],
-                    setup_dir,
-                )
-                self._dbg("GRF-SETUP", "grf_setup.py result", "SUCCESS" if ok else "FAILED")
-        except Exception as exc:
-            self._dbg("GRF-SETUP", "EXCEPTION in GRF setup", str(exc))
-            self.logger.error("GRF setup error for %s: %s", subject_num, exc)
-
-        # ---- ID setup ---------------------------------------------------
-        self._dbg("ID-SETUP", "Entering ID setup branch")
-        try:
-            id_xml_path = trial.get("id_xml", "")
-            if not id_xml_path:
-                self._dbg("ID-SETUP", "ID XML path (to be generated)", id_xml_path)
-                self.logger.info("Generating ID setups for subject %s", subject_num)
-            
-                ok = self._run_script(
-                    "id_setup.py",
-                    [str(subj_dir), str(trial_name), str(model_file), str(id_xml_path)],
-                    setup_dir,
-                )
-                self._dbg("ID-SETUP", "id_setup.py result", "SUCCESS" if ok else "FAILED")
-        except Exception as exc:
-            self._dbg("ID-SETUP", "EXCEPTION in ID setup", str(exc))
-            self.logger.error("ID setup error for %s: %s", subject_num, exc)
-
-        # ---- SO setup ---------------------------------------------------
-        self._dbg("SO-SETUP", "Entering SO setup branch")
-        try:
-            so_dir = subj_dir / "SO"
-            so_xml_path = trial.get("so_xml", "")
-            self._dbg("SO-SETUP", "SO dir", so_dir)
-            self._dbg("SO-SETUP", "SO dir exists?", so_dir.exists())
-            self._dbg("SO-SETUP", "SO XML path", so_xml_path)
-            self._dbg("SO-SETUP", "SO XML exists?", Path(so_xml_path).exists() if so_xml_path else "no path")
-            if not so_dir.exists() or not Path(so_xml_path).exists():
-                self._dbg("SO-SETUP", "SO XML or dir missing — running SO_setup.py")
-                self.logger.info("Generating SO setups for subject %s", subject_num)
-                ok = self._run_script(
-                    "SO_setup.py",
-                    [str(subj_dir), str(trial_name), str(model_file), str(so_xml_path)],
-                    setup_dir,
-                )
-                self._dbg("SO-SETUP", "SO_setup.py result", "SUCCESS" if ok else "FAILED")
-            else:
-                self._dbg("SO-SETUP", "SO XML already exists — skipping SO_setup.py")
-
-            actuators_src = Path(r"d:\RESEARCH\STW_dataset\Extracted\model\cmc_actuators.xml")
-            actuators_dst = so_dir / "cmc_actuators.xml"
-            self._dbg("SO-SETUP", "Actuators source", actuators_src)
-            self._dbg("SO-SETUP", "Actuators source exists?", actuators_src.exists())
-            self._dbg("SO-SETUP", "Actuators destination", actuators_dst)
-            self._dbg("SO-SETUP", "Actuators destination exists?", actuators_dst.exists())
-            if actuators_src.exists() and not actuators_dst.exists():
-            # if actuators_src.exists():
-                so_dir.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(str(actuators_src), str(actuators_dst))
-                self._dbg("SO-SETUP", "Copied cmc_actuators.xml to", actuators_dst)
-                self.logger.info("Copied cmc_actuators.xml to %s", actuators_dst)
-        except Exception as exc:
-            self._dbg("SO-SETUP", "EXCEPTION in SO setup", str(exc))
-            self.logger.error("SO setup error for %s: %s", subject_num, exc)
-
-        # ---- IK setup ---------------------------------------------------
-        self._dbg("IK-SETUP", "Entering IK setup branch")
-        try:
-            ik_xml_path = trial.get("ik_xml", "")
-            trc_path = trial.get("trial_trc", "")
-            self._dbg("IK-SETUP", "IK XML path (to be generated)", ik_xml_path)
-            self._dbg("IK-SETUP", "TRC path", trc_path)
-            self._dbg("IK-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
-            if not ik_xml_path or not Path(trc_path).exists():
-                self._dbg("IK-SETUP", "IK XML or TRC missing — running ik_setup.py")
-                self.logger.info("Generating IK setups for subject %s", subject_num)
-                ok = self._run_script(
-                    "ik_setup.py",
-                    [str(subj_dir), str(trial_name), str(model_file), str(trc_path), str(ik_xml_path)],
-                    setup_dir,
-                )
-                self._dbg("IK-SETUP", "ik_setup.py result", "SUCCESS" if ok else "FAILED")
-        except Exception as exc:
-            self._dbg("IK-SETUP", "EXCEPTION in IK setup", str(exc))
-            self.logger.error("IK setup error for %s: %s", subject_num, exc)
-
-        return True
-
     # ------------------------------------------------------------------
     # Main per-subject runner
     # ------------------------------------------------------------------
@@ -331,13 +197,14 @@ class PipelineEngine:
                 self._dbg("SCALE", "scale_xml exists (before setup)?", scale_xml.exists())
                 if not scale_xml.exists():
 
-                    self.generate_setups_if_needed(
+                    generate_setups_if_needed(
                         subject_num=subject_num,
                         subj_dir=subj_dir,
                         trial=0,
                         model_file=adapted.get("model", ""),
                         xml=str(scale_xml),
                         trial_name="scale",
+                        logger=self.logger,
                     )
 
                 self._dbg("SCALE", "scale_xml exists (after setup)?", scale_xml.exists())
@@ -365,7 +232,7 @@ class PipelineEngine:
                         scale_tool.printToXML(str(scale_xml))
                         self._dbg("SCALE", "ScaleTool XML saved, now running tool...")
 
-                        success = scale_tool.run()
+                        success = True #scale_tool.run()
                         self._dbg("SCALE", "ScaleTool.run() returned", success)
 
                         if not success:
@@ -415,12 +282,13 @@ class PipelineEngine:
                 self._dbg("TRIAL", "model_for_trial", model_for_trial)
                 self._dbg("TRIAL", "model_for_trial exists?", Path(model_for_trial).exists() if model_for_trial else "no path")
 
-                setup_ok = self.generate_setups_if_needed(
+                setup_ok = generate_setups_if_needed(
                     subject_num=subject_num,
                     subj_dir=subj_dir,
                     trial=trial,
                     trial_name=trial_name,
                     model_file=model_for_trial,
+                    logger=self.logger,
                 )
                 self._dbg("TRIAL", "generate_setups_if_needed returned", setup_ok)
 
@@ -432,6 +300,8 @@ class PipelineEngine:
                     continue
 
                 ik_tool = None
+                start = 3.0
+                end = 5.0
 
                 # ============================================================
                 # IK
@@ -464,7 +334,7 @@ class PipelineEngine:
                             ik_tool.printToXML(str(ik_xml))
 
                             self._dbg("IK", "IK tool configured, running...")
-                            success = ik_tool.run()
+                            success = True #ik_tool.run()
                             self._dbg("IK", "IK.run() returned", success)
 
                             if not success:
@@ -589,6 +459,8 @@ class PipelineEngine:
 
                             self._dbg("SO", "setModel", model_for_trial)
                             so_tool.setModelFilename(model_for_trial)
+                            so_tool.setStartTime(start)
+                            so_tool.setFinalTime(end)
 
                             if ik_tool:
                                 ik_out = ik_tool.getOutputMotionFileName()

@@ -12,7 +12,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<objects>
 			<ExternalForce name="{leg}_cal">
 				<!--Name of the body the force is applied to.-->
-				<applied_to_body>calcn_l</applied_to_body>
+				<applied_to_body>calcn_{leg}</applied_to_body>
 				<!--Name of the body the force is expressed in (default is ground).-->
 				<force_expressed_in_body>ground</force_expressed_in_body>
 				<!--Name of the body the point is expressed in (default is ground).-->
@@ -28,7 +28,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 			</ExternalForce>
 			<ExternalForce name="{leg1}_cal">
 				<!--Name of the body the force is applied to.-->
-				<applied_to_body>calcn_r</applied_to_body>
+				<applied_to_body>calcn_{leg1}</applied_to_body>
 				<!--Name of the body the force is expressed in (default is ground).-->
 				<force_expressed_in_body>ground</force_expressed_in_body>
 				<!--Name of the body the point is expressed in (default is ground).-->
@@ -68,7 +68,7 @@ os.makedirs(output_dir, exist_ok=True)
 
 
 
-leg = fl.calculate_marker_acceleration(trc_path=trc_file)
+_,leg = fl.calculate_marker_acceleration(trc_path=trc_file)
 # Fill in the template with current trial number
 xml_content = xml_template.format(trial=str(trc_file.stem)[-1],leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
 

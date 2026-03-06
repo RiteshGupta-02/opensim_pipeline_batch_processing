@@ -52,59 +52,62 @@ def calculate_marker_acceleration(trc_path, trial = 0,subject = 0,output_csv='ma
     # Acceleration
     rfcc_acc = np.gradient(rfcc_vel, time, axis=0)
     lfcc_acc = np.gradient(lfcc_vel, time, axis=0)
+    results = pd.DataFrame({
+        'time': time,
+        'RFCC_Acc_Y': rfcc_acc[:, 1],
+        'LFCC_Acc_Y': lfcc_acc[:, 1]
+    })
+    results.to_csv(output_csv, index=False)
 
     # 5. Determine which leg steps first
     # We look for the first peak in Vertical (Y) acceleration (index 1)
-    # A threshold of 0.5 m/s^2 is usually enough to detect movement
-    threshold = 2
-    r_start_idx = np.where(np.abs(rfcc_acc[:, 1]) > threshold)[0][0]    
-    
+    # A threshold of 1.9 m/s^2 is use to detect verical acceleration movement of leg
+    threshold = 1.9
+    r_start_idx = np.where(np.abs(rfcc_acc[:, 1]) > threshold)[0][0]
+    print("r_start_idx:",np.where(np.abs(rfcc_acc[:, 1]) > threshold))    
+    print(type(np.where(np.abs(rfcc_acc[:, 1]) > threshold)))
     l_start_idx = np.where(np.abs(lfcc_acc[:, 1]) > threshold)[0][0]
 
     first_leg = "Right (RFCC)" if r_start_idx < l_start_idx else "Left (LFCC)"
-    # print(f"The {first_leg} leg starts moving first at {time[min(r_start_idx, l_start_idx)]:.3f}s")
+    print(f"The {first_leg} leg starts moving first at {time[min(r_start_idx, l_start_idx)]:.3f}s")
     
 
-    # # 6. Save and Plot
-    # results = pd.DataFrame({
-    #     'time': time,
-    #     'RFCC_Acc_Y': rfcc_acc[:, 1],
-    #     'LFCC_Acc_Y': lfcc_acc[:, 1]
-    # })
-    # results.to_csv(output_csv, index=False)
-    # os.chdir(os.path.dirname(rf'd:\UG_Proj\Human Sitting to Walking Transitions\S{subject:02d}'))
+    # 6. Save and Plot
     
-    # plt.figure(figsize=(10, 5))
-    # plt.plot(time, rfcc_acc[:, 1], label='RFCC (Right) Vertical Accel')
-    # plt.plot(time, lfcc_acc[:, 1], label='LFCC (Left) Vertical Accel')
-    # plt.axvline(time[r_start_idx], color='blue', linestyle='--', alpha=0.5, label='R-Start')
-    # plt.axvline(time[l_start_idx], color='red', linestyle='--', alpha=0.5, label='L-Start')
-    # plt.title('Heel Marker Vertical Acceleration')
-    # plt.ylabel('Acceleration ($m/s^2$)')
-    # plt.xlabel('Time (s)')
-    # plt.legend()
+    os.chdir(os.path.dirname(rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\S{subject:02d}'))
+    
+    plt.figure(figsize=(10, 5))
+    plt.plot(time, rfcc_acc[:, 1], label='RFCC (Right) Vertical Accel')
+    plt.plot(time, lfcc_acc[:, 1], label='LFCC (Left) Vertical Accel')
+    plt.axvline(time[r_start_idx], color='blue', linestyle='--', alpha=0.5, label='R-Start')
+    plt.axvline(time[l_start_idx], color='red', linestyle='--', alpha=0.5, label='L-Start')
+    plt.title('Heel Marker Vertical Acceleration')
+    plt.ylabel('Acceleration ($m/s^2$)')
+    plt.xlabel('Time (s)')
+    plt.legend()
     # plt.show()
-    # plt.savefig(f'heel_acceleration_plot_{trial}.png')
+    plt.savefig(f'heel_acceleration_plot_{trial}.png')
     
-    return first_leg
+    return results,first_leg
 
 
       
 
 
 # To run:
-# if __name__ == "__main__":
-#     leg = {}
-#     for subject in range(1,11):
-#         leg[subject] = []  # Add this line
-#         for trial in range(1,6):
-#             trc_file = rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
-#             print(f"Processing {trc_file}...")
-#             df,first_leg = calculate_marker_acceleration(trc_file, output_csv=rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\subject_{subject:02d}_trial_{trial}_accelerations.csv',trial=trial,subject=subject)
-#             leg[subject].append({trial:first_leg})
-#     leg_df = pd.DataFrame(leg).T
-#     print(leg_df)
+if __name__ == "__main__":
+    leg = {}
+    for subject in range(21,21+1):
+        leg[subject] = []  # Add this line
+        for trial in range(1,6):
+            # trc_file = rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
+            trc_file = rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\S{subject:02d}\Mocap\trcResults\stw{trial}.trc'
+            print(f"Processing {trc_file}...")
+            df,first_leg = calculate_marker_acceleration(trc_file, output_csv=rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\subject_{subject:02d}_trial_{trial}_accelerations.csv',trial=trial,subject=subject)
+            leg[subject].append({trial:first_leg})
+    leg_df = pd.DataFrame(leg).T
+    print(leg_df)
     
-    # os.chdir(os.path.dirname(rf'd:\UG_Proj\Human Sitting to Walking Transitions'))
-    # leg_df.to_excel('leg_results.xlsx')
-    # print("Saved to leg_results.xlsx")
+    os.chdir(os.path.dirname(r'D:\student\MTech\opensim_pipeline_batch_processing\pipeline'))
+    leg_df.to_excel('leg_results_afternewthreshold_21_31.xlsx')
+    print("Saved to leg_results.xlsx")

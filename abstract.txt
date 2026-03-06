@@ -1,0 +1,25 @@
+three age groups – 
+young (19–35 years), 
+middle (36–55 years) 
+and older (above 56 years)
+
+subject that were chosen to use for abstract:
+M 08,06,23
+F 03,17,35
+
+M 29,65,52
+F 34,30,43
+
+M 53,55,45
+F 54,42,56
+
+mean and sd plot
+
+reference:
+1. for acceleration detection rcc >1.9m/s
+    A novel method for accurate division of the gait cycle into seven phases using shank angular velocity
+    Author links open overlay panel
+    Mikko Salminen a
+    , 
+    Jarmo Perttunen b
+    , Janne Avela b, Antti Vehkaoja a
