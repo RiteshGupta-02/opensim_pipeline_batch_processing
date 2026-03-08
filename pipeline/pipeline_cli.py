@@ -103,14 +103,14 @@ class PipelineEngine:
 
     def _run_script(self, script_name: str, args: List[str], cwd: Path) -> bool:
         """Run a helper setup script and return True on success."""
-        self._dbg("SCRIPT", f"Running: {script_name}", f"cwd={cwd}  args={args}")
+        self. _dbg("SCRIPT", f"Running: {script_name}", f"cwd={cwd}  args={args}")
         result = subprocess.run(
             [sys.executable, script_name] + args,
             cwd=str(cwd),
             capture_output=True,
             text=True,
         )
-        self._dbg("SCRIPT", f"Return code: {result.returncode}", script_name)
+        self. _dbg("SCRIPT", f"Return code: {result.returncode}", script_name)
         if result.stdout.strip():
             print(f"[DBG] [SCRIPT stdout]\n{result.stdout.strip()}", flush=True)
         if result.returncode != 0:
@@ -131,17 +131,18 @@ class PipelineEngine:
         enabled_steps: dict,
         selected_trials: Optional[List[str]] = None,
     ) -> bool:
+        
         # Defer opensim import so each spawned process loads it cleanly
         import opensim as osim  # type: ignore
 
-        self._dbg("SUBJECT", f"===== START subject {subject_num} =====")
-        self._dbg("SUBJECT", "enabled_steps", enabled_steps)
-        self._dbg("SUBJECT", "selected_trials", selected_trials or "all")
-        self._dbg("SUBJECT", "root_dir", root_dir)
+        self. _dbg("SUBJECT", f"===== START subject {subject_num} =====")
+        self. _dbg("SUBJECT", "enabled_steps", enabled_steps)
+        self. _dbg("SUBJECT", "selected_trials", selected_trials or "all")
+        self. _dbg("SUBJECT", "root_dir", root_dir)
 
         subj_dir = root_dir / f"S{subject_num}"
-        self._dbg("SUBJECT", "subj_dir", subj_dir)
-        self._dbg("SUBJECT", "subj_dir exists?", subj_dir.exists())
+        self. _dbg("SUBJECT", "subj_dir", subj_dir)
+        self. _dbg("SUBJECT", "subj_dir exists?", subj_dir.exists())
 
         osim.Logger.setLevelString("Warn")
 
@@ -161,18 +162,18 @@ class PipelineEngine:
                             if isinstance(v, str):
                                 item[k] = replace_subject_in_path(v, "01", subject_num)
 
-        self._dbg("SUBJECT", "Adapted template keys", list(adapted.keys()))
-        self._dbg("SUBJECT", "model path (adapted)", adapted.get("model", "NOT SET"))
-        self._dbg("SUBJECT", "model file exists?",
+        self. _dbg("SUBJECT", "Adapted template keys", list(adapted.keys()))
+        self. _dbg("SUBJECT", "model path (adapted)", adapted.get("model", "NOT SET"))
+        self. _dbg("SUBJECT", "model file exists?",
                   Path(adapted.get("model", "")).exists() if adapted.get("model") else "no path")
-        self._dbg("SUBJECT", "static_trc (adapted)", adapted.get("static_trc", "NOT SET"))
-        self._dbg("SUBJECT", "static_trc exists?",
+        self. _dbg("SUBJECT", "static_trc (adapted)", adapted.get("static_trc", "NOT SET"))
+        self. _dbg("SUBJECT", "static_trc exists?",
                   Path(adapted.get("static_trc", "")).exists() if adapted.get("static_trc") else "no path")
-        self._dbg("SUBJECT", "scale_xml (adapted)", adapted.get("scale_xml", "NOT SET"))
-        self._dbg("SUBJECT", "mapped_trials count", len(adapted.get("mapped_trials", [])))
+        self. _dbg("SUBJECT", "scale_xml (adapted)", adapted.get("scale_xml", "NOT SET"))
+        self. _dbg("SUBJECT", "mapped_trials count", len(adapted.get("mapped_trials", [])))
 
         original_cwd = os.getcwd()
-        self._dbg("SUBJECT", "original working directory", original_cwd)
+        self. _dbg("SUBJECT", "original working directory", original_cwd)
 
         try:
             self.logger.info("Processing subject %s in %s", subject_num, subj_dir)
@@ -183,18 +184,18 @@ class PipelineEngine:
             # ================================================================
             # SCALING
             # ================================================================
-            self._dbg("SCALE", f"Step enabled? {enabled_steps.get('scale', True)}")
+            self. _dbg("SCALE", f"Step enabled? {enabled_steps.get('scale', True)}")
 
             if enabled_steps.get("scale", True):
                 scale_dir = subj_dir / "scale"
-                self._dbg("SCALE", "scale_dir", scale_dir)
-                self._dbg("SCALE", "scale_dir exists (before mkdir)?", scale_dir.exists())
+                self. _dbg("SCALE", "scale_dir", scale_dir)
+                self. _dbg("SCALE", "scale_dir exists (before mkdir)?", scale_dir.exists())
                 scale_dir.mkdir(exist_ok=True)
-                self._dbg("SCALE", "scale_dir exists (after mkdir)?", scale_dir.exists())
+                self. _dbg("SCALE", "scale_dir exists (after mkdir)?", scale_dir.exists())
 
                 scale_xml = Path(adapted.get("scale_xml", ""))
-                self._dbg("SCALE", "scale_xml path", scale_xml)
-                self._dbg("SCALE", "scale_xml exists (before setup)?", scale_xml.exists())
+                self. _dbg("SCALE", "scale_xml path", scale_xml)
+                self. _dbg("SCALE", "scale_xml exists (before setup)?", scale_xml.exists())
                 if not scale_xml.exists():
 
                     generate_setups_if_needed(
@@ -207,48 +208,48 @@ class PipelineEngine:
                         logger=self.logger,
                     )
 
-                self._dbg("SCALE", "scale_xml exists (after setup)?", scale_xml.exists())
+                self. _dbg("SCALE", "scale_xml exists (after setup)?", scale_xml.exists())
 
                 if scale_xml.exists():
-                    self._dbg("SCALE", "Changing cwd to scale_xml parent", scale_xml.parent)
+                    self. _dbg("SCALE", "Changing cwd to scale_xml parent", scale_xml.parent)
                     os.chdir(str(scale_xml.parent))
-                    self._dbg("SCALE", "Current working directory", os.getcwd())
+                    self. _dbg("SCALE", "Current working directory", os.getcwd())
                     self.logger.info("Running scaling for subject %s", subject_num)
                     try:
-                        self._dbg("SCALE", "Loading ScaleTool from", scale_xml)
+                        self. _dbg("SCALE", "Loading ScaleTool from", scale_xml)
                         scale_tool = osim.ScaleTool(str(scale_xml))
                         scale_tool.setPathToSubject("")
                         scaled_model = scale_tool.getMarkerPlacer().getOutputModelFileName()
-                        self._dbg("SCALE", "Output scaled model filename", scaled_model)
+                        self. _dbg("SCALE", "Output scaled model filename", scaled_model)
 
                         generic_model = adapted.get("model", "")
                         static_trc = adapted.get("static_trc", "")
-                        self._dbg("SCALE", "Setting generic model", generic_model)
-                        self._dbg("SCALE", "Setting static TRC", static_trc)
+                        self. _dbg("SCALE", "Setting generic model", generic_model)
+                        self. _dbg("SCALE", "Setting static TRC", static_trc)
 
                         scale_tool.getGenericModelMaker().setModelFileName(generic_model)
                         scale_tool.getMarkerPlacer().setMarkerFileName(static_trc)
                         scale_tool.getModelScaler().setMarkerFileName(static_trc)
                         scale_tool.printToXML(str(scale_xml))
-                        self._dbg("SCALE", "ScaleTool XML saved, now running tool...")
+                        self. _dbg("SCALE", "ScaleTool XML saved, now running tool...")
 
-                        success = True #scale_tool.run()
-                        self._dbg("SCALE", "ScaleTool.run() returned", success)
+                        success = scale_tool.run()
+                        self. _dbg("SCALE", "ScaleTool.run() returned", success)
 
                         if not success:
                             self.logger.error("Scaling failed for subject %s", subject_num)
                             return False
 
                         full_scaled_path = Path(scale_xml.parent) / scaled_model
-                        self._dbg("SCALE", "Expected scaled model output path", full_scaled_path)
-                        self._dbg("SCALE", "Scaled model file exists?", full_scaled_path.exists())
+                        self. _dbg("SCALE", "Expected scaled model output path", full_scaled_path)
+                        self. _dbg("SCALE", "Scaled model file exists?", full_scaled_path.exists())
 
                     except Exception as exc:
-                        self._dbg("SCALE", "EXCEPTION during scaling", str(exc))
+                        self. _dbg("SCALE", "EXCEPTION during scaling", str(exc))
                         self.logger.error("Scaling exception for subject %s: %s", subject_num, exc)
                         return False
                 else:
-                    self._dbg("SCALE", "scale_xml not found — scaling skipped")
+                    self. _dbg("SCALE", "scale_xml not found — scaling skipped")
                     self.logger.warning(
                         "Scale XML not found for subject %s; skipping scaling.", subject_num
                     )
@@ -257,18 +258,18 @@ class PipelineEngine:
             # PER-TRIAL LOOP
             # ================================================================
             mapped_trials = adapted.get("mapped_trials", [])
-            self._dbg("TRIALS", f"Total mapped trials to iterate", len(mapped_trials))
+            self. _dbg("TRIALS", f"Total mapped trials to iterate", len(mapped_trials))
 
             for trial_idx, trial in enumerate(mapped_trials):
                 trc = replace_subject_in_path(trial.get("trial_trc", ""), "01", subject_num)
                 trial_name = Path(trc).stem
 
-                self._dbg("TRIAL", f"--- Trial [{trial_idx + 1}/{len(mapped_trials)}]: {trial_name} ---")
-                self._dbg("TRIAL", "trial_trc path", trc)
-                self._dbg("TRIAL", "trial_trc exists?", Path(trc).exists())
+                self. _dbg("TRIAL", f"--- Trial [{trial_idx + 1}/{len(mapped_trials)}]: {trial_name} ---")
+                self. _dbg("TRIAL", "trial_trc path", trc)
+                self. _dbg("TRIAL", "trial_trc exists?", Path(trc).exists())
 
                 if selected_trials and trial_name not in selected_trials:
-                    self._dbg("TRIAL", f"Skipping {trial_name} — not in selected_trials", selected_trials)
+                    self. _dbg("TRIAL", f"Skipping {trial_name} — not in selected_trials", selected_trials)
                     self.logger.debug("Skipping trial %s (not in selection)", trial_name)
                     continue
 
@@ -279,8 +280,8 @@ class PipelineEngine:
                     if scale_xml and scaled_model
                     else adapted.get("model", "")
                 )
-                self._dbg("TRIAL", "model_for_trial", model_for_trial)
-                self._dbg("TRIAL", "model_for_trial exists?", Path(model_for_trial).exists() if model_for_trial else "no path")
+                self. _dbg("TRIAL", "model_for_trial", model_for_trial)
+                self. _dbg("TRIAL", "model_for_trial exists?", Path(model_for_trial).exists() if model_for_trial else "no path")
 
                 setup_ok = generate_setups_if_needed(
                     subject_num=subject_num,
@@ -290,7 +291,7 @@ class PipelineEngine:
                     model_file=model_for_trial,
                     logger=self.logger,
                 )
-                self._dbg("TRIAL", "generate_setups_if_needed returned", setup_ok)
+                self. _dbg("TRIAL", "generate_setups_if_needed returned", setup_ok)
 
                 if not setup_ok:
                     self.logger.error(
@@ -306,59 +307,59 @@ class PipelineEngine:
                 # ============================================================
                 # IK
                 # ============================================================
-                self._dbg("IK", f"Step enabled? {enabled_steps.get('ik', True)}")
+                self. _dbg("IK", f"Step enabled? {enabled_steps.get('ik', True)}")
 
                 if enabled_steps.get("ik", True):
                     ik_xml = Path(
                         replace_subject_in_path(trial.get("ik_xml", ""), "01", subject_num)
                     )
-                    self._dbg("IK", "ik_xml path", ik_xml)
-                    self._dbg("IK", "ik_xml exists?", ik_xml.exists())
+                    self. _dbg("IK", "ik_xml path", ik_xml)
+                    self. _dbg("IK", "ik_xml exists?", ik_xml.exists())
 
                     if ik_xml.exists():
-                        self._dbg("IK", "Changing cwd to ik_xml parent", ik_xml.parent)
+                        self. _dbg("IK", "Changing cwd to ik_xml parent", ik_xml.parent)
                         os.chdir(str(ik_xml.parent))
-                        self._dbg("IK", "Current working directory", os.getcwd())
+                        self. _dbg("IK", "Current working directory", os.getcwd())
                         self.logger.info("Running IK for trial %s", trial_name)
                         try:
-                            self._dbg("IK", "Loading InverseKinematicsTool from", ik_xml)
+                            self. _dbg("IK", "Loading InverseKinematicsTool from", ik_xml)
                             ik_tool = osim.InverseKinematicsTool(str(ik_xml))
 
-                            self._dbg("IK", "Setting model file", model_for_trial)
+                            self. _dbg("IK", "Setting model file", model_for_trial)
                             ik_tool.set_model_file(model_for_trial)
 
                             marker_file = trial["trial_trc"]
-                            self._dbg("IK", "Setting marker data file", marker_file)
-                            self._dbg("IK", "Marker file exists?", Path(marker_file).exists())
+                            self. _dbg("IK", "Setting marker data file", marker_file)
+                            self. _dbg("IK", "Marker file exists?", Path(marker_file).exists())
                             ik_tool.setMarkerDataFileName(marker_file)
                             ik_tool.printToXML(str(ik_xml))
 
-                            self._dbg("IK", "IK tool configured, running...")
-                            success = True #ik_tool.run()
-                            self._dbg("IK", "IK.run() returned", success)
+                            self. _dbg("IK", "IK tool configured, running...")
+                            success = ik_tool.run()
+                            self. _dbg("IK", "IK.run() returned", success)
 
                             if not success:
                                 self.logger.error("IK failed for trial %s", trial_name)
                                 continue
 
                             output_mot = ik_tool.getOutputMotionFileName()
-                            self._dbg("IK", "IK output motion file", output_mot)
-                            self._dbg("IK", "IK output exists?",
+                            self. _dbg("IK", "IK output motion file", output_mot)
+                            self. _dbg("IK", "IK output exists?",
                                       Path(ik_xml.parent / output_mot).exists() if output_mot else "no filename")
 
                         except Exception as exc:
-                            self._dbg("IK", "EXCEPTION during IK", str(exc))
+                            self. _dbg("IK", "EXCEPTION during IK", str(exc))
                             self.logger.error("IK exception for trial %s: %s", trial_name, exc)
                             continue
                     else:
-                        self._dbg("IK", "ik_xml not found — IK skipped for this trial")
+                        self. _dbg("IK", "ik_xml not found — IK skipped for this trial")
                         self.logger.warning("IK XML not found for %s; skipping.", trial_name)
                         continue
 
                 # ============================================================
                 # ID
                 # ============================================================
-                self._dbg("ID", f"Step enabled? {enabled_steps.get('id', True)}")
+                self. _dbg("ID", f"Step enabled? {enabled_steps.get('id', True)}")
 
                 if enabled_steps.get("id", True):
                     id_xml = Path(
@@ -367,68 +368,68 @@ class PipelineEngine:
                     grf_xml = Path(
                         replace_subject_in_path(trial.get("grf_xml", ""), "01", subject_num)
                     )
-                    self._dbg("ID", "id_xml path", id_xml)
-                    self._dbg("ID", "id_xml exists?", id_xml.exists())
-                    self._dbg("ID", "grf_xml path", grf_xml)
-                    self._dbg("ID", "grf_xml exists?", grf_xml.exists())
+                    self. _dbg("ID", "id_xml path", id_xml)
+                    self. _dbg("ID", "id_xml exists?", id_xml.exists())
+                    self. _dbg("ID", "grf_xml path", grf_xml)
+                    self. _dbg("ID", "grf_xml exists?", grf_xml.exists())
 
                     if id_xml.exists():
-                        self._dbg("ID", "Changing cwd to id_xml parent", id_xml.parent)
+                        self. _dbg("ID", "Changing cwd to id_xml parent", id_xml.parent)
                         os.chdir(str(id_xml.parent))
-                        self._dbg("ID", "Loading InverseDynamicsTool from", id_xml)
+                        self. _dbg("ID", "Loading InverseDynamicsTool from", id_xml)
                         id_tool = osim.InverseDynamicsTool(str(id_xml))
                     else:
-                        self._dbg("ID", "id_xml missing — creating empty InverseDynamicsTool")
+                        self. _dbg("ID", "id_xml missing — creating empty InverseDynamicsTool")
                         id_tool = osim.InverseDynamicsTool()
 
                     if grf_xml.exists():
                         try:
-                            self._dbg("ID", "Setting model", model_for_trial)
+                            self. _dbg("ID", "Setting model", model_for_trial)
                             id_tool.setModelFileName(model_for_trial)
 
                             mot_file = ik_tool.getOutputMotionFileName() if ik_tool else ""
-                            self._dbg("ID", "IK output motion file to use for ID", mot_file)
-                            self._dbg("ID", "mot_file exists?",
+                            self. _dbg("ID", "IK output motion file to use for ID", mot_file)
+                            self. _dbg("ID", "mot_file exists?",
                                       Path(mot_file).exists() if mot_file else "no filename")
 
                             table = osim.TimeSeriesTable(mot_file)
                             start = table.getIndependentColumn()[0]
                             end = table.getIndependentColumn()[-1]
-                            self._dbg("ID", "Time range from motion file", f"start={start:.4f}  end={end:.4f}")
+                            self. _dbg("ID", "Time range from motion file", f"start={start:.4f}  end={end:.4f}")
 
                             id_tool.setStartTime(start)
                             id_tool.setEndTime(end)
 
                             if ik_tool:
                                 coord_path = str(Path(ik_xml.parent) / mot_file) if id_xml.exists() else mot_file
-                                self._dbg("ID", "setCoordinatesFileName", coord_path)
-                                self._dbg("ID", "coordinates file exists?", Path(coord_path).exists())
+                                self. _dbg("ID", "setCoordinatesFileName", coord_path)
+                                self. _dbg("ID", "coordinates file exists?", Path(coord_path).exists())
                                 id_tool.setCoordinatesFileName(coord_path)
 
-                            self._dbg("ID", "setExternalLoadsFileName", grf_xml)
+                            self. _dbg("ID", "setExternalLoadsFileName", grf_xml)
                             id_tool.setExternalLoadsFileName(str(grf_xml))
                             id_tool.printToXML(str(id_xml))
 
-                            self._dbg("ID", "ID tool configured, running...")
+                            self. _dbg("ID", "ID tool configured, running...")
                             success = id_tool.run()
-                            self._dbg("ID", "ID.run() returned", success)
+                            self. _dbg("ID", "ID.run() returned", success)
 
                             if not success:
                                 self.logger.error("ID failed for trial %s", trial_name)
                                 continue
                         except Exception as exc:
-                            self._dbg("ID", "EXCEPTION during ID", str(exc))
+                            self. _dbg("ID", "EXCEPTION during ID", str(exc))
                             self.logger.error("ID exception for trial %s: %s", trial_name, exc)
                             continue
                     else:
-                        self._dbg("ID", "grf_xml missing — ID skipped")
+                        self. _dbg("ID", "grf_xml missing — ID skipped")
                         self.logger.info("GRF file missing for trial %s; skipping ID.", trial_name)
                         continue
 
                 # ============================================================
                 # SO
                 # ============================================================
-                self._dbg("SO", f"Step enabled? {enabled_steps.get('so', True)}")
+                self. _dbg("SO", f"Step enabled? {enabled_steps.get('so', True)}")
 
                 if enabled_steps.get("so", True):
                     so_xml = Path(
@@ -438,59 +439,60 @@ class PipelineEngine:
                     grf_xml = Path(
                         replace_subject_in_path(trial.get("grf_xml", ""), "01", subject_num)
                     )
-                    self._dbg("SO", "so_xml path", so_xml)
-                    self._dbg("SO", "so_xml exists?", so_xml.exists())
-                    self._dbg("SO", "grf_xml path", grf_xml)
-                    self._dbg("SO", "grf_xml exists?", grf_xml.exists())
+                    self. _dbg("SO", "so_xml path", so_xml)
+                    self. _dbg("SO", "so_xml exists?", so_xml.exists())
+                    self. _dbg("SO", "grf_xml path", grf_xml)
+                    self. _dbg("SO", "grf_xml exists?", grf_xml.exists())
 
                     if so_xml.exists():
-                        self._dbg("SO", "Changing cwd to so_xml parent", so_xml.parent)
+                        self. _dbg("SO", "Changing cwd to so_xml parent", so_xml.parent)
                         os.chdir(str(so_xml.parent))
                         so_tool = osim.AnalyzeTool(str(so_xml))
-                        self._dbg("SO", "Model filename", so_tool.getModelFilename())
-                        self._dbg("SO", "Current working directory", os.getcwd())
+                        self. _dbg("SO", "Model filename", so_tool.getModelFilename())
+                        self. _dbg("SO", "Current working directory", os.getcwd())
                         self.logger.info("Running SO for trial %s", trial_name)
                         try:
-                            self._dbg("SO", "Loading AnalyzeTool from", so_xml)
+                            self. _dbg("SO", "Loading AnalyzeTool from", so_xml)
                             so_tool = osim.AnalyzeTool(str(so_xml))
 
-                            self._dbg("SO", "setExternalLoadsFileName", grf_xml)
+                            self. _dbg("SO", "setExternalLoadsFileName", grf_xml)
                             so_tool.setExternalLoadsFileName(str(grf_xml))
 
-                            self._dbg("SO", "setModel", model_for_trial)
+                            self. _dbg("SO", "setModel", model_for_trial)
                             so_tool.setModelFilename(model_for_trial)
                             so_tool.setStartTime(start)
                             so_tool.setFinalTime(end)
 
                             if ik_tool:
                                 ik_out = ik_tool.getOutputMotionFileName()
-                                self._dbg("SO", "setCoordinatesFileName (from IK output)", ik_out)
+                                self. _dbg("SO", "setCoordinatesFileName (from IK output)", ik_out)
                                 so_tool.setCoordinatesFileName(ik_out)
                             else:
-                                self._dbg("SO", "ik_tool is None — coordinates not set from IK")
+                                self. _dbg("SO", "ik_tool is None — coordinates not set from IK")
+                                pass
 
                             so_tool.printToXML(str(so_xml))
-                            self._dbg("SO", "SO tool configured, running...")
+                            self. _dbg("SO", "SO tool configured, running...")
 
                             success = so_tool.run()
-                            self._dbg("SO", "SO.run() returned", success)
+                            self. _dbg("SO", "SO.run() returned", success)
 
                             if not success:
                                 self.logger.error("SO failed for trial %s", trial_name)
                         except Exception as exc:
-                            self._dbg("SO", "EXCEPTION during SO", str(exc))
+                            self. _dbg("SO", "EXCEPTION during SO", str(exc))
                             self.logger.error("SO exception for trial %s: %s", trial_name, exc)
                     else:
-                        self._dbg("SO", "so_xml not found — SO skipped for this trial")
+                        self. _dbg("SO", "so_xml not found — SO skipped for this trial")
                         self.logger.warning("SO XML not found for %s; skipping.", trial_name)
                         continue
 
-                self._dbg("TRIAL", f"--- Trial {trial_name} complete ---")
+                self. _dbg("TRIAL", f"--- Trial {trial_name} complete ---")
 
-            self._dbg("SUBJECT", f"===== END subject {subject_num} — all trials processed =====")
+            self. _dbg("SUBJECT", f"===== END subject {subject_num} — all trials processed =====")
 
         finally:
-            self._dbg("SUBJECT", "Restoring original working directory", original_cwd)
+            self. _dbg("SUBJECT", "Restoring original working directory", original_cwd)
             os.chdir(original_cwd)
 
         return True

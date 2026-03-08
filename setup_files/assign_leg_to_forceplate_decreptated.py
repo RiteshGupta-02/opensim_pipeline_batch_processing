@@ -260,7 +260,7 @@ def detect_swing_leg(left_pos: np.ndarray, right_pos: np.ndarray,
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def assign_legs() -> dict:
+def assign_legs(TRC_PATH = TRC_PATH, GRF_PATH = GRF_PATH) -> dict:
     """
     Assign left / right leg to Force Plate 2 and Force Plate 3.
 
@@ -331,33 +331,37 @@ def assign_legs() -> dict:
 
     return results
 
+def run(trc_file, grf_file):
+    results = assign_legs(trc_file, grf_file)
+    return results["FP2"]["leg"]
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
-if __name__ == "__main__":
-    results = assign_legs()
+# if __name__ == "__main__":
+#     results = assign_legs()
 
-    print("\n" + "=" * 60)
-    print("   LEG-TO-FORCE-PLATE ASSIGNMENT  (FP1 skipped)")
-    print("=" * 60)
-    for fp, res in results.items():
-        d = res["details"]
-        print(f"\n  {fp}  →  {res['leg']} leg   "
-              f"[confidence: {res['confidence']}]")
-        print(f"       GRF onset : {res['fp_onset_s']} s  "
-              f"(threshold = {res['grf_thresh_N']} N)")
-        print(f"       Window    : {d['window_s'][0]} – {d['window_s'][1]} s")
-        print(f"       Scores    : Left = {res['scores']['Left']}  "
-              f"Right = {res['scores']['Right']}")
-        if res["votes"]:
-            for v in res["votes"]:
-                print(f"                   • {v}")
-        else:
-            print("                   • (no decisive vote)")
-        print(f"       LFCC      : net={d['left_net_mm']:+.1f} mm  "
-              f"range={d['left_range_mm']:.1f} mm  "
-              f"vel={d['left_peakvel_mm_s']:.0f} mm/s")
-        print(f"       RFCC      : net={d['right_net_mm']:+.1f} mm  "
-              f"range={d['right_range_mm']:.1f} mm  "
-              f"vel={d['right_peakvel_mm_s']:.0f} mm/s")
-    print("\n" + "=" * 60)
+#     print("\n" + "=" * 60)
+#     print("   LEG-TO-FORCE-PLATE ASSIGNMENT  (FP1 skipped)")
+#     print("=" * 60)
+#     print(f"FP2 onset: {results['FP2']['leg']} leg")
+    # for fp, res in results.items():
+    #     d = res["details"]
+    #     print(f"\n  {fp}  →  {res['leg']} leg   "
+    #           f"[confidence: {res['confidence']}]")
+    #     print(f"       GRF onset : {res['fp_onset_s']} s  "
+    #           f"(threshold = {res['grf_thresh_N']} N)")
+    #     print(f"       Window    : {d['window_s'][0]} – {d['window_s'][1]} s")
+    #     print(f"       Scores    : Left = {res['scores']['Left']}  "
+    #           f"Right = {res['scores']['Right']}")
+    #     if res["votes"]:
+    #         for v in res["votes"]:
+    #             print(f"                   • {v}")
+    #     else:
+    #         print("                   • (no decisive vote)")
+    #     print(f"       LFCC      : net={d['left_net_mm']:+.1f} mm  "
+    #           f"range={d['left_range_mm']:.1f} mm  "
+    #           f"vel={d['left_peakvel_mm_s']:.0f} mm/s")
+    #     print(f"       RFCC      : net={d['right_net_mm']:+.1f} mm  "
+    #           f"range={d['right_range_mm']:.1f} mm  "
+    #           f"vel={d['right_peakvel_mm_s']:.0f} mm/s")
+    # print("\n" + "=" * 60)

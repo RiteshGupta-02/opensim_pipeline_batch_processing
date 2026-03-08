@@ -3713,3 +3713,297 @@ IndexError: index 0 is out of bounds for axis 0 with size 0
 12:19:58 [INFO    ] pipeline: [47/47] Subject 64  DONE
 12:19:58 [INFO    ] pipeline: Finished in 62391.5 s
 12:19:58 [INFO    ] pipeline: All subjects completed successfully.
+20:27:45 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+20:27:45 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+20:27:45 [INFO    ] pipeline: Subjects  : ['30', '43', '53', '42']
+20:27:45 [INFO    ] pipeline: Trials    : all
+20:27:45 [INFO    ] pipeline: Steps     : ['so', 'ik', 'id', 'scale']
+20:27:45 [INFO    ] pipeline: Parallel  : False
+20:27:46 [INFO    ] S30: Processing subject 30 in D:\RESEARCH\STW_dataset\Extracted\S30
+20:27:46 [INFO    ] S30: Running scaling for subject 30
+20:27:46 [INFO    ] S30: Processing trial stw1 for subject 30
+20:27:46 [INFO    ] S30: Running IK for trial stw1
+20:27:57 [INFO    ] S30: Running SO for trial stw1
+20:31:36 [INFO    ] S30: Processing trial stw2 for subject 30
+20:31:36 [INFO    ] S30: Running IK for trial stw2
+20:31:49 [INFO    ] S30: Running SO for trial stw2
+20:36:21 [INFO    ] S30: Processing trial stw3 for subject 30
+20:36:21 [INFO    ] S30: Running IK for trial stw3
+20:36:31 [INFO    ] S30: Running SO for trial stw3
+20:39:38 [INFO    ] S30: Processing trial stw4 for subject 30
+20:39:38 [INFO    ] S30: Running IK for trial stw4
+20:39:48 [INFO    ] S30: Running SO for trial stw4
+20:42:53 [INFO    ] S30: Processing trial stw5 for subject 30
+20:42:53 [INFO    ] S30: Running IK for trial stw5
+20:43:05 [INFO    ] S30: Running SO for trial stw5
+20:46:56 [INFO    ] pipeline: [1/4] Subject 30  DONE
+20:46:56 [INFO    ] S43: Processing subject 43 in D:\RESEARCH\STW_dataset\Extracted\S43
+20:46:56 [INFO    ] S43: Running scaling for subject 43
+20:46:57 [INFO    ] S43: Processing trial stw1 for subject 43
+20:46:57 [INFO    ] S43: Running IK for trial stw1
+20:47:09 [INFO    ] S43: Running SO for trial stw1
+20:52:19 [INFO    ] S43: Processing trial stw2 for subject 43
+20:52:19 [INFO    ] S43: Running IK for trial stw2
+20:52:31 [INFO    ] S43: Running SO for trial stw2
+20:57:29 [INFO    ] S43: Processing trial stw3 for subject 43
+20:57:29 [INFO    ] S43: Running IK for trial stw3
+20:57:40 [INFO    ] S43: Running SO for trial stw3
+21:01:52 [INFO    ] S43: Processing trial stw4 for subject 43
+21:01:52 [INFO    ] S43: Running IK for trial stw4
+21:02:04 [INFO    ] S43: Running SO for trial stw4
+21:06:52 [INFO    ] S43: Processing trial stw5 for subject 43
+21:06:52 [INFO    ] S43: Running IK for trial stw5
+21:07:04 [INFO    ] S43: Running SO for trial stw5
+21:11:44 [INFO    ] pipeline: [2/4] Subject 43  DONE
+21:11:44 [INFO    ] S53: Processing subject 53 in D:\RESEARCH\STW_dataset\Extracted\S53
+21:11:44 [INFO    ] S53: Running scaling for subject 53
+21:11:44 [INFO    ] S53: Processing trial stw1 for subject 53
+21:11:44 [INFO    ] S53: Running IK for trial stw1
+21:11:54 [ERROR   ] S53: ID exception for trial stw1: std::exception in 'bool OpenSim::InverseDynamicsTool::run()': InverseDynamicsTool Failed, please see messages window for details...
+21:11:54 [INFO    ] S53: Processing trial stw2 for subject 53
+21:11:54 [INFO    ] S53: Running IK for trial stw2
+21:12:06 [INFO    ] S53: Running SO for trial stw2
+21:17:39 [INFO    ] S53: Processing trial stw3 for subject 53
+21:17:39 [INFO    ] S53: Running IK for trial stw3
+21:17:50 [ERROR   ] S53: ID exception for trial stw3: std::exception in 'bool OpenSim::InverseDynamicsTool::run()': InverseDynamicsTool Failed, please see messages window for details...
+21:17:50 [INFO    ] S53: Processing trial stw4 for subject 53
+21:17:50 [INFO    ] S53: Running IK for trial stw4
+21:18:03 [INFO    ] S53: Running SO for trial stw4
+21:24:36 [INFO    ] S53: Processing trial stw5 for subject 53
+21:24:36 [INFO    ] S53: Running IK for trial stw5
+21:24:48 [INFO    ] S53: Running SO for trial stw5
+21:31:29 [INFO    ] pipeline: [3/4] Subject 53  DONE
+21:31:29 [INFO    ] S42: Processing subject 42 in D:\RESEARCH\STW_dataset\Extracted\S42
+21:31:29 [INFO    ] S42: Running scaling for subject 42
+21:31:29 [INFO    ] S42: Processing trial stw1 for subject 42
+21:31:29 [INFO    ] S42: Running IK for trial stw1
+21:31:37 [INFO    ] S42: Running SO for trial stw1
+21:34:36 [INFO    ] S42: Processing trial stw2 for subject 42
+21:34:36 [INFO    ] S42: Running IK for trial stw2
+21:34:44 [INFO    ] S42: Running SO for trial stw2
+21:37:43 [INFO    ] S42: Processing trial stw3 for subject 42
+21:37:43 [INFO    ] S42: Running IK for trial stw3
+21:37:51 [INFO    ] S42: Running SO for trial stw3
+21:40:43 [INFO    ] S42: Processing trial stw4 for subject 42
+21:40:43 [INFO    ] S42: Running IK for trial stw4
+21:40:52 [INFO    ] S42: Running SO for trial stw4
+21:44:33 [INFO    ] S42: Processing trial stw5 for subject 42
+21:44:33 [INFO    ] S42: Running IK for trial stw5
+21:44:42 [INFO    ] S42: Running SO for trial stw5
+21:47:50 [INFO    ] pipeline: [4/4] Subject 42  DONE
+21:47:50 [INFO    ] pipeline: Finished in 4805.1 s
+21:47:50 [INFO    ] pipeline: All subjects completed successfully.
+21:37:57 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:37:57 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:37:57 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:37:57 [INFO    ] pipeline: Trials    : ['1']
+21:37:57 [INFO    ] pipeline: Steps     : ['so', 'scale', 'ik', 'id']
+21:37:57 [INFO    ] pipeline: Parallel  : True
+21:37:57 [INFO    ] pipeline: Starting parallel run: 10 subject(s) across 5 physical core(s)
+21:37:58 [INFO    ] pipeline: [1/10] Subject 35  DONE
+21:37:58 [INFO    ] pipeline: [2/10] Subject 54  DONE
+21:37:58 [INFO    ] pipeline: [3/10] Subject 45  DONE
+21:37:58 [INFO    ] pipeline: [4/10] Subject 23  DONE
+21:37:58 [INFO    ] pipeline: [5/10] Subject 55  DONE
+21:37:58 [INFO    ] pipeline: [6/10] Subject 34  DONE
+21:37:58 [INFO    ] pipeline: [7/10] Subject 56  DONE
+21:37:58 [INFO    ] pipeline: [8/10] Subject 29  DONE
+21:37:58 [INFO    ] pipeline: [9/10] Subject 52  DONE
+21:37:58 [INFO    ] pipeline: [10/10] Subject 65  DONE
+21:37:58 [INFO    ] pipeline: Finished in 0.8 s
+21:37:58 [INFO    ] pipeline: All subjects completed successfully.
+21:39:04 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:39:04 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:39:04 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:39:04 [INFO    ] pipeline: Trials    : ['1']
+21:39:04 [INFO    ] pipeline: Steps     : ['id', 'so', 'ik', 'scale']
+21:39:04 [INFO    ] pipeline: Parallel  : False
+21:39:04 [INFO    ] S23: Processing subject 23 in D:\RESEARCH\STW_dataset\Extracted\S23
+21:39:04 [INFO    ] S23: Running scaling for subject 23
+21:39:04 [INFO    ] pipeline: [1/10] Subject 23  DONE
+21:39:04 [INFO    ] S35: Processing subject 35 in D:\RESEARCH\STW_dataset\Extracted\S35
+21:39:04 [INFO    ] S35: Running scaling for subject 35
+21:39:04 [INFO    ] pipeline: [2/10] Subject 35  DONE
+21:39:04 [INFO    ] S45: Processing subject 45 in D:\RESEARCH\STW_dataset\Extracted\S45
+21:39:04 [INFO    ] S45: Running scaling for subject 45
+21:39:04 [INFO    ] pipeline: [3/10] Subject 45  DONE
+21:39:04 [INFO    ] S55: Processing subject 55 in D:\RESEARCH\STW_dataset\Extracted\S55
+21:39:04 [INFO    ] S55: Running scaling for subject 55
+21:39:05 [INFO    ] pipeline: [4/10] Subject 55  DONE
+21:39:05 [INFO    ] S54: Processing subject 54 in D:\RESEARCH\STW_dataset\Extracted\S54
+21:39:05 [INFO    ] S54: Running scaling for subject 54
+21:39:05 [INFO    ] pipeline: [5/10] Subject 54  DONE
+21:39:05 [INFO    ] S56: Processing subject 56 in D:\RESEARCH\STW_dataset\Extracted\S56
+21:39:05 [INFO    ] S56: Running scaling for subject 56
+21:39:05 [INFO    ] pipeline: [6/10] Subject 56  DONE
+21:39:05 [INFO    ] S29: Processing subject 29 in D:\RESEARCH\STW_dataset\Extracted\S29
+21:39:05 [INFO    ] S29: Running scaling for subject 29
+21:39:05 [INFO    ] pipeline: [7/10] Subject 29  DONE
+21:39:05 [INFO    ] S65: Processing subject 65 in D:\RESEARCH\STW_dataset\Extracted\S65
+21:39:05 [INFO    ] S65: Running scaling for subject 65
+21:39:05 [INFO    ] pipeline: [8/10] Subject 65  DONE
+21:39:05 [INFO    ] S52: Processing subject 52 in D:\RESEARCH\STW_dataset\Extracted\S52
+21:39:05 [INFO    ] S52: Running scaling for subject 52
+21:39:06 [INFO    ] pipeline: [9/10] Subject 52  DONE
+21:39:06 [INFO    ] S34: Processing subject 34 in D:\RESEARCH\STW_dataset\Extracted\S34
+21:39:06 [INFO    ] S34: Running scaling for subject 34
+21:39:06 [INFO    ] pipeline: [10/10] Subject 34  DONE
+21:39:06 [INFO    ] pipeline: Finished in 2.0 s
+21:39:06 [INFO    ] pipeline: All subjects completed successfully.
+21:42:35 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:42:35 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:42:35 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:42:35 [INFO    ] pipeline: Trials    : ['1']
+21:42:35 [INFO    ] pipeline: Steps     : ['scale', 'ik', 'so', 'id']
+21:42:35 [INFO    ] pipeline: Parallel  : False
+21:42:35 [INFO    ] S23: Processing subject 23 in D:\RESEARCH\STW_dataset\Extracted\S23
+21:42:35 [INFO    ] S23: Running scaling for subject 23
+21:42:35 [INFO    ] pipeline: [1/10] Subject 23  DONE
+21:42:35 [INFO    ] S35: Processing subject 35 in D:\RESEARCH\STW_dataset\Extracted\S35
+21:42:35 [INFO    ] S35: Running scaling for subject 35
+21:42:36 [INFO    ] pipeline: [2/10] Subject 35  DONE
+21:42:36 [INFO    ] S45: Processing subject 45 in D:\RESEARCH\STW_dataset\Extracted\S45
+21:42:36 [INFO    ] S45: Running scaling for subject 45
+21:42:36 [INFO    ] pipeline: [3/10] Subject 45  DONE
+21:42:36 [INFO    ] S55: Processing subject 55 in D:\RESEARCH\STW_dataset\Extracted\S55
+21:42:36 [INFO    ] S55: Running scaling for subject 55
+21:42:36 [INFO    ] pipeline: [4/10] Subject 55  DONE
+21:42:36 [INFO    ] S54: Processing subject 54 in D:\RESEARCH\STW_dataset\Extracted\S54
+21:42:36 [INFO    ] S54: Running scaling for subject 54
+21:42:36 [INFO    ] pipeline: [5/10] Subject 54  DONE
+21:42:36 [INFO    ] S56: Processing subject 56 in D:\RESEARCH\STW_dataset\Extracted\S56
+21:42:36 [INFO    ] S56: Running scaling for subject 56
+21:42:36 [INFO    ] pipeline: [6/10] Subject 56  DONE
+21:42:36 [INFO    ] S29: Processing subject 29 in D:\RESEARCH\STW_dataset\Extracted\S29
+21:42:36 [INFO    ] S29: Running scaling for subject 29
+21:42:36 [INFO    ] pipeline: [7/10] Subject 29  DONE
+21:42:36 [INFO    ] S65: Processing subject 65 in D:\RESEARCH\STW_dataset\Extracted\S65
+21:42:36 [INFO    ] S65: Running scaling for subject 65
+21:42:37 [INFO    ] pipeline: [8/10] Subject 65  DONE
+21:42:37 [INFO    ] S52: Processing subject 52 in D:\RESEARCH\STW_dataset\Extracted\S52
+21:42:37 [INFO    ] S52: Running scaling for subject 52
+21:42:37 [INFO    ] pipeline: [9/10] Subject 52  DONE
+21:42:37 [INFO    ] S34: Processing subject 34 in D:\RESEARCH\STW_dataset\Extracted\S34
+21:42:37 [INFO    ] S34: Running scaling for subject 34
+21:42:37 [INFO    ] pipeline: [10/10] Subject 34  DONE
+21:42:37 [INFO    ] pipeline: Finished in 1.9 s
+21:42:37 [INFO    ] pipeline: All subjects completed successfully.
+21:44:12 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:44:12 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:44:12 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:44:12 [INFO    ] pipeline: Trials    : ['stw1']
+21:44:12 [INFO    ] pipeline: Steps     : ['ik', 'id', 'scale', 'so']
+21:44:12 [INFO    ] pipeline: Parallel  : False
+21:44:12 [INFO    ] S23: Processing subject 23 in D:\RESEARCH\STW_dataset\Extracted\S23
+21:44:12 [INFO    ] S23: Running scaling for subject 23
+21:44:12 [INFO    ] S23: Processing trial stw1 for subject 23
+21:44:12 [INFO    ] S23: Generating GRF setup for subject 23
+21:44:12 [INFO    ] S23: Generating GRF setups for subject 23
+21:44:13 [INFO    ] S23: Running IK for trial stw1
+21:44:27 [INFO    ] S23: Running SO for trial stw1
+21:53:23 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:53:23 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:53:23 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:53:23 [INFO    ] pipeline: Trials    : ['stw1']
+21:53:23 [INFO    ] pipeline: Steps     : ['id', 'ik', 'scale', 'so']
+21:53:23 [INFO    ] pipeline: Parallel  : False
+21:53:23 [ERROR   ] pipeline: [1/10] Subject 23  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [2/10] Subject 35  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [3/10] Subject 45  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [4/10] Subject 55  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [5/10] Subject 54  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [6/10] Subject 56  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [7/10] Subject 29  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [8/10] Subject 65  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [9/10] Subject 52  FAILED: No module named 'opensim'
+21:53:23 [ERROR   ] pipeline: [10/10] Subject 34  FAILED: No module named 'opensim'
+21:53:23 [INFO    ] pipeline: Finished in 0.0 s
+21:53:23 [ERROR   ] pipeline: Failed subjects: ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:54:02 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+21:54:02 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+21:54:02 [INFO    ] pipeline: Subjects  : ['23', '35', '45', '55', '54', '56', '29', '65', '52', '34']
+21:54:02 [INFO    ] pipeline: Trials    : ['stw1']
+21:54:02 [INFO    ] pipeline: Steps     : ['ik', 'scale', 'so', 'id']
+21:54:02 [INFO    ] pipeline: Parallel  : False
+21:54:03 [INFO    ] S23: Processing subject 23 in D:\RESEARCH\STW_dataset\Extracted\S23
+21:54:03 [INFO    ] S23: Running scaling for subject 23
+21:54:03 [INFO    ] S23: Processing trial stw1 for subject 23
+21:54:03 [INFO    ] S23: Generating GRF setup for subject 23
+21:54:03 [INFO    ] S23: Generating GRF setups for subject 23
+21:54:04 [INFO    ] S23: Running IK for trial stw1
+21:54:19 [INFO    ] S23: Running SO for trial stw1
+21:58:09 [INFO    ] pipeline: [1/10] Subject 23  DONE
+21:58:09 [INFO    ] S35: Processing subject 35 in D:\RESEARCH\STW_dataset\Extracted\S35
+21:58:09 [INFO    ] S35: Running scaling for subject 35
+21:58:09 [INFO    ] S35: Processing trial stw1 for subject 35
+21:58:09 [INFO    ] S35: Generating GRF setup for subject 35
+21:58:09 [INFO    ] S35: Generating GRF setups for subject 35
+21:58:10 [INFO    ] S35: Running IK for trial stw1
+21:58:19 [INFO    ] S35: Running SO for trial stw1
+22:00:44 [INFO    ] pipeline: [2/10] Subject 35  DONE
+22:00:44 [INFO    ] S45: Processing subject 45 in D:\RESEARCH\STW_dataset\Extracted\S45
+22:00:44 [INFO    ] S45: Running scaling for subject 45
+22:00:45 [INFO    ] S45: Processing trial stw1 for subject 45
+22:00:45 [INFO    ] S45: Generating GRF setup for subject 45
+22:00:45 [INFO    ] S45: Generating GRF setups for subject 45
+22:00:46 [INFO    ] S45: Running IK for trial stw1
+22:00:58 [INFO    ] S45: Running SO for trial stw1
+22:05:58 [INFO    ] pipeline: [3/10] Subject 45  DONE
+22:05:58 [INFO    ] S55: Processing subject 55 in D:\RESEARCH\STW_dataset\Extracted\S55
+22:05:58 [INFO    ] S55: Running scaling for subject 55
+22:05:58 [INFO    ] S55: Processing trial stw1 for subject 55
+22:05:58 [INFO    ] S55: Generating GRF setup for subject 55
+22:05:58 [INFO    ] S55: Generating GRF setups for subject 55
+22:05:59 [INFO    ] S55: Running IK for trial stw1
+22:06:10 [INFO    ] S55: Running SO for trial stw1
+22:10:34 [INFO    ] pipeline: [4/10] Subject 55  DONE
+22:10:34 [INFO    ] S54: Processing subject 54 in D:\RESEARCH\STW_dataset\Extracted\S54
+22:10:34 [INFO    ] S54: Running scaling for subject 54
+22:10:34 [INFO    ] S54: Processing trial stw1 for subject 54
+22:10:34 [INFO    ] S54: Generating GRF setup for subject 54
+22:10:34 [INFO    ] S54: Generating GRF setups for subject 54
+22:10:35 [INFO    ] S54: Running IK for trial stw1
+22:10:45 [INFO    ] S54: Running SO for trial stw1
+22:14:33 [INFO    ] pipeline: [5/10] Subject 54  DONE
+22:14:33 [INFO    ] S56: Processing subject 56 in D:\RESEARCH\STW_dataset\Extracted\S56
+22:14:33 [INFO    ] S56: Running scaling for subject 56
+22:14:33 [INFO    ] S56: Processing trial stw1 for subject 56
+22:14:33 [INFO    ] S56: Generating GRF setup for subject 56
+22:14:33 [INFO    ] S56: Generating GRF setups for subject 56
+22:14:34 [INFO    ] S56: Running IK for trial stw1
+22:14:47 [INFO    ] S56: Running SO for trial stw1
+22:19:44 [INFO    ] pipeline: [6/10] Subject 56  DONE
+22:19:44 [INFO    ] S29: Processing subject 29 in D:\RESEARCH\STW_dataset\Extracted\S29
+22:19:44 [INFO    ] S29: Running scaling for subject 29
+22:19:44 [INFO    ] S29: Processing trial stw1 for subject 29
+22:19:44 [INFO    ] S29: Generating GRF setup for subject 29
+22:19:44 [INFO    ] S29: Generating GRF setups for subject 29
+22:19:45 [INFO    ] S29: Running IK for trial stw1
+22:19:55 [INFO    ] S29: Running SO for trial stw1
+22:23:54 [INFO    ] pipeline: [7/10] Subject 29  DONE
+22:23:54 [INFO    ] S65: Processing subject 65 in D:\RESEARCH\STW_dataset\Extracted\S65
+22:23:54 [INFO    ] S65: Running scaling for subject 65
+22:23:54 [INFO    ] S65: Processing trial stw1 for subject 65
+22:23:54 [INFO    ] S65: Generating GRF setup for subject 65
+22:23:54 [INFO    ] S65: Generating GRF setups for subject 65
+22:23:55 [INFO    ] S65: Running IK for trial stw1
+22:24:06 [INFO    ] S65: Running SO for trial stw1
+22:26:57 [INFO    ] pipeline: [8/10] Subject 65  DONE
+22:26:57 [INFO    ] S52: Processing subject 52 in D:\RESEARCH\STW_dataset\Extracted\S52
+22:26:57 [INFO    ] S52: Running scaling for subject 52
+22:26:57 [INFO    ] S52: Processing trial stw1 for subject 52
+22:26:57 [INFO    ] S52: Generating GRF setup for subject 52
+22:26:57 [INFO    ] S52: Generating GRF setups for subject 52
+22:26:58 [INFO    ] S52: Running IK for trial stw1
+22:27:11 [INFO    ] S52: Running SO for trial stw1
+22:31:39 [INFO    ] pipeline: [9/10] Subject 52  DONE
+22:31:39 [INFO    ] S34: Processing subject 34 in D:\RESEARCH\STW_dataset\Extracted\S34
+22:31:39 [INFO    ] S34: Running scaling for subject 34
+22:31:39 [INFO    ] S34: Processing trial stw1 for subject 34
+22:31:39 [INFO    ] S34: Generating GRF setup for subject 34
+22:31:39 [INFO    ] S34: Generating GRF setups for subject 34
+22:31:40 [INFO    ] S34: Running IK for trial stw1
+22:31:51 [INFO    ] S34: Running SO for trial stw1
+22:35:04 [INFO    ] pipeline: [10/10] Subject 34  DONE
+22:35:04 [INFO    ] pipeline: Finished in 2460.8 s
+22:35:04 [INFO    ] pipeline: All subjects completed successfully.

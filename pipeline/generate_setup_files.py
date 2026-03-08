@@ -52,14 +52,14 @@ def _dbg(tag: str, msg: str, value=None):
 
 def _run_script(script_name: str, args: list, cwd: Path, logger: logging.Logger) -> bool:
     """Run a helper setup script and return True on success."""
-    _dbg("SCRIPT", f"Running: {script_name}", f"cwd={cwd}  args={args}")
+    # _dbg("SCRIPT", f"Running: {script_name}", f"cwd={cwd}  args={args}")
     result = subprocess.run(
         [sys.executable, script_name] + args,
         cwd=str(cwd),
         capture_output=True,
         text=True,
     )
-    _dbg("SCRIPT", f"Return code: {result.returncode}", script_name)
+    # _dbg("SCRIPT", f"Return code: {result.returncode}", script_name)
     if result.stdout.strip():
         print(f"[DBG] [SCRIPT stdout]\n{result.stdout.strip()}", flush=True)
     if result.returncode != 0:
@@ -86,7 +86,7 @@ def load_and_adapt_template(template_path: Path, subject_num: str, logger: loggi
     Returns:
         Adapted template dictionary with subject-specific paths
     """
-    _dbg("TEMPLATE", f"Loading template from", template_path)
+    # _dbg("TEMPLATE", f"Loading template from", template_path)
     
     if not template_path.is_file():
         logger.error("Template file not found: %s", template_path)
@@ -95,7 +95,7 @@ def load_and_adapt_template(template_path: Path, subject_num: str, logger: loggi
     with open(template_path, "r") as fh:
         template = json.load(fh)
     
-    _dbg("TEMPLATE", "Template loaded — keys", list(template.keys()))
+    # _dbg("TEMPLATE", "Template loaded — keys", list(template.keys()))
     
     # Deep-copy template and substitute '01' -> subject_num everywhere
     adapted = json.loads(json.dumps(template))
@@ -109,7 +109,7 @@ def load_and_adapt_template(template_path: Path, subject_num: str, logger: loggi
                         if isinstance(v, str):
                             item[k] = replace_subject_in_path(v, "01", subject_num)
     
-    _dbg("TEMPLATE", "Template adapted for subject", subject_num)
+    # _dbg("TEMPLATE", "Template adapted for subject", subject_num)
     return adapted
 
 
@@ -127,17 +127,17 @@ def get_trial_by_name(adapted_template: Dict[str, Any], trial_name: str, logger:
     """
     mapped_trials = adapted_template.get("mapped_trials", [])
     
-    _dbg("TRIAL-LOOKUP", f"Looking for trial: {trial_name}", f"total trials: {len(mapped_trials)}")
+    # _dbg("TRIAL-LOOKUP", f"Looking for trial: {trial_name}", f"total trials: {len(mapped_trials)}")
     
     for trial in mapped_trials:
         trc = trial.get("trial_trc", "")
         trial_stem = Path(trc).stem
         
         if trial_stem == trial_name:
-            _dbg("TRIAL-LOOKUP", f"Found trial: {trial_name}", "MATCH")
+            # _dbg("TRIAL-LOOKUP", f"Found trial: {trial_name}", "MATCH")
             return trial
     
-    _dbg("TRIAL-LOOKUP", f"Trial not found: {trial_name}", "NO MATCH")
+    # _dbg("TRIAL-LOOKUP", f"Trial not found: {trial_name}", "NO MATCH")
     logger.warning("Trial %s not found in template", trial_name)
     return None
 
@@ -176,59 +176,63 @@ def generate_setups_if_needed(
     script_dir = Path(__file__).parent
     setup_dir = script_dir.parent / "setup_files"
 
-    _dbg("SETUP", f"generate_setups_if_needed called",
-          f"subject={subject_num}  trial_name={trial_name!r}  subj_dir={subj_dir}")
-    _dbg("SETUP", "Setup scripts directory", setup_dir)
-    _dbg("SETUP", "Setup dir exists?", setup_dir.exists())
-    _dbg("SETUP", "Model file", model_file)
+    # _dbg("SETUP", f"generate_setups_if_needed called",
+        #   f"subject={subject_num}  trial_name={trial_name!r}  subj_dir={subj_dir}")
+    # _dbg("SETUP", "Setup scripts directory", setup_dir)
+    # _dbg("SETUP", "Setup dir exists?", setup_dir.exists())
+    # _dbg("SETUP", "Model file", model_file)
 
     # ---- Scale setup ------------------------------------------------
     if trial_name == "scale":
-        _dbg("SCALE-SETUP", "Entering scale setup branch")
-        _dbg("SCALE-SETUP", "Scale XML path", xml)
-        _dbg("SCALE-SETUP", "Scale XML exists?", Path(xml).exists() if xml else "no path given")
-        logger.info("Generating scale setup for subject %s", subject_num)
-        ok = True ;'''_run_script(
-            "scale_setup.py",
-            [subject_num, str(subj_dir), str(model_file), str(xml)],
-            setup_dir,
-            logger,
-        )
-        _dbg("SCALE-SETUP", "scale_setup.py result", "SUCCESS" if ok else "FAILED") '''
-        return ok
+        if not Path(xml).exists():
+            # _dbg("SCALE-SETUP", "Entering scale setup branch")
+            # _dbg("SCALE-SETUP", "Scale XML path", xml)
+            # _dbg("SCALE-SETUP", "Scale XML exists?", Path(xml).exists() if xml else "no path given")
+            logger.info("Generating scale setup for subject %s", subject_num)
+            ok = True ;'''_run_script(
+                "scale_setup.py",
+                [subject_num, str(subj_dir), str(model_file), str(xml)],
+                setup_dir,
+                logger,
+            )
+            # _dbg("SCALE-SETUP", "scale_setup.py result", "SUCCESS" if ok else "FAILED") '''
+            return ok
         
     # ---- GRF setup --------------------------------------
     
-    _dbg("GRF-SETUP", "Entering GRF setup branch (stw1 trial)")
+    # _dbg("GRF-SETUP", "Entering GRF setup branch (stw1 trial)")
     try:
         grf_xml_path = trial.get("grf_xml", "")
+        
+        # _dbg("GRF-SETUP", "GRF XML path (to be generated)", grf_xml_path)
+        logger.info("Generating GRF setup for subject %s", subject_num)
         mot_path = trial.get("trial_mot", "")
         trc_path = trial.get("trial_trc", "")
-        _dbg("GRF-SETUP", "GRF XML path", grf_xml_path)
-        _dbg("GRF-SETUP", "GRF XML exists?", Path(grf_xml_path).exists() if grf_xml_path else "no path")
-        _dbg("GRF-SETUP", "MOT path", mot_path)
-        _dbg("GRF-SETUP", "MOT exists?", Path(mot_path).exists() if mot_path else "no path")
-        _dbg("GRF-SETUP", "TRC path", trc_path)
-        _dbg("GRF-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
+        # _dbg("GRF-SETUP", "GRF XML path", grf_xml_path)
+        # _dbg("GRF-SETUP", "GRF XML exists?", Path(grf_xml_path).exists() if grf_xml_path else "no path")
+        # _dbg("GRF-SETUP", "MOT path", mot_path)
+        # _dbg("GRF-SETUP", "MOT exists?", Path(mot_path).exists() if mot_path else "no path")
+        # _dbg("GRF-SETUP", "TRC path", trc_path)
+        # _dbg("GRF-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
         
         logger.info("Generating GRF setups for subject %s", subject_num)
         ok = _run_script(
             "grf_setup.py",
-            [subject_num, str(subj_dir), str(trial_name), str(mot_path), str(trc_path), str(grf_xml_path)],
+            [subject_num, str(subj_dir), str(mot_path), str(trc_path), str(grf_xml_path)],
             setup_dir,
             logger,
         )
-        _dbg("GRF-SETUP", "grf_setup.py result", "SUCCESS" if ok else "FAILED")
+        # _dbg("GRF-SETUP", "grf_setup.py result", "SUCCESS" if ok else "FAILED")
     except Exception as exc:
-        _dbg("GRF-SETUP", "EXCEPTION in GRF setup", str(exc))
+        # _dbg("GRF-SETUP", "EXCEPTION in GRF setup", str(exc))
         logger.error("GRF setup error for %s: %s", subject_num, exc)
 
     # ---- ID setup ---------------------------------------------------
-    _dbg("ID-SETUP", "Entering ID setup branch")
+    # _dbg("ID-SETUP", "Entering ID setup branch")
     try:
         id_xml_path = trial.get("id_xml", "")
         if not id_xml_path:
-            _dbg("ID-SETUP", "ID XML path (to be generated)", id_xml_path)
+            # _dbg("ID-SETUP", "ID XML path (to be generated)", id_xml_path)
             logger.info("Generating ID setups for subject %s", subject_num)
         
             ok = True ;'''_run_script(
@@ -237,22 +241,22 @@ def generate_setups_if_needed(
                 setup_dir,
                 logger,
             ) '''
-            _dbg("ID-SETUP", "id_setup.py result", "SUCCESS" if ok else "FAILED")
+            # _dbg("ID-SETUP", "id_setup.py result", "SUCCESS" if ok else "FAILED")
     except Exception as exc:
-        _dbg("ID-SETUP", "EXCEPTION in ID setup", str(exc))
+        # _dbg("ID-SETUP", "EXCEPTION in ID setup", str(exc))
         logger.error("ID setup error for %s: %s", subject_num, exc)
 
     # ---- SO setup ---------------------------------------------------
-    _dbg("SO-SETUP", "Entering SO setup branch")
+    # _dbg("SO-SETUP", "Entering SO setup branch")
     try:
         so_dir = subj_dir / "SO"
         so_xml_path = trial.get("so_xml", "")
-        _dbg("SO-SETUP", "SO dir", so_dir)
-        _dbg("SO-SETUP", "SO dir exists?", so_dir.exists())
-        _dbg("SO-SETUP", "SO XML path", so_xml_path)
-        _dbg("SO-SETUP", "SO XML exists?", Path(so_xml_path).exists() if so_xml_path else "no path")
+        # _dbg("SO-SETUP", "SO dir", so_dir)
+        # _dbg("SO-SETUP", "SO dir exists?", so_dir.exists())
+        # _dbg("SO-SETUP", "SO XML path", so_xml_path)
+        # _dbg("SO-SETUP", "SO XML exists?", Path(so_xml_path).exists() if so_xml_path else "no path")
         if not so_dir.exists() or not Path(so_xml_path).exists():
-            _dbg("SO-SETUP", "SO XML or dir missing — running SO_setup.py")
+            # _dbg("SO-SETUP", "SO XML or dir missing — running SO_setup.py")
             logger.info("Generating SO setups for subject %s", subject_num)
             ok = True ;'''_run_script(
                 "SO_setup.py",
@@ -260,35 +264,36 @@ def generate_setups_if_needed(
                 setup_dir,
                 logger,
             ) '''
-            _dbg("SO-SETUP", "SO_setup.py result", "SUCCESS" if ok else "FAILED")
+            # _dbg("SO-SETUP", "SO_setup.py result", "SUCCESS" if ok else "FAILED")
         else:
-            _dbg("SO-SETUP", "SO XML already exists — skipping SO_setup.py")
+            # _dbg("SO-SETUP", "SO XML already exists — skipping SO_setup.py")
+            pass
 
         actuators_src = Path(r"d:\RESEARCH\STW_dataset\Extracted\model\cmc_actuators.xml")
         actuators_dst = so_dir / "cmc_actuators.xml"
-        _dbg("SO-SETUP", "Actuators source", actuators_src)
-        _dbg("SO-SETUP", "Actuators source exists?", actuators_src.exists())
-        _dbg("SO-SETUP", "Actuators destination", actuators_dst)
-        _dbg("SO-SETUP", "Actuators destination exists?", actuators_dst.exists())
+        # _dbg("SO-SETUP", "Actuators source", actuators_src)
+        # _dbg("SO-SETUP", "Actuators source exists?", actuators_src.exists())
+        # _dbg("SO-SETUP", "Actuators destination", actuators_dst)
+        # _dbg("SO-SETUP", "Actuators destination exists?", actuators_dst.exists())
         if actuators_src.exists() and not actuators_dst.exists():
             so_dir.mkdir(parents=True, exist_ok=True)
             shutil.copy2(str(actuators_src), str(actuators_dst))
-            _dbg("SO-SETUP", "Copied cmc_actuators.xml to", actuators_dst)
+            # _dbg("SO-SETUP", "Copied cmc_actuators.xml to", actuators_dst)
             logger.info("Copied cmc_actuators.xml to %s", actuators_dst)
     except Exception as exc:
-        _dbg("SO-SETUP", "EXCEPTION in SO setup", str(exc))
+        # _dbg("SO-SETUP", "EXCEPTION in SO setup", str(exc))
         logger.error("SO setup error for %s: %s", subject_num, exc)
 
     # ---- IK setup ---------------------------------------------------
-    _dbg("IK-SETUP", "Entering IK setup branch")
+    # _dbg("IK-SETUP", "Entering IK setup branch")
     try:
         ik_xml_path = trial.get("ik_xml", "")
         trc_path = trial.get("trial_trc", "")
-        _dbg("IK-SETUP", "IK XML path (to be generated)", ik_xml_path)
-        _dbg("IK-SETUP", "TRC path", trc_path)
-        _dbg("IK-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
+        # _dbg("IK-SETUP", "IK XML path (to be generated)", ik_xml_path)
+        # _dbg("IK-SETUP", "TRC path", trc_path)
+        # _dbg("IK-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
         if not ik_xml_path or not Path(trc_path).exists():
-            _dbg("IK-SETUP", "IK XML or TRC missing — running ik_setup.py")
+            # _dbg("IK-SETUP", "IK XML or TRC missing — running ik_setup.py")
             logger.info("Generating IK setups for subject %s", subject_num)
             ok = True ;'''_run_script(
                 "ik_setup.py",
@@ -296,9 +301,9 @@ def generate_setups_if_needed(
                 setup_dir,
                 logger,
             ) '''
-            _dbg("IK-SETUP", "ik_setup.py result", "SUCCESS" if ok else "FAILED")
+            # _dbg("IK-SETUP", "ik_setup.py result", "SUCCESS" if ok else "FAILED")
     except Exception as exc:
-        _dbg("IK-SETUP", "EXCEPTION in IK setup", str(exc))
+        # _dbg("IK-SETUP", "EXCEPTION in IK setup", str(exc))
         logger.error("IK setup error for %s: %s", subject_num, exc)
 
     return True
@@ -355,14 +360,14 @@ if __name__ == "__main__":
         template_root_dir = adapted_template.get("root_dir", "")
         if template_root_dir:
             ROOT_DIR = Path(template_root_dir)
-            _dbg("MAIN", "Using root_dir from template", ROOT_DIR)
+            # _dbg("MAIN", "Using root_dir from template", ROOT_DIR)
         
         # =====================================================================
         # Resolve subject directory
         # =====================================================================
         subj_dir = ROOT_DIR / f"S{SUBJECT_NUM}"
-        _dbg("MAIN", "Subject directory", subj_dir)
-        _dbg("MAIN", "Subject directory exists?", subj_dir.exists())
+        # _dbg("MAIN", "Subject directory", subj_dir)
+        # _dbg("MAIN", "Subject directory exists?", subj_dir.exists())
         
         if not subj_dir.exists():
             logger.error("Subject directory not found: %s", subj_dir)
@@ -373,8 +378,8 @@ if __name__ == "__main__":
         # Resolve model file
         # =====================================================================
         model_file = adapted_template.get("model", "")
-        _dbg("MAIN", "Model file path", model_file)
-        _dbg("MAIN", "Model file exists?", Path(model_file).exists() if model_file else "no path")
+        # _dbg("MAIN", "Model file path", model_file)
+        # _dbg("MAIN", "Model file exists?", Path(model_file).exists() if model_file else "no path")
         
         if not model_file:
             logger.error("Model file not found in template")
@@ -390,7 +395,7 @@ if __name__ == "__main__":
         if TRIAL_NAME.lower() == "scale":
             print("[STANDALONE] Processing SCALE setup...")
             xml_path = adapted_template.get("scale_xml", "")
-            _dbg("MAIN", "Scale XML path", xml_path)
+            # _dbg("MAIN", "Scale XML path", xml_path)
             
             success = generate_setups_if_needed(
                 subject_num=SUBJECT_NUM,
@@ -418,11 +423,11 @@ if __name__ == "__main__":
                     print(f"              - {trial_stem}")
                 sys.exit(1)
             
-            _dbg("MAIN", "Trial data found", f"keys: {list(trial.keys())}")
+            # _dbg("MAIN", "Trial data found", f"keys: {list(trial.keys())}")
             
             # Get model file (might be scaled if available)
             model_for_trial = adapted_template.get("model", "")
-            _dbg("MAIN", "Model for trial", model_for_trial)
+            # _dbg("MAIN", "Model for trial", model_for_trial)
             
             success = generate_setups_if_needed(
                 subject_num=SUBJECT_NUM,

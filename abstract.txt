@@ -16,10 +16,11 @@ F 54,42,56
 mean and sd plot
 
 reference:
-1. for acceleration detection rcc >1.9m/s
+1. for acceleration detection rcc >1.9m/s not used
     A novel method for accurate division of the gait cycle into seven phases using shank angular velocity
     Author links open overlay panel
     Mikko Salminen a
     , 
     Jarmo Perttunen b
     , Janne Avela b, Antti Vehkaoja a
+2. first leg detection using cop of plate and marker trajectory and calculating distance between them 

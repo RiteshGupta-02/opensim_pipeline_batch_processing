@@ -1,7 +1,9 @@
 import os
-import first_leg as fl
+# import first_leg_using_just_acc as fl
 import sys
 from pathlib import Path
+import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+import first_leg_detection
 BOLD_RED = "\033[1;91m" # Bold and bright red for extra attention
 END = "\033[0m" # Reset code
 
@@ -50,25 +52,26 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 </OpenSimDocument>
 
 ''' 
-if len(sys.argv) < 2:
+if len(sys.argv) < 6:
         print("Usage: python grf_setup.py subject trial trc_file grf_file filepath")
         sys.exit(1)
 
 
 subject = int(sys.argv[1])
 subjdir = Path(sys.argv[2])
-trial_name = str(sys.argv[3])
-grf = Path(sys.argv[4])
-trc_file = Path(sys.argv[5])
-filepath = Path(sys.argv[6])
+grf = Path(sys.argv[3])
+trc_file = Path(sys.argv[4])
+filepath = Path(sys.argv[5])
 # Create output directory if it doesn't exist
 output_dir = rf"{subjdir}\ID\grf"
 os.makedirs(output_dir, exist_ok=True)
 
 
+c3d_file = trc_file.parent.parent / f"{trc_file.stem}.c3d"
 
-
-_,leg = fl.calculate_marker_acceleration(trc_path=trc_file)
+# _,leg = fl.calculate_marker_acceleration(trc_path=trc_file)
+# leg = assign_leg_to_forceplate.run(trc_file, grf)
+leg = first_leg_detection.detect_first_leg(trc_file, grf)
 # Fill in the template with current trial number
 xml_content = xml_template.format(trial=str(trc_file.stem)[-1],leg=leg[0].lower(),leg1='r' if leg[0].lower() == 'l' else 'l',grf=grf)
 
