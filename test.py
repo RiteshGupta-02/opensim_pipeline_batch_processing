@@ -1,21 +1,31 @@
-import sys
-import os
-import subprocess
+import pandas as pd
 
-def run_command(command):
-    try:
-        result = subprocess.run([sys.executable] + command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        return result.stdout, result.stderr
-    except Exception as e:
-        return "", str(e)
+df = pd.read_csv("Subject Details.csv")
+
+# Clean column names
+df.columns = df.columns.str.strip()
+
+age_group = {
+    "young": [],
+    "middle": [],
+    "older": []
+}
+
+for _, row in df.iterrows():
     
-if __name__ == "__main__":    # Example command to run another Python script
-    command = ["generate_setup_files.py","03", "stw_3", None, "xml", "ERROR"]  # Replace with your actual script and arguments
-    stdout, stderr = run_command(command)
-    
-    print("Standard Output:")
-    print(stdout)
-    
-    if stderr:
-        print("Standard Error:")
-        print(stderr)
+    subject = row["Subject"]          # already S01, S02...
+    age = row["Age (Years)"]
+
+    # Convert S01 → 1, S02 → 2
+    subject_num = int(subject.replace("S", ""))
+
+    if 19 <= age <= 35:
+        age_group["young"].append(subject_num)
+
+    elif 36 <= age <= 55:
+        age_group["middle"].append(subject_num)
+
+    elif age >= 56:
+        age_group["older"].append(subject_num)
+
+print(age_group)

@@ -1,0 +1,3976 @@
+
+============================================================
+[MAIN] Pipeline CLI starting
+[MAIN]   Python        : 3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]
+[MAIN]   PID           : 41896
+[MAIN]   CWD           : D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+[MAIN]   --template    : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN]   --subjects    : 16,39,51
+[MAIN]   --trials      : stw5
+[MAIN]   --steps       : scale,ik,id,so
+[MAIN]   --parallel    : True
+[MAIN]   --cores       : (auto)
+[MAIN]   --log-level   : INFO
+[MAIN]   --log-file    : output_pipeline.log
+============================================================
+
+[MAIN] Checking template path: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN] Template file exists? True
+[MAIN] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[MAIN] root_dir from template: 'D:\\RESEARCH\\STW_dataset\\Extracted'
+[MAIN] root_dir Path: D:\RESEARCH\STW_dataset\Extracted
+[MAIN] root_dir exists? True
+[MAIN] Subjects from --subjects arg: ['16', '39', '51']
+[MAIN] selected_trials: ['stw5']
+[MAIN] Steps map: {'so': True, 'ik': True, 'id': True, 'scale': True}
+[MAIN] Active steps: ['so', 'ik', 'id', 'scale']
+15:07:52 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+15:07:52 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+15:07:52 [INFO    ] pipeline: Subjects  : ['16', '39', '51']
+15:07:52 [INFO    ] pipeline: Trials    : ['stw5']
+15:07:52 [INFO    ] pipeline: Steps     : ['so', 'ik', 'id', 'scale']
+15:07:52 [INFO    ] pipeline: Parallel  : True
+[MAIN] Total jobs to run: 3
+[MAIN]   job -> subject=16  template=d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN]   job -> subject=39  template=d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN]   job -> subject=51  template=d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+
+[MAIN] Parallel mode — physical cores available: 20
+[MAIN] Using 3 core(s) for 3 subject(s)
+15:07:52 [INFO    ] pipeline: Starting parallel run: 3 subject(s) across 3 physical core(s)
+
+============================================================
+[WORKER] Process started for subject 16
+[WORKER]   PID           : 16244
+[WORKER]   template_path : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER]   root_dir      : D:\RESEARCH\STW_dataset\Extracted
+[WORKER]   steps         : {'so': True, 'ik': True, 'id': True, 'scale': True}
+[WORKER]   selected_trials: ['stw5']
+[WORKER]   log_level     : INFO
+============================================================
+
+[WORKER] Loading template from: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[WORKER] PipelineEngine created, starting run_pipeline_for_subject...
+
+============================================================
+[WORKER] Process started for subject 39
+[WORKER]   PID           : 34996
+[WORKER]   template_path : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER]   root_dir      : D:\RESEARCH\STW_dataset\Extracted
+[WORKER]   steps         : {'so': True, 'ik': True, 'id': True, 'scale': True}
+[WORKER]   selected_trials: ['stw5']
+[WORKER]   log_level     : INFO
+============================================================
+
+[WORKER] Loading template from: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+
+============================================================
+[WORKER] Process started for subject 51
+[WORKER]   PID           : 45276
+[WORKER]   template_path : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER]   root_dir      : D:\RESEARCH\STW_dataset\Extracted
+[WORKER] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[WORKER]   steps         : {'so': True, 'ik': True, 'id': True, 'scale': True}
+[WORKER] PipelineEngine created, starting run_pipeline_for_subject...
+[WORKER]   selected_trials: ['stw5']
+[WORKER]   log_level     : INFO
+============================================================
+
+[WORKER] Loading template from: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[WORKER] PipelineEngine created, starting run_pipeline_for_subject...
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== START subject 16 =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] enabled_steps
+      >> {'so': True, 'ik': True, 'id': True, 'scale': True}
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] root_dir
+      >> D:\RESEARCH\STW_dataset\Extracted
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S16
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== START subject 51 =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] enabled_steps
+      >> {'so': True, 'ik': True, 'id': True, 'scale': True}
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] root_dir
+      >> D:\RESEARCH\STW_dataset\Extracted
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== START subject 39 =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] enabled_steps
+      >> {'so': True, 'ik': True, 'id': True, 'scale': True}
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S51
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] root_dir
+      >> D:\RESEARCH\STW_dataset\Extracted
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S39
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Adapted template keys
+      >> ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model path (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Adapted template keys
+      >> ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model path (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] scale_xml (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\scale_S16_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Adapted template keys
+      >> ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] mapped_trials count
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model path (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] scale_xml (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\scale_S39_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] mapped_trials count
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+15:07:52 [INFO    ] S16: Processing subject 16 in D:\RESEARCH\STW_dataset\Extracted\S16
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] scale_xml (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\scale_S51_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] mapped_trials count
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale
+------------------------------------------------------------
+15:07:52 [INFO    ] S39: Processing subject 39 in D:\RESEARCH\STW_dataset\Extracted\S39
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (before mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale
+------------------------------------------------------------
+15:07:52 [INFO    ] S51: Processing subject 51 in D:\RESEARCH\STW_dataset\Extracted\S51
+
+------------------------------------------------------------
+[DBG] [SCALE] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (before mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (before mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (after mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\scale_S16_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (after mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\scale_S39_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (after mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (before setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\scale_S51_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (before setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (after setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Changing cwd to scale_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (after setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (before setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Changing cwd to scale_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (after setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Changing cwd to scale_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale
+------------------------------------------------------------
+15:07:52 [INFO    ] S16: Running scaling for subject 16
+
+------------------------------------------------------------
+[DBG] [SCALE] Loading ScaleTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\scale_S16_setup.xml
+------------------------------------------------------------
+15:07:52 [INFO    ] S39: Running scaling for subject 39
+
+------------------------------------------------------------
+[DBG] [SCALE] Loading ScaleTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\scale_S39_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale
+------------------------------------------------------------
+15:07:52 [INFO    ] S51: Running scaling for subject 51
+
+------------------------------------------------------------
+[DBG] [SCALE] Loading ScaleTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\scale_S51_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Output scaled model filename
+      >> S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Output scaled model filename
+      >> S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting generic model
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting generic model
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting static TRC
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting static TRC
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Output scaled model filename
+      >> S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting generic model
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting static TRC
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool XML saved, now running tool...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool XML saved, now running tool...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool XML saved, now running tool...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Expected scaled model output path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Scaled model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIALS] Total mapped trials to iterate
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [1/5]: stw1 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw1.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw1 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [2/5]: stw2 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw2 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [3/5]: stw3 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw3 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [4/5]: stw4 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw4 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [5/5]: stw5 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S16: Processing trial stw5 for subject 16
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S16: Generating GRF setup for subject 16
+15:07:53 [INFO    ] S16: Generating GRF setups for subject 16
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Expected scaled model output path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Scaled model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIALS] Total mapped trials to iterate
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [1/5]: stw1 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw1.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw1 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [2/5]: stw2 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw2 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [3/5]: stw3 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw3 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [4/5]: stw4 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw4 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [5/5]: stw5 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S39: Processing trial stw5 for subject 39
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S39: Generating GRF setup for subject 39
+15:07:53 [INFO    ] S39: Generating GRF setups for subject 39
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Expected scaled model output path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Scaled model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIALS] Total mapped trials to iterate
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [1/5]: stw1 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw1.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw1 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [2/5]: stw2 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw2 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [3/5]: stw3 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw3 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [4/5]: stw4 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw4 — not in selected_trials
+      >> ['stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [5/5]: stw5 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S51: Processing trial stw5 for subject 51
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:07:53 [INFO    ] S51: Generating GRF setup for subject 51
+15:07:53 [INFO    ] S51: Generating GRF setups for subject 51
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:07:53 [ERROR   ] S16: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\IK\ik_setup_S16_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\IK
+------------------------------------------------------------
+15:07:53 [INFO    ] S16: Running IK for trial stw5
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\IK\ik_setup_S16_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\S16\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:07:53 [ERROR   ] S39: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\IK\ik_setup_S39_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\IK
+------------------------------------------------------------
+15:07:53 [INFO    ] S39: Running IK for trial stw5
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\IK\ik_setup_S39_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\S39\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:07:53 [ERROR   ] S51: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\IK\ik_setup_S51_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\IK
+------------------------------------------------------------
+15:07:53 [INFO    ] S51: Running IK for trial stw5
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\IK\ik_setup_S51_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\S51\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S39/IK/results_stw/ik_output_stw5_S39.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\id_setup_S39_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\grf\S39_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\id_setup_S39_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S39/IK/results_stw/ik_output_stw5_S39.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=5.0250
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\IK\results_stw\ik_output_stw5_S39.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\grf\S39_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Directory 'd:\RESEARCH\STW_dataset\Extracted\S39\ID\results_id\' was specified where only file name 'id_output_S39_stw5' is expected. The directory will be ignored. Result files will be written to directory 'D:\RESEARCH\STW_dataset\Extracted\S39\ID\results_id' instead.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\SO\so_setup_S39_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\grf\S39_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\SO
+------------------------------------------------------------
+15:08:04 [INFO    ] S39: Running SO for trial stw5
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\SO\so_setup_S39_stw5.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\ID\grf\S39_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S39\scale\S39_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S39/IK/results_stw/ik_output_stw5_S39.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S51/IK/results_stw/ik_output_stw5_S51.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\id_setup_S51_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\grf\S51_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\id_setup_S51_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S51/IK/results_stw/ik_output_stw5_S51.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=7.0200
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\IK\results_stw\ik_output_stw5_S51.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\grf\S51_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S16/IK/results_stw/ik_output_stw5_S16.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\id_setup_S16_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\grf\S16_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\id_setup_S16_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S16/IK/results_stw/ik_output_stw5_S16.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=6.0000
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\IK\results_stw\ik_output_stw5_S16.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\grf\S16_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[warning] Directory 'd:\RESEARCH\STW_dataset\Extracted\S51\ID\results_id\' was specified where only file name 'id_output_S51_stw5' is expected. The directory will be ignored. Result files will be written to directory 'D:\RESEARCH\STW_dataset\Extracted\S51\ID\results_id' instead.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\SO\so_setup_S51_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\grf\S51_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\SO
+------------------------------------------------------------
+15:08:07 [INFO    ] S51: Running SO for trial stw5
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\SO\so_setup_S51_stw5.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\ID\grf\S51_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S51\scale\S51_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S51/IK/results_stw/ik_output_stw5_S51.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+[warning] Directory 'd:\RESEARCH\STW_dataset\Extracted\S16\ID\results_id\' was specified where only file name 'id_output_S16_stw5' is expected. The directory will be ignored. Result files will be written to directory 'D:\RESEARCH\STW_dataset\Extracted\S16\ID\results_id' instead.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\SO\so_setup_S16_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\grf\S16_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\SO
+------------------------------------------------------------
+15:08:08 [INFO    ] S16: Running SO for trial stw5
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\SO\so_setup_S16_stw5.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\ID\grf\S16_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S16\scale\S16_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S16/IK/results_stw/ik_output_stw5_S16.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw5 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== END subject 39 — all trials processed =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Restoring original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+[WORKER] run_pipeline_for_subject returned: True
+15:12:35 [INFO    ] pipeline: [1/3] Subject 39  DONE
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw5 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== END subject 16 — all trials processed =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Restoring original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+[WORKER] run_pipeline_for_subject returned: True
+15:14:08 [INFO    ] pipeline: [2/3] Subject 16  DONE
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw5 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== END subject 51 — all trials processed =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Restoring original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+[WORKER] run_pipeline_for_subject returned: True
+15:15:42 [INFO    ] pipeline: [3/3] Subject 51  DONE
+15:15:42 [INFO    ] pipeline: Finished in 470.1 s
+
+[MAIN] Total elapsed time: 470.1 s
+15:15:42 [INFO    ] pipeline: All subjects completed successfully.
+[MAIN] All subjects completed successfully.
+
+============================================================
+[MAIN] Pipeline CLI starting
+[MAIN]   Python        : 3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]
+[MAIN]   PID           : 29676
+[MAIN]   CWD           : D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+[MAIN]   --template    : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN]   --subjects    : 62
+[MAIN]   --trials      : stw2,stw3,stw4,stw5
+[MAIN]   --steps       : scale,ik,id,so
+[MAIN]   --parallel    : True
+[MAIN]   --cores       : (auto)
+[MAIN]   --log-level   : INFO
+[MAIN]   --log-file    : output_pipeline.log
+============================================================
+
+[MAIN] Checking template path: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN] Template file exists? True
+[MAIN] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[MAIN] root_dir from template: 'D:\\RESEARCH\\STW_dataset\\Extracted'
+[MAIN] root_dir Path: D:\RESEARCH\STW_dataset\Extracted
+[MAIN] root_dir exists? True
+[MAIN] Subjects from --subjects arg: ['62']
+[MAIN] selected_trials: ['stw2', 'stw3', 'stw4', 'stw5']
+[MAIN] Steps map: {'so': True, 'scale': True, 'ik': True, 'id': True}
+[MAIN] Active steps: ['so', 'scale', 'ik', 'id']
+15:26:01 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+15:26:01 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+15:26:01 [INFO    ] pipeline: Subjects  : ['62']
+15:26:01 [INFO    ] pipeline: Trials    : ['stw2', 'stw3', 'stw4', 'stw5']
+15:26:01 [INFO    ] pipeline: Steps     : ['so', 'scale', 'ik', 'id']
+15:26:01 [INFO    ] pipeline: Parallel  : True
+[MAIN] Total jobs to run: 1
+[MAIN]   job -> subject=62  template=d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+15:26:01 [INFO    ] pipeline: Only one subject; running sequentially.
+
+[MAIN] Sequential mode
+
+============================================================
+[WORKER] Process started for subject 62
+[WORKER]   PID           : 29676
+[WORKER]   template_path : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER]   root_dir      : D:\RESEARCH\STW_dataset\Extracted
+[WORKER]   steps         : {'so': True, 'scale': True, 'ik': True, 'id': True}
+[WORKER]   selected_trials: ['stw2', 'stw3', 'stw4', 'stw5']
+[WORKER]   log_level     : INFO
+============================================================
+
+[WORKER] Loading template from: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[WORKER] PipelineEngine created, starting run_pipeline_for_subject...
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== START subject 62 =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] enabled_steps
+      >> {'so': True, 'scale': True, 'ik': True, 'id': True}
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] selected_trials
+      >> ['stw2', 'stw3', 'stw4', 'stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] root_dir
+      >> D:\RESEARCH\STW_dataset\Extracted
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S62
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Adapted template keys
+      >> ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model path (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] scale_xml (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] mapped_trials count
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+15:26:01 [INFO    ] S62: Processing subject 62 in D:\RESEARCH\STW_dataset\Extracted\S62
+15:26:01 [INFO    ] S62: Processing subject 62 in D:\RESEARCH\STW_dataset\Extracted\S62
+
+------------------------------------------------------------
+[DBG] [SCALE] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (before mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (after mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (before setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (after setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Changing cwd to scale_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+15:26:01 [INFO    ] S62: Running scaling for subject 62
+15:26:01 [INFO    ] S62: Running scaling for subject 62
+
+------------------------------------------------------------
+[DBG] [SCALE] Loading ScaleTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Output scaled model filename
+      >> S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting generic model
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting static TRC
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool XML saved, now running tool...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Expected scaled model output path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Scaled model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIALS] Total mapped trials to iterate
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [1/5]: stw1 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw1.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw1 — not in selected_trials
+      >> ['stw2', 'stw3', 'stw4', 'stw5']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [2/5]: stw2 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:26:02 [INFO    ] S62: Processing trial stw2 for subject 62
+15:26:02 [INFO    ] S62: Processing trial stw2 for subject 62
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:26:02 [INFO    ] S62: Generating GRF setup for subject 62
+15:26:02 [INFO    ] S62: Generating GRF setup for subject 62
+15:26:02 [INFO    ] S62: Generating GRF setups for subject 62
+15:26:02 [INFO    ] S62: Generating GRF setups for subject 62
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:26:02 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:26:02 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+15:26:02 [INFO    ] S62: Running IK for trial stw2
+15:26:02 [INFO    ] S62: Running IK for trial stw2
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+[error] IO.OpenFile(const string&,const string&): failed to open D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> False
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw2_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> False
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] EXCEPTION during ID
+      >> std::exception in 'OpenSim::TimeSeriesTable_< double >::TimeSeriesTable_(std::string const &)': File 'D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot' does not exist.
+	Thrown at DelimFileAdapter.h:316 in extendRead().
+------------------------------------------------------------
+15:26:31 [ERROR   ] S62: ID exception for trial stw2: std::exception in 'OpenSim::TimeSeriesTable_< double >::TimeSeriesTable_(std::string const &)': File 'D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot' does not exist.
+	Thrown at DelimFileAdapter.h:316 in extendRead().
+15:26:31 [ERROR   ] S62: ID exception for trial stw2: std::exception in 'OpenSim::TimeSeriesTable_< double >::TimeSeriesTable_(std::string const &)': File 'D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot' does not exist.
+	Thrown at DelimFileAdapter.h:316 in extendRead().
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [3/5]: stw3 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:26:31 [INFO    ] S62: Processing trial stw3 for subject 62
+15:26:31 [INFO    ] S62: Processing trial stw3 for subject 62
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:26:31 [INFO    ] S62: Generating GRF setup for subject 62
+15:26:31 [INFO    ] S62: Generating GRF setup for subject 62
+15:26:31 [INFO    ] S62: Generating GRF setups for subject 62
+15:26:31 [INFO    ] S62: Generating GRF setups for subject 62
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:26:31 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:26:31 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw3.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+15:26:31 [INFO    ] S62: Running IK for trial stw3
+15:26:31 [INFO    ] S62: Running IK for trial stw3
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw3.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw3_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw3.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw3_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw3.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw3_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=5.6400
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\results_stw\ik_output_stw3_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw3_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw3.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw3_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+15:27:02 [INFO    ] S62: Running SO for trial stw3
+15:27:02 [INFO    ] S62: Running SO for trial stw3
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw3.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw3_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw3_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw3 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [4/5]: stw4 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:35:39 [INFO    ] S62: Processing trial stw4 for subject 62
+15:35:39 [INFO    ] S62: Processing trial stw4 for subject 62
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:35:39 [INFO    ] S62: Generating GRF setup for subject 62
+15:35:39 [INFO    ] S62: Generating GRF setup for subject 62
+15:35:39 [INFO    ] S62: Generating GRF setups for subject 62
+15:35:39 [INFO    ] S62: Generating GRF setups for subject 62
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:35:39 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:35:39 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw4.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+15:35:39 [INFO    ] S62: Running IK for trial stw4
+15:35:39 [INFO    ] S62: Running IK for trial stw4
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw4.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw4_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw4.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw4_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw4.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw4_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=5.9850
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\results_stw\ik_output_stw4_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw4_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw4.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw4_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+15:36:06 [INFO    ] S62: Running SO for trial stw4
+15:36:06 [INFO    ] S62: Running SO for trial stw4
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw4.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw4_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw4_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw4 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [5/5]: stw5 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:41:32 [INFO    ] S62: Processing trial stw5 for subject 62
+15:41:32 [INFO    ] S62: Processing trial stw5 for subject 62
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:41:32 [INFO    ] S62: Generating GRF setup for subject 62
+15:41:32 [INFO    ] S62: Generating GRF setup for subject 62
+15:41:32 [INFO    ] S62: Generating GRF setups for subject 62
+15:41:32 [INFO    ] S62: Generating GRF setups for subject 62
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:41:32 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:41:32 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+15:41:32 [INFO    ] S62: Running IK for trial stw5
+15:41:32 [INFO    ] S62: Running IK for trial stw5
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw5_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw5_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=5.4550
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\results_stw\ik_output_stw5_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw5.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+15:41:44 [INFO    ] S62: Running SO for trial stw5
+15:41:44 [INFO    ] S62: Running SO for trial stw5
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_S62_stw5.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw5_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw5_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw5 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== END subject 62 — all trials processed =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Restoring original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+[WORKER] run_pipeline_for_subject returned: True
+15:45:52 [INFO    ] pipeline: [1/1] Subject 62  DONE
+15:45:52 [INFO    ] pipeline: Finished in 1191.5 s
+
+[MAIN] Total elapsed time: 1191.5 s
+15:45:52 [INFO    ] pipeline: All subjects completed successfully.
+[MAIN] All subjects completed successfully.
+
+============================================================
+[MAIN] Pipeline CLI starting
+[MAIN]   Python        : 3.8.20 (default, Oct  3 2024, 15:19:54) [MSC v.1929 64 bit (AMD64)]
+[MAIN]   PID           : 45204
+[MAIN]   CWD           : D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+[MAIN]   --template    : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN]   --subjects    : 62
+[MAIN]   --trials      : stw2
+[MAIN]   --steps       : scale,ik,id,so
+[MAIN]   --parallel    : True
+[MAIN]   --cores       : (auto)
+[MAIN]   --log-level   : INFO
+[MAIN]   --log-file    : output_pipeline.log
+============================================================
+
+[MAIN] Checking template path: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[MAIN] Template file exists? True
+[MAIN] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[MAIN] root_dir from template: 'D:\\RESEARCH\\STW_dataset\\Extracted'
+[MAIN] root_dir Path: D:\RESEARCH\STW_dataset\Extracted
+[MAIN] root_dir exists? True
+[MAIN] Subjects from --subjects arg: ['62']
+[MAIN] selected_trials: ['stw2']
+[MAIN] Steps map: {'scale': True, 'so': True, 'id': True, 'ik': True}
+[MAIN] Active steps: ['scale', 'so', 'id', 'ik']
+15:46:57 [INFO    ] pipeline: Template  : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+15:46:57 [INFO    ] pipeline: Root dir  : D:\RESEARCH\STW_dataset\Extracted
+15:46:57 [INFO    ] pipeline: Subjects  : ['62']
+15:46:57 [INFO    ] pipeline: Trials    : ['stw2']
+15:46:57 [INFO    ] pipeline: Steps     : ['scale', 'so', 'id', 'ik']
+15:46:57 [INFO    ] pipeline: Parallel  : True
+[MAIN] Total jobs to run: 1
+[MAIN]   job -> subject=62  template=d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+15:46:57 [INFO    ] pipeline: Only one subject; running sequentially.
+
+[MAIN] Sequential mode
+
+============================================================
+[WORKER] Process started for subject 62
+[WORKER]   PID           : 45204
+[WORKER]   template_path : d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER]   root_dir      : D:\RESEARCH\STW_dataset\Extracted
+[WORKER]   steps         : {'scale': True, 'so': True, 'id': True, 'ik': True}
+[WORKER]   selected_trials: ['stw2']
+[WORKER]   log_level     : INFO
+============================================================
+
+[WORKER] Loading template from: d:\student\MTech\opensim_pipeline_batch_processing\pipeline\template_map.json
+[WORKER] Template loaded OK — keys: ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+[WORKER] PipelineEngine created, starting run_pipeline_for_subject...
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== START subject 62 =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] enabled_steps
+      >> {'scale': True, 'so': True, 'id': True, 'ik': True}
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] selected_trials
+      >> ['stw2']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] root_dir
+      >> D:\RESEARCH\STW_dataset\Extracted
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S62
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] subj_dir exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Adapted template keys
+      >> ['subject', 'root_dir', 'model', 'static_trc', 'scale_xml', 'mapped_trials']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model path (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] static_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] scale_xml (adapted)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] mapped_trials count
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+15:46:58 [INFO    ] S62: Processing subject 62 in D:\RESEARCH\STW_dataset\Extracted\S62
+15:46:58 [INFO    ] S62: Processing subject 62 in D:\RESEARCH\STW_dataset\Extracted\S62
+
+------------------------------------------------------------
+[DBG] [SCALE] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (before mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_dir exists (after mkdir)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (before setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] scale_xml exists (after setup)?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Changing cwd to scale_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale
+------------------------------------------------------------
+15:46:58 [INFO    ] S62: Running scaling for subject 62
+15:46:58 [INFO    ] S62: Running scaling for subject 62
+
+------------------------------------------------------------
+[DBG] [SCALE] Loading ScaleTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\scale_S62_setup.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Output scaled model filename
+      >> S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting generic model
+      >> D:\RESEARCH\STW_dataset\Extracted\model\RajagopalLa2023_LL-stw_adjustedWieghts.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Setting static TRC
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\static.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool XML saved, now running tool...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SCALE] ScaleTool.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Expected scaled model output path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SCALE] Scaled model file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIALS] Total mapped trials to iterate
+      >> 5
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [1/5]: stw1 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw1.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw1 — not in selected_trials
+      >> ['stw2']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [2/5]: stw2 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+15:46:58 [INFO    ] S62: Processing trial stw2 for subject 62
+15:46:58 [INFO    ] S62: Processing trial stw2 for subject 62
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] model_for_trial exists?
+      >> True
+------------------------------------------------------------
+15:46:58 [INFO    ] S62: Generating GRF setup for subject 62
+15:46:58 [INFO    ] S62: Generating GRF setup for subject 62
+15:46:58 [INFO    ] S62: Generating GRF setups for subject 62
+15:46:58 [INFO    ] S62: Generating GRF setups for subject 62
+[DBG] [SCRIPT stderr]
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:46:58 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+15:46:58 [ERROR   ] S62: Script grf_setup.py failed:
+Traceback (most recent call last):
+  File "grf_setup.py", line 5, in <module>
+    import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+ModuleNotFoundError: No module named 'setup_files'
+
+------------------------------------------------------------
+[DBG] [TRIAL] generate_setups_if_needed returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] ik_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Changing cwd to ik_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK
+------------------------------------------------------------
+15:46:58 [INFO    ] S62: Running IK for trial stw2
+15:46:58 [INFO    ] S62: Running IK for trial stw2
+
+------------------------------------------------------------
+[DBG] [IK] Loading InverseKinematicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\ik_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting model file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Setting marker data file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw2.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] Marker file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [IK] IK.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output motion file
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [IK] IK output exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] id_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw2_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Changing cwd to id_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Loading InverseDynamicsTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\id_setup_S62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Setting model
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] IK output motion file to use for ID
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] mot_file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] Time range from motion file
+      >> start=0.0000  end=5.6650
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setCoordinatesFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\IK\results_stw\ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] coordinates file exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw2_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [ID] ID tool configured, running...
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [ID] ID.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Step enabled? True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_s62_stw2.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] so_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw2_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] grf_xml exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Changing cwd to so_xml parent
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] Model filename
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] Current working directory
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO
+------------------------------------------------------------
+15:47:11 [INFO    ] S62: Running SO for trial stw2
+15:47:11 [INFO    ] S62: Running SO for trial stw2
+
+------------------------------------------------------------
+[DBG] [SO] Loading AnalyzeTool from
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\SO\so_setup_s62_stw2.xml
+------------------------------------------------------------
+[warning] Couldn't find file 'r_pelvis.vtp'.
+[warning] Couldn't find file 'l_pelvis.vtp'.
+[warning] Couldn't find file 'sacrum.vtp'.
+[warning] Couldn't find file 'r_femur.vtp'.
+[warning] Couldn't find file 'r_tibia.vtp'.
+[warning] Couldn't find file 'r_fibula.vtp'.
+[warning] Couldn't find file 'r_patella.vtp'.
+[warning] Couldn't find file 'r_talus.vtp'.
+[warning] Couldn't find file 'r_foot.vtp'.
+[warning] Couldn't find file 'r_bofoot.vtp'.
+[warning] Couldn't find file 'l_femur.vtp'.
+[warning] Couldn't find file 'l_tibia.vtp'.
+[warning] Couldn't find file 'l_fibula.vtp'.
+[warning] Couldn't find file 'l_patella.vtp'.
+[warning] Couldn't find file 'l_talus.vtp'.
+[warning] Couldn't find file 'l_foot.vtp'.
+[warning] Couldn't find file 'l_bofoot.vtp'.
+
+------------------------------------------------------------
+[DBG] [SO] setExternalLoadsFileName
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\ID\grf\S62_stw2_grf.xml
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setModel
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\scale\S62_simbody_scaled.osim
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] setCoordinatesFileName (from IK output)
+      >> D:\RESEARCH\STW_dataset\Extracted\S62/IK/results_stw/ik_output_stw2_S62.mot
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO tool configured, running...
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SO] SO.run() returned
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial stw2 complete ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [3/5]: stw3 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw3.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw3 — not in selected_trials
+      >> ['stw2']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [4/5]: stw4 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw4.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw4 — not in selected_trials
+      >> ['stw2']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] --- Trial [5/5]: stw5 ---
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc path
+      >> D:\RESEARCH\STW_dataset\Extracted\S62\S62\Mocap\trcResults\stw5.trc
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] trial_trc exists?
+      >> True
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [TRIAL] Skipping stw5 — not in selected_trials
+      >> ['stw2']
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] ===== END subject 62 — all trials processed =====
+------------------------------------------------------------
+
+------------------------------------------------------------
+[DBG] [SUBJECT] Restoring original working directory
+      >> D:\student\MTech\opensim_pipeline_batch_processing\pipeline
+------------------------------------------------------------
+
+[WORKER] run_pipeline_for_subject returned: True
+15:51:27 [INFO    ] pipeline: [1/1] Subject 62  DONE
+15:51:27 [INFO    ] pipeline: Finished in 269.7 s
+
+[MAIN] Total elapsed time: 269.7 s
+15:51:27 [INFO    ] pipeline: All subjects completed successfully.
+[MAIN] All subjects completed successfully.

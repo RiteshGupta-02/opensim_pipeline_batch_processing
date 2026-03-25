@@ -59,9 +59,9 @@ def detect_first_leg(trc_file, mot_file):
 
     # ---------- ASSIGN PLATE ----------
     if mean_left < mean_right:
-        plate_owner = "Left Foot"
+        plate_owner = "Left"
     else:
-        plate_owner = "Right Foot"
+        plate_owner = "Right"
 
     
     return plate_owner
