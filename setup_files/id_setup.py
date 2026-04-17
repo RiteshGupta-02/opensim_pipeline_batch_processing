@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+import event_detection
 
 # Template XML content
 xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
@@ -29,6 +30,7 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 	</InverseDynamicsTool>
 </OpenSimDocument>
 '''
+
 
 if len(sys.argv) < 4:
 	print("Usage: python id_setup.py <sub_directory> <trial_filename> <model_file>")

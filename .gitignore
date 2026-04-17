@@ -14,3 +14,7 @@ node_modules/
 # OS junk
 .DS_Store
 Thumbs.db
+
+/test.py
+/test.ipynb
+/ritesh.ipynb
