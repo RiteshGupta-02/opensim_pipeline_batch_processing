@@ -33,28 +33,35 @@ xml_template = '''<?xml version="1.0" encoding="UTF-8" ?>
 		<!--Set of analyses to be run during the investigation.-->
 		<AnalysisSet name="Analyses">
 			<objects>
-				<StaticOptimization name="StaticOptimization">
+				<!-- <StaticOptimization name="StaticOptimization">
+					<on>true</on>
+					<start_time>4</start_time>
+					<end_time>5.6200000000000001</end_time>
+					<step_interval>1</step_interval>
+					<in_degrees>true</in_degrees>
+					<use_model_force_set>true</use_model_force_set>
+					<activation_exponent>2</activation_exponent>
+					<use_muscle_physiology>true</use_muscle_physiology>
+					<optimizer_convergence_criterion>0.0001</optimizer_convergence_criterion>
+					<optimizer_max_iterations>100</optimizer_max_iterations>
+				</StaticOptimization> -->
+
+				<BodyKinematics name="BodyKinematics">
 					<!--Flag (true or false) specifying whether on. True by default.-->
 					<on>true</on>
 					<!--Start time.-->
-					<start_time>4</start_time>
+					<start_time>0</start_time>
 					<!--End time.-->
-					<end_time>5.6200000000000001</end_time>
+					<end_time>4.3099999999999996</end_time>
 					<!--Specifies how often to store results during a simulation. More specifically, the interval (a positive integer) specifies how many successful integration steps should be taken before results are recorded again.-->
 					<step_interval>1</step_interval>
 					<!--Flag (true or false) indicating whether the results are in degrees or not.-->
 					<in_degrees>true</in_degrees>
-					<!--If true, the model's own force set will be used in the static optimization computation.  Otherwise, inverse dynamics for coordinate actuators will be computed for all unconstrained degrees of freedom.-->
-					<use_model_force_set>true</use_model_force_set>
-					<!--A double indicating the exponent to raise activations to when solving static optimization.  -->
-					<activation_exponent>2</activation_exponent>
-					<!--If true muscle force-length curve is observed while running optimization.-->
-					<use_muscle_physiology>true</use_muscle_physiology>
-					<!--Value used to determine when the optimization solution has converged-->
-					<optimizer_convergence_criterion>0.0001</optimizer_convergence_criterion>
-					<!--An integer for setting the maximum number of iterations the optimizer can use at each time.  -->
-					<optimizer_max_iterations>100</optimizer_max_iterations>
-				</StaticOptimization>
+					<!--Names of bodies to record kinematics for.  Use 'all' to record all bodies.  The special name 'center_of_mass' refers to the combined center of mass.-->
+					<bodies> all</bodies>
+					<!--Flag (true or false) indicating whether to express results in the global frame or local-frames of the bodies. Body positions and center of mass results are always given in the global frame. This flag is set to false by default.-->
+					<express_results_in_body_local_frame>false</express_results_in_body_local_frame>
+				</BodyKinematics>
 			</objects>
 			<groups />
 		</AnalysisSet>

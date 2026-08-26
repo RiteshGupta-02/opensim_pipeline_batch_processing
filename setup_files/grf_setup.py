@@ -2,7 +2,7 @@ import os
 # import first_leg_using_just_acc as fl
 import sys
 from pathlib import Path
-import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
+# import setup_files.assign_leg_to_forceplate_decreptated as assign_leg_to_forceplate_decreptated
 import first_leg_detection
 BOLD_RED = "\033[1;91m" # Bold and bright red for extra attention
 END = "\033[0m" # Reset code

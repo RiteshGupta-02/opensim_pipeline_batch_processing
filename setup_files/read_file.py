@@ -12,20 +12,26 @@ def smooth_data(data, cutoff_freq=20, fs=1000):
     b, a = butter(2, normal_cutoff, btype='low', analog=False)
     return pd.DataFrame(filtfilt(b, a, data, axis=0), columns=data.columns)
 
-def read_file(file, sep='\t', skiprows = None, cutoff_freq=20, fs=1000):
+def read_file(file, sep='\t', skiprows = None, cutoff_freq=20, fs=1000, smooth = True):
 
-    if skiprows is None:
+    data = 0
+    if file.endswith(".trc"):
+        data = pd.read_csv(rf"{file}",sep="\t",skiprows=3)
+        data = data.iloc[:,2:-2]
+    elif skiprows is None:
         with open(file, 'r') as f:
             for i, line in enumerate(f):
                 if 'endheader' in line.lower():
                     skiprows = i + 1
                     break
 
-    data = pd.read_csv(
-        file,
-        sep=sep,
-        skiprows=skiprows
-    )
-
-    data = smooth_data(data, cutoff_freq=cutoff_freq, fs=fs)
-    return data
+        data = pd.read_csv(
+            file,
+            sep=sep,
+            skiprows=skiprows
+        )
+    if smooth :
+        data = smooth_data(data, cutoff_freq=cutoff_freq, fs=fs)
+        return data
+    else:
+        return data

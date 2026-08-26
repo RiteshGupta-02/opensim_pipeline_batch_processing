@@ -97,12 +97,12 @@ def detect_first_leg(trc_file, mot_file):
 # To run:
 if __name__ == "__main__":
     leg = {}
-    for subject in [53,55,45,54,42,56]:
+    for subject in [i for i in range(1,66)]:
         leg[subject] = []  # Add this line
         for trial in range(1,6):
             # trc_file = rf'd:\student\MTech\Sakshi\STW\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
-            trc_file = rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\S{subject:02d}\Mocap\trcResults\stw{trial}.trc'
-            mot_file = rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\S{subject:02d}\Mocap\grfResults\stw{trial}.mot'
+            trc_file = rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\ExpData\Mocap\trcResults\stw{trial}.trc'
+            mot_file = rf'D:\RESEARCH\STW_dataset\Extracted\S{subject:02d}\ExpData\Mocap\grfResults\stw{trial}.mot'
             print(f"Processing {trc_file}...")
             first_leg = detect_first_leg(trc_file, mot_file)
             leg[subject].append(first_leg)
@@ -110,5 +110,5 @@ if __name__ == "__main__":
     print(leg_df)
     
     os.chdir(os.path.dirname(r'D:\student\MTech\opensim_pipeline_batch_processing\pipeline'))
-    leg_df.to_csv(r'pipeline\older.csv')
-    print("Saved to older.csv")
+    leg_df.to_csv(r'pipeline\complete.csv')
+    print("Saved to complete.csv")

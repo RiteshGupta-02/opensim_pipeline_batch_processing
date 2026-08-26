@@ -203,26 +203,26 @@ def generate_setups_if_needed(
     # _dbg("GRF-SETUP", "Entering GRF setup branch (stw1 trial)")
     try:
         grf_xml_path = trial.get("grf_xml", "")
-        
-        # _dbg("GRF-SETUP", "GRF XML path (to be generated)", grf_xml_path)
-        logger.info("Generating GRF setup for subject %s", subject_num)
-        mot_path = trial.get("trial_mot", "")
-        trc_path = trial.get("trial_trc", "")
-        # _dbg("GRF-SETUP", "GRF XML path", grf_xml_path)
-        # _dbg("GRF-SETUP", "GRF XML exists?", Path(grf_xml_path).exists() if grf_xml_path else "no path")
-        # _dbg("GRF-SETUP", "MOT path", mot_path)
-        # _dbg("GRF-SETUP", "MOT exists?", Path(mot_path).exists() if mot_path else "no path")
-        # _dbg("GRF-SETUP", "TRC path", trc_path)
-        # _dbg("GRF-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
-        
-        logger.info("Generating GRF setups for subject %s", subject_num)
-        ok = _run_script(
-            "grf_setup.py",
-            [subject_num, str(subj_dir), str(mot_path), str(trc_path), str(grf_xml_path)],
-            setup_dir,
-            logger,
-        )
-        # _dbg("GRF-SETUP", "grf_setup.py result", "SUCCESS" if ok else "FAILED")
+        if not grf_xml_path:
+            # _dbg("GRF-SETUP", "GRF XML path (to be generated)", grf_xml_path)
+            logger.info("Generating GRF setup for subject %s", subject_num)
+            mot_path = trial.get("trial_mot", "")
+            trc_path = trial.get("trial_trc", "")
+            _dbg("GRF-SETUP", "GRF XML path", grf_xml_path)
+            # _dbg("GRF-SETUP", "GRF XML exists?", Path(grf_xml_path).exists() if grf_xml_path else "no path")
+            # _dbg("GRF-SETUP", "MOT path", mot_path)
+            # _dbg("GRF-SETUP", "MOT exists?", Path(mot_path).exists() if mot_path else "no path")
+            # _dbg("GRF-SETUP", "TRC path", trc_path)
+            # _dbg("GRF-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
+            
+            logger.info("Generating GRF setups for subject %s", subject_num)
+            ok = _run_script(
+                "grf_setup.py",
+                [subject_num, str(subj_dir), str(mot_path), str(trc_path), str(grf_xml_path)],
+                setup_dir,
+                logger,
+            )
+            _dbg("GRF-SETUP", "grf_setup.py result", "SUCCESS" if ok else "FAILED")
     except Exception as exc:
         # _dbg("GRF-SETUP", "EXCEPTION in GRF setup", str(exc))
         logger.error("GRF setup error for %s: %s", subject_num, exc)
@@ -235,12 +235,12 @@ def generate_setups_if_needed(
             # _dbg("ID-SETUP", "ID XML path (to be generated)", id_xml_path)
             logger.info("Generating ID setups for subject %s", subject_num)
         
-            ok = True ;'''_run_script(
+            ok = _run_script(
                 "id_setup.py",
                 [str(subj_dir), str(trial_name), str(model_file), str(id_xml_path)],
                 setup_dir,
                 logger,
-            ) '''
+            )
             # _dbg("ID-SETUP", "id_setup.py result", "SUCCESS" if ok else "FAILED")
     except Exception as exc:
         # _dbg("ID-SETUP", "EXCEPTION in ID setup", str(exc))
@@ -256,15 +256,15 @@ def generate_setups_if_needed(
         # _dbg("SO-SETUP", "SO XML path", so_xml_path)
         # _dbg("SO-SETUP", "SO XML exists?", Path(so_xml_path).exists() if so_xml_path else "no path")
         if not so_dir.exists() or not Path(so_xml_path).exists():
-            # _dbg("SO-SETUP", "SO XML or dir missing — running SO_setup.py")
+            _dbg("SO-SETUP", "SO XML or dir missing — running SO_setup.py")
             logger.info("Generating SO setups for subject %s", subject_num)
-            ok = True ;'''_run_script(
+            ok = _run_script(
                 "SO_setup.py",
                 [str(subj_dir), str(trial_name), str(model_file), str(so_xml_path)],
                 setup_dir,
-                logger,
-            ) '''
-            # _dbg("SO-SETUP", "SO_setup.py result", "SUCCESS" if ok else "FAILED")
+                logger
+            )
+            _dbg("SO-SETUP", "SO_setup.py result", "SUCCESS" if ok else "FAILED")
         else:
             # _dbg("SO-SETUP", "SO XML already exists — skipping SO_setup.py")
             pass
@@ -294,7 +294,7 @@ def generate_setups_if_needed(
         # _dbg("IK-SETUP", "TRC exists?", Path(trc_path).exists() if trc_path else "no path")
         if not ik_xml_path or not Path(trc_path).exists():
             # _dbg("IK-SETUP", "IK XML or TRC missing — running ik_setup.py")
-            logger.info("Generating IK setups for subject %s", subject_num)
+            # logger.info("Generating IK setups for subject %s", subject_num)
             ok = True ;'''_run_script(
                 "ik_setup.py",
                 [str(subj_dir), str(trial_name), str(model_file), str(trc_path), str(ik_xml_path)],
